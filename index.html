@@ -34,7 +34,7 @@
     <!-- Fonts Prefetch -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
 
-	
+
 <script type="text/javascript">
 /* <![CDATA[ */
 window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6.3"}};
@@ -134,6 +134,440 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 		transform: translateY(-2px);
 		box-shadow: 0 8px 25px rgba(255, 195, 41, 0.4);
 	}
+
+	/* iNSTA AND Social Section Styles */
+
+        :root {
+            --primary-orange: #FF6B35;
+            --bright-yellow: #FFD700;
+            --pure-white: #FFFFFF;
+            --deep-black: #1A1A1A;
+            --gray-text: #666666;
+            --light-gray: #F8F8F8;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+    
+
+        .bridan-social-section {
+            background: linear-gradient(135deg, var(--pure-white) 0%, var(--light-gray) 100%);
+            padding: 60px 0;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--deep-black);
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(45deg, var(--primary-orange), var(--bright-yellow));
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--gray-text);
+            max-width: 600px;
+            margin: 0 auto;
+            margin-top: 25px;
+        }
+
+        .social-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .tab-btn {
+            background: var(--pure-white);
+            border: 2px solid var(--primary-orange);
+            color: var(--primary-orange);
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        .tab-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+        }
+
+        .tab-btn.active {
+            background: var(--primary-orange);
+            color: var(--pure-white);
+        }
+
+        .tab-btn i {
+            font-size: 1.3rem;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .social-header {
+            background: var(--pure-white);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px var(--shadow);
+            border: 1px solid #E0E0E0;
+        }
+
+        .social-profile {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .social-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 4px solid var(--primary-orange);
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        .social-info h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--deep-black);
+            margin-bottom: 10px;
+        }
+
+        .social-follow-btn {
+            background: linear-gradient(45deg, var(--primary-orange), var(--bright-yellow));
+            color: var(--pure-white);
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        .social-follow-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.4);
+            color: var(--pure-white);
+        }
+
+        .social-description {
+            font-size: 1.1rem;
+            color: var(--gray-text);
+            line-height: 1.6;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .content-card {
+            background: var(--pure-white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px var(--shadow);
+            transition: var(--transition);
+            border: 1px solid #E0E0E0;
+        }
+
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--primary-orange);
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--deep-black);
+            margin-bottom: 10px;
+        }
+
+        .card-description {
+            color: var(--gray-text);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .view-more-btn {
+            background: var(--deep-black);
+            color: var(--pure-white);
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .view-more-btn:hover {
+            background: var(--primary-orange);
+            color: var(--pure-white);
+            transform: translateY(-2px);
+        }
+
+        .video-preview {
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 107, 53, 0.9);
+            color: var(--pure-white);
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .play-button:hover {
+            background: var(--primary-orange);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .topics-section {
+            background: var(--pure-white);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px var(--shadow);
+            border: 1px solid #E0E0E0;
+        }
+
+        .topics-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--deep-black);
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .topic-item {
+            background: linear-gradient(135deg, var(--light-gray), var(--pure-white));
+            padding: 20px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: var(--deep-black);
+            text-align: center;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        .topic-item:hover {
+            background: linear-gradient(45deg, var(--primary-orange), var(--bright-yellow));
+            color: var(--pure-white);
+            transform: translateY(-5px);
+            border-color: var(--bright-yellow);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+        }
+
+        .topic-item i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .topic-item span {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .social-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--deep-black);
+            transition: var(--transition);
+            background: var(--pure-white);
+            text-decoration: none;
+            font-size: 1.5rem;
+            border: 2px solid #E0E0E0;
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        .social-icon:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .instagram:hover {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: var(--pure-white);
+            border-color: #e6683c;
+        }
+
+        .tiktok:hover {
+            background: var(--deep-black);
+            color: var(--pure-white);
+            border-color: var(--deep-black);
+        }
+
+        .facebook:hover {
+            background: #1877f2;
+            color: var(--pure-white);
+            border-color: #1877f2;
+        }
+
+        .linkedin:hover {
+            background: #0077b5;
+            color: var(--pure-white);
+            border-color: #0077b5;
+        }
+
+        .whatsapp:hover {
+            background: #25d366;
+            color: var(--pure-white);
+            border-color: #25d366;
+        }
+
+        .pinterest:hover {
+            background: #bd081c;
+            color: var(--pure-white);
+            border-color: #bd081c;
+        }
+
+        @media (max-width: 768px) {
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+            
+            .social-tabs {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .tab-btn {
+                width: 200px;
+                justify-content: center;
+            }
+            
+            .social-profile {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .topics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .social-links {
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .social-header {
+                padding: 20px;
+            }
+            
+            .topics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    
 	
 </style>
 <link rel='stylesheet' id='wp-block-library-css' href='wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' />
@@ -415,10 +849,13 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
 <!-- END REVOLUTION SLIDER -->
 	
 
-									<rs-slide style="position: absolute;" data-key="rs-4" data-title="TILING WORK " data-thumb="wp-content/uploads/2015/03/fullscreen3-100x50.jpg" data-anim="ms:400;" data-in="x:-100%;">
-														<img decoding="async" src="wp-content/uploads/2015/03/fullscreen3.jpg" alt="" title="Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="wp-content/uploads/2015/03/fullscreen3.jpg" data-bg="p:center top;" data-parallax="1" data-no-retina>
-									<!--
-														--><rs-layer
+									
+<rs-slide style="position: absolute;" data-key="rs-4" data-title="TILING WORK " data-thumb="wp-content/uploads/2015/03/fullscreen3-100x50.jpg" data-anim="ms:400;" data-in="x:-100%;">
+														
+	<img decoding="async" src="wp-content/uploads/2015/03/fullscreen3.jpg" alt="" title="Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="wp-content/uploads/2015/03/fullscreen3.jpg" data-bg="p:center top;" data-parallax="1" data-no-retina>
+			<!---->
+			
+			<rs-layer
 															id="slider-2-slide-4-layer-1" 
 															class="content-font-style"
 															data-type="text"
@@ -429,7 +866,7 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
 															data-frame_1="tp:600;st:500;"
 															data-frame_999="o:0;tp:600;e:nothing;st:w;"
 															style="z-index:5;font-family:'PT Sans';text-shadow:none;"
-														>C 
+														> 
 														</rs-layer><!--
 
 														--><rs-layer
@@ -444,7 +881,8 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
 															data-frame_1="tp:600;st:500;"
 															data-frame_999="o:0;tp:600;e:nothing;st:w;"
 															style="z-index:6;font-family:'PT Sans';text-shadow:none;"
-														>Ideal theme for any construction business you need<br/> With Visual Composer, Revolution Slider and other awesome<br/>features, just got better, with new options you can't go wrong. 
+														>Ideal theme for any construction business you need<br/> With Visual Composer, Revolution Slider and other awesome
+														<br/>features, just got better, with new options you can't go wrong. 
 														</rs-layer><!--
 
 														--><rs-layer
@@ -588,21 +1026,30 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
 											</script>
 										</rs-module-wrap>
 										<!-- END REVOLUTION SLIDER -->
-</div></div></div></div></div><div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1476869795460 vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-10"><div class="vc_column-inner"><div class="wpb_wrapper">
+</div></div></div></div></div>
+
+<div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1476869795460 vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-10"><div class="vc_column-inner"><div class="wpb_wrapper">
 	<div class="wpb_text_column wpb_content_element vc_custom_1418808445132" >
 		<div class="wpb_wrapper">
-			<h3 style="text-align: left;"><span style="color: #ffffff;">DISCOVER THE PROVEN METHOD SAVING HOME-OWNERS AND DEVELOPERS UP TO 30% ON CONSTRUCTION COST IN KENYA!</span></h3>
+			<h3 style="text-align: left;">
+				<span style="color: #ffffff;">DISCOVER THE PROVEN METHOD SAVING HOME-OWNERS AND DEVELOPERS UP TO 30% ON CONSTRUCTION COST IN KENYA!</span></h3>
 
 		</div>
 	</div>
-</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner"><div class="wpb_wrapper"><a target="_self" href="contact-us/index.html" class="btn  btn-md style-1" id="custom-id-0" style="">GET A QUOTE</a></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div class="vc_row wpb_row vc_row-fluid on-top vc_custom_1427282781534"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+</div></div></div>
+
+<div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner"><div class="wpb_wrapper"><a target="_self" href="contact-us/index.html" class="btn  btn-md style-1" id="custom-id-0" style="">GET A QUOTE</a></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div class="vc_row wpb_row vc_row-fluid on-top vc_custom_1427282781534"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
 	<div  class="wpb_single_image wpb_content_element vc_align_left wpb_content_element">
 		
-		<figure class="wpb_wrapper vc_figure">
-			<a  target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img fetchpriority="high" decoding="async" width="347" height="166" src="wp-content/uploads/2014/11/consultation22.jpg" class="vc_single_image-img attachment-full" alt="" title="consultation22" srcset="wp-content/uploads/2014/11/consultation22.jpg 347w, wp-content/uploads/2014/11/consultation22-300x144.jpg 300w" sizes="(max-width: 347px) 100vw, 347px" /></a>
-		</figure>
+<figure class="wpb_wrapper vc_figure">
+    <a href="img/home.jpg" target="_self" class="vc_single_image-wrapper vc_box_border_grey">
+        <img fetchpriority="high" decoding="async" width="347" height="166" src="img/home.jpg" class="vc_single_image-img attachment-full" alt="Home" title="Home Image" srcset="img/home.jpg 347w, img/home-300x144.jpg 300w" sizes="(max-width: 347px) 100vw, 347px" />
+    </a>
+</figure>
 	</div>
-<h5 class='heading-left  style-1' ><span> MOST PEAOPLE ARE BURNING MONEY ON THEIR BUILDS WITHOUT REALIZING IT. </span></h5>
+<h5 class='heading-left  style-1' >
+	<span> Most people are burning money on their builds without realizing it. </span>
+</h5>
 	<div class="wpb_text_column wpb_content_element" >
 		<div class="wpb_wrapper">
 			<p>Hiring multiple contractors who don’t talk to each other? 
@@ -619,12 +1066,15 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
 
 		</div>
 	</div>
-</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner">
+	<div class="wpb_wrapper">
 	<div  class="wpb_single_image wpb_content_element vc_align_left wpb_content_element">
 		
-		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="347" height="166" src="wp-content/uploads/2014/11/consultation23.jpg" class="vc_single_image-img attachment-full" alt="" title="consultation23" srcset="wp-content/uploads/2014/11/consultation23.jpg 347w, wp-content/uploads/2014/11/consultation23-300x144.jpg 300w" sizes="(max-width: 347px) 100vw, 347px" /></div>
-		</figure>
+<figure class="wpb_wrapper vc_figure">
+    <a href="img/insta (3).jpg" target="_self" class="vc_single_image-wrapper vc_box_border_grey">
+        <img fetchpriority="high" decoding="async" width="347" height="166" src="img/insta (3).jpg" class="vc_single_image-img attachment-full" alt="Home" title="Home Image"  sizes="(max-width: 347px) 100vw, 347px" />
+    </a>
+</figure>
 	</div>
 	
 <h5 class='heading-left  style-1' ><span>One Team. One Vision. Zero Budget Surprises. </span></h5>
@@ -637,20 +1087,28 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
 
 		</div>
 	</div>
-<div class="vc_empty_space"   style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+<div class="vc_empty_space"   style="height: 20px">
+	<span class="vc_empty_space_inner"></span></div>
 	<div class="wpb_text_column wpb_content_element" >
 		<div class="wpb_wrapper">
 			<p></p>
 
 		</div>
 	</div>
-</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+</div></div></div>
+
+<div class="wpb_column vc_column_container vc_col-sm-4">
+	<div class="vc_column-inner">
+		<div class="wpb_wrapper">
 	<div  class="wpb_single_image wpb_content_element vc_align_left wpb_content_element">
 		
-		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="347" height="166" src="wp-content/uploads/2014/11/consultation21.jpg" class="vc_single_image-img attachment-full" alt="" title="consultation2" srcset="wp-content/uploads/2014/11/consultation21.jpg 347w, wp-content/uploads/2014/11/consultation21-300x143.jpg 300w, wp-content/uploads/2014/11/consultation21-270x129.jpg 270w, wp-content/uploads/2014/11/consultation21-263x125.jpg 263w" sizes="(max-width: 347px) 100vw, 347px" /></div>
-		</figure>
+<figure class="wpb_wrapper vc_figure">
+    <a href="img/insta (10).jpg" target="_self" class="vc_single_image-wrapper vc_box_border_grey">
+        <img fetchpriority="high" decoding="async" width="347" height="166" src="img/insta (10).jpg" class="vc_single_image-img attachment-full" alt="Home" title="Home Image" sizes="(max-width: 347px) 100vw, 347px" />
+    </a>
+</figure>
 	</div>
+
 <h5 class='heading-left  style-1' ><span>Real People. real Projects. Real Savings</span></h5>
 	<div class="wpb_text_column wpb_content_element" >
 		<div class="wpb_wrapper">
@@ -658,20 +1116,320 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
 
 		</div>
 	</div>
+
 <div class="vc_empty_space"   style="height: 20px"><span class="vc_empty_space_inner"></span></div>
 	<div class="wpb_text_column wpb_content_element" >
 		<div class="wpb_wrapper">
-			<p></p>
+		
 
-		</div>
-	</div>
 	
-</div></div></div></div><div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid vc_custom_1476957010512 vc_row-has-fill vc_row-no-padding"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class='container'><div class='row owly'><div class='col-md-6 col-xs-6'><h2 style='color:#ffffff;'>Featured work</h2></div><div class='col-xs-6 col-md-6 align-right'><a class='owlprev' style='background:#0a0a0a;'><i class='fa fa-chevron-left' style='color:#c1c1c1;'></i></a><a class='owlnext' style='background:#0a0a0a;'><i class='fa fa-chevron-right' style='color:#c1c1c1;'></i></a></div></div></div><ul class='owl-carousel recentportfolio clearfix' data-col=5><li class='item item-type-line'><a class='item-hover' href=portfolio/modern-building/><div class='mask'></div><div class='item-info'><div class='headline'><h2>Modern Building</h2></div></div></a><div class='item-img'><img loading="lazy" decoding="async" width="360" height="267" src="wp-content/uploads/2014/12/2-360x267.jpg" class="attachment-post-thumb size-post-thumb wp-post-image" alt="" srcset="wp-content/uploads/2014/12/2-360x267.jpg 360w, wp-content/uploads/2014/12/2-500x371.jpg 500w" sizes="(max-width: 360px) 100vw, 360px" /></div></li><li class='item item-type-line'><a class='item-hover' href=portfolio/interior-concept/><div class='mask'></div><div class='item-info'><div class='headline'><h2>Interior Concept</h2></div></div></a><div class='item-img'><img loading="lazy" decoding="async" width="360" height="267" src="wp-content/uploads/2014/12/4-360x267.jpg" class="attachment-post-thumb size-post-thumb wp-post-image" alt="" srcset="wp-content/uploads/2014/12/4-360x267.jpg 360w, wp-content/uploads/2014/12/4-500x371.jpg 500w" sizes="(max-width: 360px) 100vw, 360px" /></div></li><li class='item item-type-line'><a class='item-hover' href=portfolio/corporate-concept/><div class='mask'></div><div class='item-info'><div class='headline'>
-	<h2>Corporate concept</h2></div></div></a><div class='item-img'><img loading="lazy" decoding="async" width="360" height="267" src="wp-content/uploads/2014/12/3-360x267.jpg" class="attachment-post-thumb size-post-thumb wp-post-image" alt="" srcset="wp-content/uploads/2014/12/3-360x267.jpg 360w, wp-content/uploads/2014/12/3-500x371.jpg 500w" sizes="(max-width: 360px) 100vw, 360px" /></div></li><li class='item item-type-line'><a class='item-hover' href=portfolio/corporate-tower/><div class='mask'></div><div class='item-info'><div class='headline'><h2>Corporate Tower</h2></div></div></a><div class='item-img'><img loading="lazy" decoding="async" width="360" height="267" src="wp-content/uploads/2014/11/12-360x267.jpg" class="attachment-post-thumb size-post-thumb wp-post-image" alt="" srcset="wp-content/uploads/2014/11/12-360x267.jpg 360w, wp-content/uploads/2014/11/12-500x371.jpg 500w" sizes="(max-width: 360px) 100vw, 360px" /></div></li><li class='item item-type-line'><a class='item-hover' href=portfolio/sea-side-residence/><div class='mask'></div><div class='item-info'><div class='headline'><h2>Sea side residence</h2></div></div></a><div class='item-img'><img loading="lazy" decoding="async" width="360" height="267" src="wp-content/uploads/2014/11/house4-360x267.jpg" class="attachment-post-thumb size-post-thumb wp-post-image" alt="" srcset="wp-content/uploads/2014/11/house4-360x267.jpg 360w, wp-content/uploads/2014/11/house4-500x371.jpg 500w" sizes="(max-width: 360px) 100vw, 360px" /></div></li><li class='item item-type-line'><a class='item-hover' href=portfolio/eco-friendly-villa/><div class='mask'></div><div class='item-info'><div class='headline'><h2>Eco friendly villa</h2></div></div></a><div class='item-img'><img loading="lazy" decoding="async" width="360" height="267" src="wp-content/uploads/2014/11/house3-360x267.jpg" class="attachment-post-thumb size-post-thumb wp-post-image" alt="" srcset="wp-content/uploads/2014/11/house3-360x267.jpg 360w, wp-content/uploads/2014/11/house3-500x371.jpg 500w" sizes="(max-width: 360px) 100vw, 360px" /></div></li><li class='item item-type-line'><a class='item-hover' href=portfolio/clean-lines-house/><div class='mask'></div><div class='item-info'><div class='headline'><h2>Clean lines house</h2></div></div></a><div class='item-img'><img loading="lazy" decoding="async" width="360" height="267" src="wp-content/uploads/2014/11/house2-360x267.jpg" class="attachment-post-thumb size-post-thumb wp-post-image" alt="" srcset="wp-content/uploads/2014/11/house2-360x267.jpg 360w, wp-content/uploads/2014/11/house2-500x371.jpg 500w" sizes="(max-width: 360px) 100vw, 360px" /></div></li><li class='item item-type-line'><a class='item-hover' href=portfolio/inside-renovation/><div class='mask'></div><div class='item-info'><div class='headline'><h2>Inside renovation</h2></div></div></a><div class='item-img'><img loading="lazy" decoding="async" width="360" height="267" src="wp-content/uploads/2014/11/house1-360x267.jpg" class="attachment-post-thumb size-post-thumb wp-post-image" alt="" srcset="wp-content/uploads/2014/11/house1-360x267.jpg 360w, wp-content/uploads/2014/11/house1-500x371.jpg 500w" sizes="(max-width: 360px) 100vw, 360px" /></div></li></ul></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div class="vc_row wpb_row vc_row-fluid vc_custom_1418034361637"><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-tabs vc_tta-color-grey vc_tta-style-anps_tabs vc_tta-shape-square vc_tta-o-shape-group vc_tta-tabs-position-top vc_tta-controls-align-left"><div class="vc_tta-tabs-container col-sm-3 vertical"><ul class="vc_tta-tabs-list"><li class="vc_tta-tab vc_active" data-vc-tab><a href="#1435752532961-a38e4180-51ff" data-vc-tabs data-vc-container=".vc_tta">
+</div></div></div></div>
+</div>
+	</div>
+
+<div>
+    <h1 style="color:#f0c14b; /* A warm, inviting gold */
+                font-size: 3.0em; /* Slightly larger for impact */
+                font-weight: 900; /* Extra bold for emphasis */
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Refined shadow */
+                text-align: left;
+                letter-spacing: 1px; /* Adds subtle spacing */
+                font-family: 'Arial Black', sans-serif; /* A strong font */
+                ">Featured work</h1>
+</div>
+		
+
+<!--insta and tikok section-->
+
+<div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid vc_custom_1476957010512 vc_row-has-fill vc_row-no-padding"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner">
+	<div class="wpb_wrapper"><div class='container'><div class='row owly'>
+		<div class='col-md-6 col-xs-6'>
+		
+	</div>
+	<section>
+		    <section class="bridan-social-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Follow Our Journey</h2>
+                <p>Stay connected with Bridan Design Build for the latest projects, design tips, and behind-the-scenes content</p>
+            </div>
+
+            <div class="social-tabs">
+                <button class="tab-btn active" data-tab="instagram">
+                    <i class="fab fa-instagram"></i>
+                    Instagram
+                </button>
+                <button class="tab-btn" data-tab="tiktok">
+                    <i class="fab fa-tiktok"></i>
+                    TikTok
+                </button>
+            </div>
+
+            <!-- Instagram Tab -->
+            <div id="tab-instagram" class="tab-content active">
+                <div class="social-header">
+                    <div class="social-profile">
+                        <img src="img/bridanlogo.PNG" alt="Bridan Instagram Profile" class="social-avatar">
+                        <div class="social-info">
+                            <h3>@bridan_design_build</h3>
+                            <a href="https://www.instagram.com/bridan_design_build/" class="social-follow-btn" target="_blank" rel="noopener noreferrer">
+                                Follow Us <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="social-description">Explore our latest projects, behind-the-scenes moments, and design inspiration on Instagram.</p>
+                </div>
+
+                <div class="content-grid">
+                    <div class="content-card">
+                        <img src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?w=400&h=250&fit=crop" alt="Modern Kitchen Design" class="card-image">
+                        <div class="card-content">
+                            <h4 class="card-title">Kitchen Transformation</h4>
+                            <p class="card-description">Stunning before and after of this Nairobi kitchen renovation featuring modern finishes and smart storage solutions.</p>
+                            <a href="https://www.instagram.com/bridan_design_build/" class="view-more-btn" target="_blank">
+                                <i class="fab fa-instagram"></i> View on Instagram
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=250&fit=crop" alt="Living Room Design" class="card-image">
+                        <div class="card-content">
+                            <h4 class="card-title">Modern Living Space</h4>
+                            <p class="card-description">Contemporary living room design with clean lines, natural lighting, and carefully curated furniture pieces.</p>
+                            <a href="https://www.instagram.com/bridan_design_build/" class="view-more-btn" target="_blank">
+                                <i class="fab fa-instagram"></i> View on Instagram
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <img src="img/pinbath.jpg" alt="Bathroom Renovation" class="card-image">
+                        <div class="card-content">
+                            <h4 class="card-title">Luxury Bathroom</h4>
+                            <p class="card-description">Elegant bathroom renovation featuring premium materials, modern fixtures, and spa-like ambiance.</p>
+                            <a href="https://www.instagram.com/bridan_design_build/" class="view-more-btn" target="_blank">
+                                <i class="fab fa-instagram"></i> View on Instagram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.instagram.com/bridan_design_build/" target="_blank" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/bridandesignbuild" target="_blank" class="social-icon facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/bridan-design-build" target="_blank" class="social-icon linkedin">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- TikTok Tab -->
+            <div id="tab-tiktok" class="tab-content">
+                <div class="social-header">
+                    <div class="social-profile">
+                        <img src="img/bridanlogo.PNG" alt="Bridan TikTok Profile" class="social-avatar">
+                        <div class="social-info">
+                            <h3>@bridandesignbuild</h3>
+                            <a href="https://www.tiktok.com/@bridandesignbuild" class="social-follow-btn" target="_blank" rel="noopener noreferrer">
+                                Follow Us <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="social-description">Watch our trending design tips, project transformations, and behind-the-scenes action on TikTok.</p>
+                </div>
+
+                <div class="content-grid">
+                    <div class="content-card">
+                        <div class="video-preview">
+                            <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=400&h=250&fit=crop" alt="Design Tips Video" class="card-image">
+                            <button class="play-button">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Quick Design Tips</h4>
+                            <p class="card-description">5 easy ways to transform your space on a budget with simple design tricks and creative solutions.</p>
+                            <a href="https://www.tiktok.com/@bridandesignbuild" class="view-more-btn" target="_blank">
+                                <i class="fab fa-tiktok"></i> Watch on TikTok
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <div class="video-preview">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=250&fit=crop" alt="Before After Video" class="card-image">
+                            <button class="play-button">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Before & After Reveal</h4>
+                            <p class="card-description">Amazing transformation of a small apartment into a modern, functional living space.</p>
+                            <a href="https://www.tiktok.com/@bridandesignbuild" class="view-more-btn" target="_blank">
+                                <i class="fab fa-tiktok"></i> Watch on TikTok
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <div class="video-preview">
+                            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=400&h=250&fit=crop" alt="DIY Tutorial Video" class="card-image">
+                            <button class="play-button">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">DIY Storage Hack</h4>
+                            <p class="card-description">Creative storage solutions using everyday items to maximize space in your kitchen.</p>
+                            <a href="https://www.tiktok.com/@bridandesignbuild" class="view-more-btn" target="_blank">
+                                <i class="fab fa-tiktok"></i> Watch on TikTok
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topics-section">
+                    <h4 class="topics-title">Popular Topics</h4>
+                    <div class="topics-grid">
+                        <a href="https://www.tiktok.com/@bridandesignbuild" class="topic-item" target="_blank">
+                            <i class="fas fa-paint-roller"></i>
+                            <span>Color Trends</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@bridandesignbuild" class="topic-item" target="_blank">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Design Tips</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@bridandesignbuild" class="topic-item" target="_blank">
+                            <i class="fas fa-hammer"></i>
+                            <span>DIY Hacks</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@bridandesignbuild" class="topic-item" target="_blank">
+                            <i class="fas fa-sync-alt"></i>
+                            <span>Before & After</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.tiktok.com/@bridandesignbuild" target="_blank" class="social-icon tiktok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://wa.me/254712345678" target="_blank" class="social-icon whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.pinterest.com/bridandesign" target="_blank" class="social-icon pinterest">
+                        <i class="fab fa-pinterest"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab switching functionality
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const targetTab = btn.getAttribute('data-tab');
+                    
+                    // Remove active class from all buttons and contents
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding content
+                    btn.classList.add('active');
+                    document.getElementById(`tab-${targetTab}`).classList.add('active');
+                });
+            });
+
+            // Video preview interactions
+            const playButtons = document.querySelectorAll('.play-button');
+            playButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const card = this.closest('.content-card');
+                    const viewBtn = card.querySelector('.view-more-btn');
+                    
+                    // Add visual feedback
+                    this.style.transform = 'translate(-50%, -50%) scale(0.8)';
+                    setTimeout(() => {
+                        this.style.transform = 'translate(-50%, -50%) scale(1)';
+                        // Simulate opening TikTok link
+                        if (viewBtn) {
+                            viewBtn.click();
+                        }
+                    }, 150);
+                });
+            });
+
+            // Smooth hover animations for cards
+            const cards = document.querySelectorAll('.content-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    const playBtn = this.querySelector('.play-button');
+                    if (playBtn) {
+                        playBtn.style.transform = 'translate(-50%, -50%) scale(1.1)';
+                    }
+                });
+
+                card.addEventListener('mouseleave', function() {
+                    const playBtn = this.querySelector('.play-button');
+                    if (playBtn) {
+                        playBtn.style.transform = 'translate(-50%, -50%) scale(1)';
+                    }
+                });
+            });
+
+            // Intersection Observer for fade-in animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Apply fade-in animation to cards
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+                observer.observe(card);
+            });
+        });
+    </script>
+	</section>
+	
+	<div class='col-xs-6 col-md-6 align-right'>
+
+	</div></div></div>
+
+		<ul class='owl-carousel recentportfolio clearfix' data-col=5><li class='item item-type-line'><a class='item-hover' href=portfolio/modern-building/><div class='mask'></div><div class='item-info'><div class='headline'><h2>Modern Building</h2></div></div></a><div class='item-img'><img loading="lazy" decoding="async" width="360" height="267" src="wp-content/uploads/2014/12/2-360x267.jpg" class="attachment-post-thumb size-post-thumb wp-post-image" alt="" srcset="wp-content/uploads/2014/12/2-360x267.jpg 360w, wp-content/uploads/2014/12/2-500x371.jpg 500w" sizes="(max-width: 360px) 100vw, 360px" /></div></li><li class='item item-type-line'><a class='item-hover' href=portfolio/interior-concept/><div class='mask'></div><div class='item-info'><div class='headline'><h2>Interior Concept</h2></div></div></a><div class='item-img'><img loading="lazy" decoding="async" width="360" height="267" src="wp-content/uploads/2014/12/4-360x267.jpg" class="attachment-post-thumb size-post-thumb wp-post-image" alt="" srcset="wp-content/uploads/2014/12/4-360x267.jpg 360w, wp-content/uploads/2014/12/4-500x371.jpg 500w" sizes="(max-width: 360px) 100vw, 360px" /></div></li><li class='item item-type-line'><a class='item-hover' href=portfolio/corporate-concept/><div class='mask'></div><div class='item-info'><div class='headline'>
+	<h2>Corporate concept</h2></div></div></a><div class='item-img'>
+		<img loading="lazy" decoding="async" width="360" height="267" src="wp-content/uploads/2014/12/3-360x267.jpg" class="attachment-post-thumb size-post-thumb wp-post-image" alt="" srcset="wp-content/uploads/2014/12/3-360x267.jpg 360w, wp-content/uploads/2014/12/3-500x371.jpg 500w" sizes="(max-width: 360px) 100vw, 360px" /></div></li><li class='item item-type-line'><a class='item-hover' href=portfolio/corporate-tower/><div class='mask'></div><div class='item-info'><div class='headline'><h2>Corporate Tower</h2></div></div></a><div class='item-img'><img loading="lazy" decoding="async" width="360" height="267" src="wp-content/uploads/2014/11/12-360x267.jpg" class="attachment-post-thumb size-post-thumb wp-post-image" alt="" srcset="wp-content/uploads/2014/11/12-360x267.jpg 360w, wp-content/uploads/2014/11/12-500x371.jpg 500w" sizes="(max-width: 360px) 100vw, 360px" /></div></li><li class='item item-type-line'><a class='item-hover' href=portfolio/sea-side-residence/><div class='mask'></div><div class='item-info'><div class='headline'><h2>Sea side residence</h2></div></div></a><div class='item-img'><img loading="lazy" decoding="async" width="360" height="267" src="wp-content/uploads/2014/11/house4-360x267.jpg" class="attachment-post-thumb size-post-thumb wp-post-image" alt="" srcset="wp-content/uploads/2014/11/house4-360x267.jpg 360w, wp-content/uploads/2014/11/house4-500x371.jpg 500w" sizes="(max-width: 360px) 100vw, 360px" /></div></li><li class='item item-type-line'><a class='item-hover' href=portfolio/eco-friendly-villa/><div class='mask'></div><div class='item-info'><div class='headline'><h2>Eco friendly villa</h2></div></div></a><div class='item-img'><img loading="lazy" decoding="async" width="360" height="267" src="wp-content/uploads/2014/11/house3-360x267.jpg" class="attachment-post-thumb size-post-thumb wp-post-image" alt="" srcset="wp-content/uploads/2014/11/house3-360x267.jpg 360w, wp-content/uploads/2014/11/house3-500x371.jpg 500w" sizes="(max-width: 360px) 100vw, 360px" /></div></li><li class='item item-type-line'><a class='item-hover' href=portfolio/clean-lines-house/><div class='mask'></div><div class='item-info'><div class='headline'><h2>Clean lines house</h2></div></div></a><div class='item-img'><img loading="lazy" decoding="async" width="360" height="267" src="wp-content/uploads/2014/11/house2-360x267.jpg" class="attachment-post-thumb size-post-thumb wp-post-image" alt="" srcset="wp-content/uploads/2014/11/house2-360x267.jpg 360w, wp-content/uploads/2014/11/house2-500x371.jpg 500w" sizes="(max-width: 360px) 100vw, 360px" /></div></li><li class='item item-type-line'><a class='item-hover' href=portfolio/inside-renovation/><div class='mask'></div><div class='item-info'><div class='headline'><h2>Inside renovation</h2></div></div></a><div class='item-img'><img loading="lazy" decoding="async" width="360" height="267" src="wp-content/uploads/2014/11/house1-360x267.jpg" class="attachment-post-thumb size-post-thumb wp-post-image" alt="" srcset="wp-content/uploads/2014/11/house1-360x267.jpg 360w, wp-content/uploads/2014/11/house1-500x371.jpg 500w" sizes="(max-width: 360px) 100vw, 360px" /></div></li></ul></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div class="vc_row wpb_row vc_row-fluid vc_custom_1418034361637"><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-tabs vc_tta-color-grey vc_tta-style-anps_tabs vc_tta-shape-square vc_tta-o-shape-group vc_tta-tabs-position-top vc_tta-controls-align-left"><div class="vc_tta-tabs-container col-sm-3 vertical"><ul class="vc_tta-tabs-list"><li class="vc_tta-tab vc_active" data-vc-tab><a href="#1435752532961-a38e4180-51ff" data-vc-tabs data-vc-container=".vc_tta">
 		<span class="vc_tta-title-text">Architectural Design 
-</span></a></li><li class="vc_tta-tab" data-vc-tab><a href="#1435756781152-993f34f9-0327" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text"> Building Construction </span></a></li><li class="vc_tta-tab" data-vc-tab><a href="#1435756802721-dda6e70f-9f6c" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">Interior Design</span></a></li><li class="vc_tta-tab" data-vc-tab><a href="#1435756825187-76dab563-233c" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">Renovations</span></a></li><li class="vc_tta-tab" data-vc-tab><a href="#1435756853291-ea21db84-ab21" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">Project Management </span></a></li><li class="vc_tta-tab" data-vc-tab><a href="#1435756881933-5ecf8b5b-dd2f" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">Labour Provision</span></a></li></ul></div><div class="vc_tta-panels-container col-sm-9"><div class="vc_tta-panels"><div class="vc_tta-panel vc_active" id="1435752532961-a38e4180-51ff" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1435752532961-a38e4180-51ff" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Architectural Design </span></a></h4></div><div class="vc_tta-panel-body"><h2 class='heading-content  style-1'>
-		<span>WHAT WE OFFER</span></h2><div class="vc_empty_space" style="height: 7px"><span class="vc_empty_space_inner">Don’t Just Draw Pretty Plans. Design to Build — and to Save.</span> </div><ul class='list '><br><li>Buildable, cost-efficient plans</li><li>Optimized for materials, speed, and flow</li>
-	<li>Full council approvals handled for you</li></ul><div class="vc_empty_space" style="height: 3px"><span class="vc_empty_space_inner"></span></div>
+</span>
+</a></li>
+
+<li class="vc_tta-tab" data-vc-tab><a href="#1435756781152-993f34f9-0327" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text"> Building Construction </span></a></li><li class="vc_tta-tab" data-vc-tab><a href="#1435756802721-dda6e70f-9f6c" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">Interior Design</span></a></li><li class="vc_tta-tab" data-vc-tab><a href="#1435756825187-76dab563-233c" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">Renovations</span></a></li><li class="vc_tta-tab" data-vc-tab><a href="#1435756853291-ea21db84-ab21" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">Project Management </span></a></li><li class="vc_tta-tab" data-vc-tab><a href="#1435756881933-5ecf8b5b-dd2f" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">Labour Provision</span></a></li></ul></div><div class="vc_tta-panels-container col-sm-9"><div class="vc_tta-panels"><div class="vc_tta-panel vc_active" id="1435752532961-a38e4180-51ff" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1435752532961-a38e4180-51ff" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Architectural Design </span></a></h4></div><div class="vc_tta-panel-body"><h2 class='heading-content  style-1'>
+		<span>WHAT WE OFFER</span>
+	</h2><div class="vc_empty_space" style="height: 7px"><span class="vc_empty_space_inner">Don’t Just Draw Pretty Plans. Design to Build — and to Save.</span> </div><ul class='list '><br><li>Buildable, cost-efficient plans</li><li>Optimized for materials, speed, and flow</li>
+	<li>Full council approvals handled for you</li></ul>
+	<div class="vc_empty_space" style="height: 3px"><span class="vc_empty_space_inner"></span>
+	</div>
 
 	<div class="wpb_text_column wpb_content_element">
 		<div class="wpb_wrapper">
@@ -681,7 +1439,9 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
 	</div>
 
 </div></div><div class="vc_tta-panel" id="1435756781152-993f34f9-0327" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1435756781152-993f34f9-0327" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Building Construction </span></a></h4></div><div class="vc_tta-panel-body"><h2 class='heading-content  style-1'>
-    <span>WHAT WE OFFER</span></h2><div class="vc_empty_space" style="height: 7px"><span class="vc_empty_space_inner">Hire Builders Who Think Like Investors — Not Laborers.</span></div>
+    <span>WHAT WE OFFER</span></h2>
+	<div class="vc_empty_space" style="height: 7px">
+		<span class="vc_empty_space_inner">Hire Builders Who Think Like Investors — Not Laborers.</span></div>
     <ul class='list '> <br>
         <li>Transparent timelines.</li>
         <li> Quality control at every stage.</li>
@@ -1003,7 +1763,9 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
         
         <img alt="wp-content/uploads/img/bridanlogo-removebg-preview.png" src="wp-content/uploads/img/bridanlogo-removebg-preview.png">
 
-        </div><div id="text-4" class="widget-container widget_text">			<div class="textwidget"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam turpis quam, sodales in ante sagittis, varius efficitur mauris. </p>
+        </div><div id="text-4" class="widget-container widget_text">			
+			<div class="textwidget">
+				<p>Bridan Design Build Ltd. is a locally owned company incorporated in Kenya. We offer a straight forward method of project delivery.Our goal is to pro- vide a unified flow of work from the initial concept design to construction completion.</p>
 </div>
 		</div></div>
                 <div class="col-md-3 col-xs-12"><div id="nav_menu-2" class="widget-container widget_nav_menu"><h3 class="widget-title">Navigation</h3><div class="menu-main-menu-container"><ul id="menu-main-menu-1" class="menu"><li id="menu-item-691" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-691"><a href="" aria-current="page">Home</a>
