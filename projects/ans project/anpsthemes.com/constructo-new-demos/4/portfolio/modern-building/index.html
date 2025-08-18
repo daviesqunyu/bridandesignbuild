@@ -91,516 +91,268 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
 <link rel='shortlink' href='https://anpsthemes.com/constructo-new-demos/4/?p=356' />
 <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://anpsthemes.com/constructo-new-demos/4/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fanpsthemes.com%2Fconstructo-new-demos%2F4%2Fportfolio%2Fmodern-building%2F" />
 <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://anpsthemes.com/constructo-new-demos/4/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fanpsthemes.com%2Fconstructo-new-demos%2F4%2Fportfolio%2Fmodern-building%2F&#038;format=xml" />
-<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
-<meta name="generator" content="Powered by Slider Revolution 6.7.15 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
-<script>function setREVStartSize(e){
-			//window.requestAnimationFrame(function() {
-				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
-				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;
-				try {
-					var pw = document.getElementById(e.c).parentNode.offsetWidth,
-						newh;
-					pw = pw===0 || isNaN(pw) || (e.l=="fullwidth" || e.layout=="fullwidth") ? window.RSIW : pw;
-					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
-					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
-					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
-					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
-					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
-					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
-					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);
-					if(e.layout==="fullscreen" || e.l==="fullscreen")
-						newh = Math.max(e.mh,window.RSIH);
-					else{
-						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
-						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];
-						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
-						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
-						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
-											
-						var nl = new Array(e.rl.length),
-							ix = 0,
-							sl;
-						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
-						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
-						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
-						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;
-						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
-						sl = nl[0];
-						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}
-						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);
-						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
-					}
-					var el = document.getElementById(e.c);
-					if (el!==null && el) el.style.height = newh+"px";
-					el = document.getElementById(e.c+"_wrapper");
-					if (el!==null && el) {
-						el.style.height = newh+"px";
-						el.style.display = "block";
-					}
-				} catch(e){
-					console.log("Failure at Presize of Slider:" + e)
-				}
-			//});
-		  };</script>
-<style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1418650600843{margin-bottom: 20px !important;}.vc_custom_1418650606516{margin-bottom: 20px !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+
+<!-- Enhanced Social Media Styling -->
+<style>
+	.top-bar .social li a {
+		display: flex !important;
+		align-items: center !important;
+		padding: 10px 15px !important;
+		border-radius: 8px !important;
+		margin: 0 8px !important;
+		transition: all 0.3s ease !important;
+		background-color: rgba(255, 255, 255, 0.1) !important;
+		border: 2px solid transparent !important;
+		font-weight: 700 !important;
+		text-shadow: 1px 1px 2px rgba(0,0,0,0.3) !important;
+	}
+	
+	.top-bar .social li a:hover {
+		transform: translateY(-3px) !important;
+		box-shadow: 0 6px 15px rgba(0,0,0,0.3) !important;
+		border-color: currentColor !important;
+	}
+	
+	.top-bar .social li a i {
+		margin-right: 10px !important;
+		font-size: 20px !important;
+		filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.5)) !important;
+	}
+	
+	.top-bar .social li a span {
+		font-weight: 800 !important;
+		font-size: 15px !important;
+		letter-spacing: 0.5px !important;
+	}
+	
+	/* Facebook specific */
+	.top-bar .social li a[href*="facebook"] {
+		color: #1877F2 !important;
+		background-color: rgba(24, 119, 242, 0.1) !important;
+	}
+	.top-bar .social li a[href*="facebook"]:hover {
+		background-color: #1877F2 !important;
+		color: white !important;
+		border-color: #1877F2 !important;
+	}
+	
+	/* Twitter specific */
+	.top-bar .social li a[href*="x.com"] {
+		color: #000000 !important;
+		background-color: rgba(0, 0, 0, 0.1) !important;
+	}
+	.top-bar .social li a[href*="x.com"]:hover {
+		background-color: #000000 !important;
+		color: white !important;
+		border-color: #000000 !important;
+	}
+	
+	/* LinkedIn specific */
+	.top-bar .social li a[href*="linkedin"] {
+		color: #0077B5 !important;
+		background-color: rgba(0, 119, 181, 0.1) !important;
+	}
+	.top-bar .social li a[href*="linkedin"]:hover {
+		background-color: #0077B5 !important;
+		color: white !important;
+		border-color: #0077B5 !important;
+	}
+	
+	/* TikTok specific */
+	.top-bar .social li a[href*="tiktok"] {
+		color: #000000 !important;
+		background-color: rgba(0, 0, 0, 0.1) !important;
+	}
+	.top-bar .social li a[href*="tiktok"]:hover {
+		background-color: #000000 !important;
+		color: white !important;
+		border-color: #000000 !important;
+	}
+	
+	/* Enhanced top bar styling */
+	.top-bar {
+		background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
+		border-bottom: 3px solid #f39c12 !important;
+	}
+	
+	.top-bar .anpstext-wrap {
+		display: flex !important;
+		align-items: center !important;
+		gap: 20px !important;
+	}
+	
+	.top-bar .anpstext-desc {
+		font-weight: 600 !important;
+		color: #ecf0f1 !important;
+		text-shadow: 1px 1px 2px rgba(0,0,0,0.5) !important;
+	}
+	
+	.top-bar .fa {
+		color: #f39c12 !important;
+		filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.5)) !important;
+	}
+</style>
+</head>
 
 <body class="portfolio-template-default single single-portfolio postid-356 wp-embed-responsive wpb-js-composer js-comp-ver-7.8 vc_responsive">
         <div class="site-wrap">
                     <div class="site-wrapper ">
                                                     
-                        <div class="site-search" id="site-search">                    
+                        <!-- Top Bar -->
+                        <div class="transparent top-bar">
                             <div class="container">
-                        <form role="search" method="get" class="site-search-form" action="https://anpsthemes.com/constructo-new-demos/4/">
-                            <input name="s" type="text" class="site-search-input" placeholder="type and press &#8216;enter&#8217;">
-                        </form>
-                        <button class="site-search-close">&times;</button>
-                    </div>
-                </div>
-                                                <div class="top-bar"><div class="container">
-                                                    <div class="top-bar-left"><div id="anpssocial-2" class="widget-container widget_anpssocial">                
-                                                        
-                   
+                                <!-- Left Side - Social Media Icons Only -->
+                                <div class="top-bar-left">
+                                    <div id="anpssocial-2" class="widget-container widget_anpssocial">                
 			<ul class="social">
                     <li>
-                               
-                    <a href="https://www.facebook.com/profile.php?id=100086679484882" target="_blank" aria-label="Facebook" class="social-3d"><i class="fab fa-facebook-f"></i></a>
-
-                
-                <span class="sr-only"></span>
+                                                <a href="https://www.facebook.com/profile.php?id=100086679484882" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-3d">
+                                                    <i class="fab fa-facebook-f"></i>
+                                                    <span class="sr-only">Facebook</span>
                 </a>
                             </li>
-                                        
-                            <li>
-                                                    
-                 <a href="https://x.com/bridanbuild" target="_blank" aria-label="Twitter" class="social-3d"><i class="fab fa-twitter"></i></a>
-
-                
-                <span class="sr-only"></span>
+                                            <li>
+                                                <a href="https://x.com/bridanbuild" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="social-3d">
+                                                    <i class="fab fa-twitter"></i>
+                                                    <span class="sr-only">Twitter</span>
                 </a>
                             </li>
                                         <li>
-                          
-                <a href="https://www.linkedin.com/in/bridan-design-build-653b631a7/" target="_blank" aria-label="LinkedIn" class="social-3d"><i class="fab fa-linkedin-in"></i></a>
-
-                
-                <span class="sr-only"></span>
+                                                <a href="https://www.linkedin.com/in/bridan-design-build-653b631a7/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-3d">
+                                                    <i class="fab fa-linkedin-in"></i>
+                                                    <span class="sr-only">LinkedIn</span>
                 </a>
                             </li>
-                                        
-                            <li>
-                                                    
-             <a href="https://www.tiktok.com/@bridandesignbuild" target="_blank" aria-label="TikTok" class="social-3d"><i class="fab fa-tiktok"></i></a>
-
-                
-                <span class="sr-only"></span>
+                                            <li>
+                                                <a href="https://www.tiktok.com/@bridandesignbuild" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="social-3d">
+                                                    <i class="fab fa-tiktok"></i>
+                                                    <span class="sr-only">TikTok</span>
                 </a>
                             </li>
                     </ul>
+                                    </div>
+                                </div>
 
-        </div></div><div class="top-bar-right"><div id="anpstext-4" class="widget-container widget_anpstext">
+                                <!-- Right Side - Working Hours, WhatsApp, Email -->
+                                <div class="top-bar-right">
+                                    <!-- Working Hours -->
+                                    <div id="anpstext-4" class="widget-container widget_anpstext">
         <div class="anpstext-wrap">
-            <span class="anpstext-arrow" ></span>
                                                 <span class="fa fa-clock-o"></span>
                                                         <div class="anpstext-desc">Mon - Sat: 7:00 - 17:00</div>
                     </div>
-        </div><div id="anpstext-2" class="widget-container widget_anpstext">
+                                    </div>
+                                    
+                                    <!-- WhatsApp -->
+                                    <div id="anpstext-2" class="widget-container widget_anpstext">
         <div class="anpstext-wrap">
-            <span class="anpstext-arrow" ></span>
-                                                <span class="fa fa-phone"></span>
-                                                        <div class="anpstext-desc">+ 386 40 111 5555</div>
+                                            <a href="https://wa.me/254741400368" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+                                                <i class="fa fa-whatsapp" style="color: #25D366;"></i>
+                                                <div class="anpstext-desc">+254 741 400368</div>
+                                            </a>
+                                        </div>
                     </div>
-        </div><div id="anpstext-3" class="widget-container widget_anpstext">
+                                    
+                                    <!-- Email -->
+                                    <div id="anpstext-3" class="widget-container widget_anpstext">
         <div class="anpstext-wrap">
-            <span class="anpstext-arrow" ></span>
                                                 <span class="fa fa-envelope-o"></span>
-                                                        <div class="anpstext-desc"><a href="mailto:info@yourdomain.com">info@yourdomain.com</a></div>
+                                            <div class="anpstext-desc">
+                                                <a href="mailto:bridandesignbuild@gmail.com" style="color: inherit; text-decoration: none;">bridandesignbuild@gmail.com</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                     </div>
-        </div></div></div>                    <button class="top-bar-close">
+                            
+                            <!-- Top Bar Close Button -->
+                            <button class="top-bar-close">
                         <i class="fa fa-chevron-down"></i>
                         <span class="sr-only">Close top bar</span>
                     </button>
         </div>
-                        <header class="site-header site-header-sticky site-header-style-normal site-header-layout-normal site-header-dropdown-1" >
+                        
+                        <header class="site-header site-header-sticky site-header-layout-normal site-header-style-transparent site-header-dropdown-1">
                                     <div class="nav-wrap">
                                           <div class="container">
+                                    <!-- Logo -->
                         <div class="site-logo">    
-                                                       <a href="/">
-           <img alt="BRIDANDESIGNBULD LIMITED" src="../../../../../img/bridanlogo.PNG" style="max-width: 70px; height: auto;">
+                                        <a href="../../../index.html">
+                                            <img style="height:90px;width:70px;" class="logo-sticky" alt="Bridan Design Build Logo" src="../../../wp-content/uploads/img/bridanlogo.PNG">
+                                            <img style="height:90px;width:70px;" class="logo-mobile" alt="Bridan Design Build" src="../../../wp-content/uploads/img/bridanlogo.PNG">
+                                            <img class="logo-desktop" style="width:90px;height:70px" alt="Bridan Design Build Logo" src="../../../wp-content/uploads/img/bridanlogo.PNG">
  </a>
         </div>
+                                    
+                                    <!-- Navigation Menu -->
                                             <div class="nav-bar-wrapper">
                             <div class="nav-bar">
                                                 <nav class="site-navigation">
-                                    <ul id="menu-main-menu" class=""><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-depth-0"><a href="https://anpsthemes.com/constructo-new-demos/4/">Home</a>
+                                                <ul id="menu-main-menu" class="">
+                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-depth-0">
+                                                        <a href="../../../index.html">Home</a>
+                                                    </li>
+                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-depth-0 current-menu-item">
+                                                        <a href="../../../projects/index.html">Projects</a>
 <ul class="sub-menu">
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-depth-1"><a href="http://anpsthemes.com/constructo-new-demos/1/">CLASSIC DEMO</a></li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-depth-1"><a href="http://anpsthemes.com/constructo-new-demos/2/">LIMITLESS DEMO</a></li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-depth-1"><a href="http://anpsthemes.com/constructo-new-demos/3/">EXTRAVAGANT DEMO</a></li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-depth-1"><a href="http://anpsthemes.com/constructo-new-demos/4/">FULL SCREEN DEMO</a></li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-depth-1"><a href="http://anpsthemes.com/constructo-new-demos/5/">VERTICAL MENU DEMO</a></li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-depth-1"><a href="http://anpsthemes.com/constructo-new-demos/6/">MODERN DEMO</a></li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-depth-1"><a href="http://anpsthemes.com/constructo-new-demos/7/">ICONIC DEMO</a></li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-depth-1"><a href="http://anpsthemes.com/constructo-new-demos/8/">SIMPLE DEMO</a></li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-depth-1"><a href="http://anpsthemes.com/constructo-new-demos/9/">DARK DEMO</a></li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-depth-1"><a href="http://anpsthemes.com/constructo-new-demos/10/">CRAFTSMAN DEMO</a></li>
+                                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
+                                                                <a href="../../../projects/index.html">STANDARD VIEW</a>
+                                                            </li>
+                                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
+                                                                <a href="../../../projects/index.html">CLASSIC VIEW</a>
+                                                            </li>
+                                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
+                                                                <a href="../../../projects/index.html">RANDOM VIEW</a>
+                                                            </li>
+                                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
+                                                                <a href="../../../projects/index.html">FULL WIDTH</a>
+                                                            </li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-depth-0"><a href="https://anpsthemes.com/constructo-new-demos/4/projects/">Projects</a>
+                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-depth-0">
+                                                        <a href="../../../what-we-do/index.html">What we do</a>
 <ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="https://anpsthemes.com/constructo-new-demos/4/standard-view/">STANDARD VIEW</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="https://anpsthemes.com/constructo-new-demos/4/classic-view/">CLASSIC VIEW</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="https://anpsthemes.com/constructo-new-demos/4/random-view/">RANDOM VIEW</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="https://anpsthemes.com/constructo-new-demos/4/full-width/">FULL WIDTH</a></li>
+                                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
+                                                                <a href="../../../what-we-do/index.html">CONSTRUCTION</a>
+                                                            </li>
+                                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
+                                                                <a href="../../../what-we-do/index.html">RENOVATIONS</a>
+                                                            </li>
+                                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
+                                                                <a href="../../../what-we-do/index.html">CONSULTING</a>
+                                                            </li>
+                                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
+                                                                <a href="../../../what-we-do/index.html">BIG PROJECTS</a>
+                                                            </li>
+                                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
+                                                                <a href="../../../what-we-do/index.html">ARCHITECTURE</a>
+                                                            </li>
+                                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
+                                                                <a href="../../../what-we-do/index.html">CONCRETE TRANSPORT</a>
+                                                            </li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-depth-0"><a href="https://anpsthemes.com/constructo-new-demos/4/what-we-do/">What we do</a>
-<ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="https://anpsthemes.com/constructo-new-demos/4/construction/">CONSTRUCTION</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="https://anpsthemes.com/constructo-new-demos/4/renovations/">RENOVATIONS</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="https://anpsthemes.com/constructo-new-demos/4/consulting/">CONSULTING</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="https://anpsthemes.com/constructo-new-demos/4/big-projects/">BIG PROJECTS</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="https://anpsthemes.com/constructo-new-demos/4/architecture/">ARCHITECTURE</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="https://anpsthemes.com/constructo-new-demos/4/concrete-transport/">CONCRETE TRANSPORT</a></li>
+                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0">
+                                                        <a href="../../../about-us/index.html">About us</a>
+                                                    </li>
+                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0">
+                                                        <a href="../../../blog/index.html">Blog</a>
+                                                    </li>
+                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0">
+                                                        <a href="../../../contact-us/index.html">Contact us</a>
+                                                    </li>
 </ul>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0"><a href="https://anpsthemes.com/constructo-new-demos/4/about-us/">About us</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-depth-0"><a href="https://anpsthemes.com/constructo-new-demos/4/blog/">Blog</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0"><a href="https://anpsthemes.com/constructo-new-demos/4/contact-us/">Contact us</a></li>
-</ul>                                </nav>
-                                                                    <div class="site-search-toggle">
-                                        <button class="fa fa-search"><span class="sr-only">Search</span></button>
-                                                                            </div>
-                                                                <button class="navbar-toggle" type="button">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <i class="fa fa-bars" aria-hidden="true"></i>
-                                </button>
+                                            </nav>
                             </div>
                                                     </div>
                                             </div>
                     </div>
                                             </header>
-                                    <div class='page-heading ' style="background-image: url(http://anpsthemes.com/constructo/wp-content/uploads/2014/12/page-heading21.jpg);">
+                        
+                        <div class='page-heading ' style="background-image: url(../../../wp-content/uploads/img/project-bg.jpg);">
                             <div class='container'>
                                         <h1>Modern Building</h1>                                
-                                        <ul class='breadcrumbs'><li><a href="https://anpsthemes.com/constructo-new-demos/4">Home</a></li><li>Modern Building</li></ul>                            </div>
-                        </div>
-                                                                            
-                        <section class="container portfolio-single">
-        <div class="row">
-                        <div class='col-md-12'>
-                <div class="col-md-8"><div class='gallery'><div class='gallery-inner'><div class='item'>
-                    <a class='prettyphoto' data-rel='prettyPhoto[portfolio]' href='https://anpsthemes.com/constructo-new-demos/4/wp-content/uploads/2014/12/22.jpg'>
-                        <img alt='2'  src='https://anpsthemes.com/constructo-new-demos/4/wp-content/uploads/2014/12/22.jpg'></a></div><div class='item'>
-                            <a class='prettyphoto' data-rel='prettyPhoto[portfolio]' href='https://anpsthemes.com/constructo-new-demos/4/wp-content/uploads/2014/11/house3.jpg'>
-                                <img alt='house3'  src='https://anpsthemes.com/constructo-new-demos/4/wp-content/uploads/2014/11/house3.jpg'></a></div>
-                                <div class='item'><a class='prettyphoto' data-rel='prettyPhoto[portfolio]' href='https://anpsthemes.com/constructo-new-demos/4/wp-content/uploads/2014/12/42.jpg'>
-                                    <img alt='4'  src='https://anpsthemes.com/constructo-new-demos/4/wp-content/uploads/2014/12/42.jpg'></a></div></div></div></div>
-<div class="col-md-4">
-    <div class="wpb-content-wrapper"><div class="vc_row wpb_row vc_row-fluid vc_custom_1418650600843"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h5 class='heading-content  style-1' >
-        <span>PROJECT DESCRIPTION</span></h5></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
-	<div class="wpb_text_column wpb_content_element" >
-		<div class="wpb_wrapper">
-           <p> 🏗️ Project 1– Residential House, Ngong</p>
-              <ul>
-               
-                <li>Location: Ngong, Kenya</li>
-                <li>Status: Ongoing (Expected Completion: 2026)</li>
-                <li>Scope: Design + Build | Project Management</li>
-                <li>Team Lead: David Situma</li>
-            </ul>
-            <p>This stunning double-storey residential home in Ngong is a showcase of contemporary architecture, intelligent space planning, and seamless design-build integration. Currently under development, the home blends luxury aesthetics with functionality — tailored to suit a modern Kenyan family lifestyle.</p>
-
-            <h3>🔍PROJECT OVERVIEW</h3>
-            <p>
-     This stunning double-storey residential home in Ngong is a showcase of contemporary architecture, intelligent space planning, and seamless design-build integration. 
-Currently under development, the home blends luxury aesthetics with functionality — tailored to suit a modern Kenyan family lifestyle.</p>
-		
-<ul>
-    <h3>📐 What We Did</h3>
-    <li>Full architectural design, structural layouts, and council submission drawings</li>
-    <li>3D visualizations and client concept development</li>
-    <li>Project management from ground-breaking to execution</li>
-    <li>Material selection, BOQ planning, and site supervision</li>
-</ul>
-
-
-<p style="font-weight: bolder;">🧱 Key Features</p>
-<ul>
-    <li>Grand entry porch with modern double-height pillars</li>
-    <li>Open plan living-dining-kitchen layout with natural light optimization</li>
-    <li>Upper-floor balconies and family lounge</li>
-    <li>Integrated garage and curved canopy roofing system</li>
-    <li>Sleek modern facade with high-end finishes and landscape allowance</li>
-</ul>
-
-
-<p style="font-weight: bolder;">🎯 Client Benefit</p>
-
-<ul>
-    <li>With Bridan Design Build’s single-contract model, the client enjoys:</li>
-    <li>Faster delivery timelines</li>
-    <li>Strict cost control & budget clarity</li>
-    <li>Direct coordination from design to completion</li>
-    <li>Peace of mind with one dedicated team leading the entire process</li>
-</ul>
-
-
-
-
-
-</div>
-	</div>
-<div class="vc_row wpb_row vc_row-fluid vc_custom_1418650606516"><div class="wpb_column vc_column_container vc_col-sm-12">
-    <div class="vc_column-inner"><div class="wpb_wrapper"><h5 class='heading-content  style-1' >
-        <span>PROJECT BACKERS</span></h5></div></div></div></div><div class="vc_row wpb_row vc_row-fluid">
-            <div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
-	<div  class="wpb_single_image wpb_content_element vc_align_left wpb_content_element">
-		
-		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img fetchpriority="high" decoding="async" width="743" height="564" src="https://anpsthemes.com/constructo-new-demos/4/wp-content/uploads/2014/12/man.jpg" class="vc_single_image-img attachment-full" alt="" title="man" srcset="https://anpsthemes.com/constructo-new-demos/4/wp-content/uploads/2014/12/man.jpg 743w, https://anpsthemes.com/constructo-new-demos/4/wp-content/uploads/2014/12/man-300x227.jpg 300w, https://anpsthemes.com/constructo-new-demos/4/wp-content/uploads/2014/12/man-270x204.jpg 270w, https://anpsthemes.com/constructo-new-demos/4/wp-content/uploads/2014/12/man-370x280.jpg 370w, https://anpsthemes.com/constructo-new-demos/4/wp-content/uploads/2014/12/man-360x273.jpg 360w, https://anpsthemes.com/constructo-new-demos/4/wp-content/uploads/2014/12/man-263x199.jpg 263w" sizes="(max-width: 743px) 100vw, 743px" /></div>
-		</figure>
-	</div>
-</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
-	<div class="wpb_text_column wpb_content_element" >
-		<div class="wpb_wrapper">
-            			<p>This modern building project showcases innovative design and sustainable construction techniques, creating a functional and aesthetically pleasing space for its occupants. From concept to completion, every detail was carefully considered to ensure a high-quality result.</p>
-
-		</div>
-	</div>
-</div></div></div></div>
-</div>    <div class="row">
-        <div class="col-md-12 buttons folionav">
-            <a href="https://anpsthemes.com/constructo-new-demos/4/portfolio/interior-concept/" rel="prev">
-                <button class="btn btn-lg style-5">
-                    <i class="fa fa-angle-left"></i> &nbsp; prev</button></a>                    
-                </div>
-    </div>
-</div>            </div>
-                    </div>
-    </section>
-</div>
-  
-<footer class="site-footer style-1">
-            <div class="container">
-        <div class="row">
-                            <div class="col-md-3 col-xs-12"><div id="anpsimages-2" class="widget-container widget_anpsimages">
-                    <h3 class="widget-title">About us</h3>
-        
-        <img alt="wp-content/uploads/img/bridanlogo-removebg-preview.png" src="../img/bridanlogo.PNG" style="max-width: 70px; height: auto;">
-   
-        </div><div id="text-4" class="widget-container widget_text">			
-			<div class="textwidget">
-				<p>Bridan Design Build Ltd. is a locally owned company incorporated in Kenya. We offer a straight forward method of project delivery.Our goal is to pro- vide a unified flow of work from the initial concept design to construction completion.</p>
-</div>
-		</div></div>
-                <div class="col-md-3 col-xs-12"><div id="nav_menu-2" class="widget-container widget_nav_menu"><h3 class="widget-title">Navigation</h3><div class="menu-main-menu-container"><ul id="menu-main-menu-1" class="menu"><li id="menu-item-691" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-691"><a href="" aria-current="page">Home</a>
-<ul class="sub-menu">
-	<li id="menu-item-692" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-692"><a href="">CLASSIC DEMO</a></li>
-	<li id="menu-item-726" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-726"><a href="">LIMITLESS DEMO</a></li>
-	<li id="menu-item-724" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-724"><a href="">EXTRAVAGANT DEMO</a></li>
-	<li id="menu-item-725" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-725"><a href="" aria-current="page">FULL SCREEN DEMO</a></li>
-	<li id="menu-item-778" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-778"><a href="">VERTICAL MENU DEMO</a></li>
-	<li id="menu-item-779" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-779"><a href="">MODERN DEMO</a></li>
-	<li id="menu-item-780" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-780"><a href="">ICONIC DEMO</a></li>
-	<li id="menu-item-781" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-781"><a href="">SIMPLE DEMO</a></li>
-	<li id="menu-item-782" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-782"><a href="">DARK DEMO</a></li>
-	<li id="menu-item-783" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-783"><a href="/">CRAFTSMAN DEMO</a></li>
-</ul>
-</li>
-<li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-22"><a href="projects/index.html">Projects</a>
-<ul class="sub-menu">
-	<li id="menu-item-664" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-664"><a href="standard-view/">STANDARD VIEW</a></li>
-	<li id="menu-item-663" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-663"><a href="classic-view/">CLASSIC VIEW</a></li>
-	<li id="menu-item-662" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-662"><a href="random-view/">RANDOM VIEW</a></li>
-	<li id="menu-item-668" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-668"><a href="full-width/">FULL WIDTH</a></li>
-</ul>
-</li>
-<li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24"><a href="what-we-do/index.html">What we do</a>
-<ul class="sub-menu">
-	<li id="menu-item-384" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-384"><a href="construction/">CONSTRUCTION</a></li>
-	<li id="menu-item-383" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-383"><a href="renovations/">RENOVATIONS</a></li>
-	<li id="menu-item-382" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-382"><a href="consulting/">CONSULTING</a></li>
-	<li id="menu-item-381" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-381"><a href="big-projects/">BIG PROJECTS</a></li>
-	<li id="menu-item-380" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-380"><a href="architecture/">ARCHITECTURE</a></li>
-	<li id="menu-item-379" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-379"><a href="concrete-transport/">CONCRETE TRANSPORT</a></li>
-</ul>
-</li>
-<li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="about-us/index.html">About us</a></li>
-<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="blog/index.html">Blog</a></li>
-<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="contact-us/index.html">Contact us</a></li>
-</ul></div></div></div>
-                <div class="col-md-3 tablets-clear col-xs-12"><div id="tag_cloud-2" class="widget-container widget_tag_cloud"><h3 class="widget-title">Tags</h3><div class="tagcloud"><a href="tag/big/" class="tag-cloud-link tag-link-9 tag-link-position-1" style="font-size: 12pt;">big</a>
-<a href="tag/buildings-2/" class="tag-cloud-link tag-link-10 tag-link-position-2" style="font-size: 12pt;">buildings</a>
-<a href="tag/home-2/" class="tag-cloud-link tag-link-12 tag-link-position-3" style="font-size: 12pt;">home</a>
-<a href="tag/modern/" class="tag-cloud-link tag-link-13 tag-link-position-4" style="font-size: 12pt;">modern</a>
-<a href="tag/simple/" class="tag-cloud-link tag-link-14 tag-link-position-5" style="font-size: 12pt;">simple</a></div>
-</div></div>
-                <div class="col-md-3 col-xs-12"><div id="anpsrecentprojects-2" class="widget-container anps-recent-posts"><h3 class="widget-title">Our recent projects</h3><ul class="widget_recent_entries">            
-            
-            <li>
-                <a href="portfolio/modern-building/">Modern Building</a>
-            </li>
-
-                    
-            
-            <li>
-                <a href="portfolio/interior-concept/">Interior Concept</a>
-            </li>
-
-                    
-            
-            <li>
-                <a href="portfolio/corporate-concept/">Corporate concept</a>
-            </li>
-
-                    
-            
-            <li>
-                <a href="portfolio/corporate-tower/">Corporate Tower</a>
-            </li>
-
-                    
-            
-            <li>
-                <a href="portfolio/sea-side-residence/">Sea side residence</a>
-            </li>
-
-        </ul></div></div>
-            	</div>
-    </div>
-                <div class="copyright-footer">
-            <div class="container">
-                <div class="row">
-                                            <div class="text-center"><div id="text-5" class="widget-container widget_text">			<div class="textwidget">Bridan Build Design | © 2025 BRIDAN, All rights reserved</div>
-		</div></div>
-                                    </div>
+                                <ul class='breadcrumbs'><li><a href="../../../index.html">Home</a></li><li>Modern Building</li></ul>
             </div>
         </div>
-    </footer>
-
-    <script>
-      jQuery(function($) {
-                        $("#constructionsite").parallax("50%", 0.6);
-                });
-  </script>
-     </div>
-
-<div id="scrolltop" class="fixed scrollup"><a href="#"  title="Scroll to top"><i class="fa fa-angle-up"></i></a></div>
-<input type="hidden" id="theme-path" value="wp-content/themes/constructo" />
-
-		<script>
-			window.RS_MODULES = window.RS_MODULES || {};
-			window.RS_MODULES.modules = window.RS_MODULES.modules || {};
-			window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
-			window.RS_MODULES.defered = true;
-			window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
-			window.RS_MODULES.type = 'compiled';
-		</script>
-		<script type="text/html" id="wpb-modifications"> window.wpbCustomElement = 1; </script><link href="//fonts.googleapis.com/css?family=PT+Sans:400%7CMontserrat:400%2C500&display=swap" rel="stylesheet" property="stylesheet" media="all" type="text/css" >
-
-<script>
-		if(typeof revslider_showDoubleJqueryError === "undefined") {function revslider_showDoubleJqueryError(sliderID) {console.log("You have some jquery.js library include that comes after the Slider Revolution files js inclusion.");console.log("To fix this, you can:");console.log("1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on");console.log("2. Find the double jQuery.js inclusion and remove it");return "Double Included jQuery Library";}}
-</script>
-			<link rel="preload" as="font" id="rs-icon-set-revicon-woff" href="wp-content/plugins/revslider/sr6/assets/fonts/revicons/revicons.woff" type="font/woff" crossorigin="anonymous" media="all" />
-<link rel='stylesheet' id='vc_font_awesome_5_shims-css' href='wp-content/plugins/js_composer/assets/lib/vendor/node_modules/@fortawesome/fontawesome-free/css/v4-shims.min.css?ver=7.8' type='text/css' media='all' />
-<link rel='stylesheet' id='vc_font_awesome_5-css' href='wp-content/plugins/js_composer/assets/lib/vendor/node_modules/@fortawesome/fontawesome-free/css/all.min.css?ver=7.8' type='text/css' media='all' />
-<link rel='stylesheet' id='vc_tta_style-css' href='wp-content/plugins/js_composer/assets/css/js_composer_tta.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='rs-plugin-settings-css' href='wp-content/plugins/revslider/sr6/assets/css/rs6.css' type='text/css' media='all' />
-<style id='rs-plugin-settings-inline-css' type='text/css'>
-.tp-caption a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}		#rev_slider_2_1_wrapper .hermes.tparrows{cursor:pointer;background:rgba(0,0,0,0.5);width:30px;height:110px;position:absolute;display:block;z-index:1000}#rev_slider_2_1_wrapper .hermes.tparrows:before{font-family:'revicons';font-size:15px;color:#ffffff;display:block;line-height:110px;text-align:center;  transform:translatex(0px);  -webkit-transform:translatex(0px);  transition:all 0.3s;  -webkit-transition:all 0.3s}#rev_slider_2_1_wrapper .hermes.tparrows.tp-leftarrow:before{content:'\e824'}#rev_slider_2_1_wrapper .hermes.tparrows.tp-rightarrow:before{content:'\e825'}#rev_slider_2_1_wrapper .hermes.tparrows.tp-leftarrow.rs-touchhover:before{transform:translatex(-20px);  -webkit-transform:translatex(-20px);   opacity:0}#rev_slider_2_1_wrapper .hermes.tparrows.tp-rightarrow.rs-touchhover:before{transform:translatex(20px);  -webkit-transform:translatex(20px);   opacity:0}#rev_slider_2_1_wrapper .hermes .tp-arr-allwrapper{overflow:hidden;  position:absolute;width:180px;  height:140px;  top:0px;  left:0px;  visibility:hidden;   -webkit-transition:-webkit-transform 0.3s 0.3s; transition:transform 0.3s 0.3s; -webkit-perspective:1000px; perspective:1000px}#rev_slider_2_1_wrapper .hermes.tp-rightarrow .tp-arr-allwrapper{right:0px;left:auto}#rev_slider_2_1_wrapper .hermes.tparrows.rs-touchhover .tp-arr-allwrapper{visibility:visible}#rev_slider_2_1_wrapper .hermes .tp-arr-imgholder{width:180px;position:absolute; left:0px;top:0px;height:110px; transform:translatex(-180px); -webkit-transform:translatex(-180px); transition:all 0.3s; transition-delay:0.3s}#rev_slider_2_1_wrapper .hermes.tp-rightarrow .tp-arr-imgholder{transform:translatex(180px); -webkit-transform:translatex(180px)}#rev_slider_2_1_wrapper .hermes.tparrows.rs-touchhover .tp-arr-imgholder{transform:translatex(0px);  -webkit-transform:translatex(0px)}#rev_slider_2_1_wrapper .hermes .tp-arr-titleholder{top:110px; width:180px; text-align:left;  display:block; padding:0px 10px; line-height:30px; background:#000; background:rgba(0,0,0,0.75); color:#ffffff; font-weight:600; position:absolute; font-size:12px; white-space:nowrap; letter-spacing:1px; -webkit-transition:all 0.3s; transition:all 0.3s; -webkit-transform:rotatex(-90deg); transform:rotatex(-90deg); -webkit-transform-origin:50% 0; transform-origin:50% 0; box-sizing:border-box}#rev_slider_2_1_wrapper .hermes.tparrows.rs-touchhover .tp-arr-titleholder{-webkit-transition-delay:0.6s; transition-delay:0.6s; -webkit-transform:rotatex(0deg); transform:rotatex(0deg)}
-</style>
-<script type="text/javascript" src="wp-includes/js/comment-reply.min.js?ver=6.6.3" id="comment-reply-js" async="async" data-wp-strategy="async"></script>
-<script type="text/javascript" src="wp-includes/js/dist/hooks.min.js?ver=2810c76e705dd1a53b18" id="wp-hooks-js"></script>
-<script type="text/javascript" src="wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
-<script type="text/javascript" id="wp-i18n-js-after">
-/* <![CDATA[ */
-wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
-/* ]]> */
-</script>
-<script type="text/javascript" src="wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.9.8" id="swv-js"></script>
-<script type="text/javascript" id="contact-form-7-js-extra">
-/* <![CDATA[ */
-var wpcf7 = {"api":{"root":"/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
-/* ]]> */
-</script>
-<script type="text/javascript" src="wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.9.8" id="contact-form-7-js"></script>
-<script type="text/javascript" src="wp-content/plugins/revslider/sr6/assets/js/rbtools.min.js?ver=6.7.15" id="tp-tools-js"></script>
-<script type="text/javascript" src="wp-content/themes/constructo/js/countto.js?ver=6.6.3" id="countto-js"></script>
-<script type="text/javascript" src="wp-includes/js/imagesloaded.min.js?ver=5.0.0" id="imagesloaded-js"></script>
-<script type="text/javascript" src="wp-content/themes/constructo/js/doubletaptogo.js?ver=6.6.3" id="doubletap-js"></script>
-<script type="text/javascript" src="wp-content/themes/constructo/js/owl/owl.carousel.js?ver=6.6.3" id="owl-js"></script>
-<script type="text/javascript" id="functions-js-extra">
-/* <![CDATA[ */
-/* ]]> */
-</script>
-<script type="text/javascript" src="wp-content/themes/constructo/js/functions.js?ver=4.3.2" id="functions-js"></script>
-<script type="text/javascript" src="wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=7.8" id="wpb_composer_front_js-js"></script>
-<script type="text/javascript" src="wp-content/plugins/js_composer/assets/lib/vc/vc_accordion/vc-accordion.min.js?ver=7.8" id="vc_accordion_script-js"></script>
-<script type="text/javascript" src="wp-content/plugins/js_composer/assets/lib/vc/vc-tta-autoplay/vc-tta-autoplay.min.js?ver=7.8" id="vc_tta_autoplay_script-js"></script>
-<script type="text/javascript" src="wp-content/plugins/js_composer/assets/lib/vc/vc_tabs/vc-tabs.min.js?ver=7.8" id="vc_tabs_script-js"></script>
-<script type="text/javascript" src="wp-content/plugins/js_composer/assets/lib/vendor/node_modules/skrollr/dist/skrollr.min.js?ver=7.8" id="vc_jquery_skrollr_js-js"></script>
-<script></script><script id="rs-initialisation-scripts">
-		var	tpj = jQuery;
-
-		var	revapi2;
-
-		if(window.RS_MODULES === undefined) window.RS_MODULES = {};
-		if(RS_MODULES.modules === undefined) RS_MODULES.modules = {};
-		RS_MODULES.modules["revslider21"] = {once: RS_MODULES.modules["revslider21"]!==undefined ? RS_MODULES.modules["revslider21"].once : undefined, init:function() {
-			window.revapi2 = window.revapi2===undefined || window.revapi2===null || window.revapi2.length===0  ? document.getElementById("rev_slider_2_1") : window.revapi2;
-			if(window.revapi2 === null || window.revapi2 === undefined || window.revapi2.length==0) { window.revapi2initTry = window.revapi2initTry ===undefined ? 0 : window.revapi2initTry+1; if (window.revapi2initTry<20) requestAnimationFrame(function() {RS_MODULES.modules["revslider21"].init()}); return;}
-			window.revapi2 = jQuery(window.revapi2);
-			if(window.revapi2.revolution==undefined){ revslider_showDoubleJqueryError("rev_slider_2_1"); return;}
-			revapi2.revolutionInit({
-					revapi:"revapi2",
-					sliderLayout:"fullscreen",
-					visibilityLevels:"1240,1024,778,480",
-					gridwidth:"1170,1024,778,480",
-					gridheight:"700,550,600,600",
-					lazyType:"smart",
-					spinner:"spinner0",
-					perspectiveType:"local",
-					responsiveLevels:"1240,1024,778,480",
-					progressBar:{disableProgressBar:true},
-					navigation: {
-						mouseScrollNavigation:false,
-						touch: {
-							touchenabled:true
-						},
-						arrows: {
-							enable:true,
-							tmp:"<div class=\"tp-arr-allwrapper\">	<div class=\"tp-arr-imgholder\"></div>	<div class=\"tp-arr-titleholder\">{{title}}</div>	</div>",
-							style:"hermes",
-							hide_onmobile:true,
-							hide_under:500,
-							left: {
-								h_offset:0
-							},
-							right: {
-								h_offset:0
-							}
-						}
-					},
-					parallax: {
-						levels:[5,10,15,20,25,30,35,40,45,50,47,48,49,50,51,55],
-						type:"scroll",
-						disable_onmobile:true
-					},
-					viewPort: {
-						global:true,
-						globalDist:"-200px",
-						enable:false,
-						visible_area:"20%"
-					},
-					fallbacks: {
-						allowHTML5AutoPlayOnAndroid:true
-					},
-			});
-			
-		}} // End of RevInitScript
-
-		if (window.RS_MODULES.checkMinimal!==undefined) { window.RS_MODULES.checkMinimal();};
-	</script>
-
-</body>
-</html>
