@@ -50,7 +50,103 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 </style>
 <link rel='stylesheet' id='contact-form-7-css' href='https://anpsthemes.com/constructo-new-demos/4/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.9.8' type='text/css' media='all' />
 <link rel='stylesheet' id='js_composer_front-css' href='https://anpsthemes.com/constructo-new-demos/4/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=7.8' type='text/css' media='all' />
-<link rel='stylesheet' id='font-awesome-css' href='https://anpsthemes.com/constructo-new-demos/4/wp-content/themes/constructo/css/font-awesome.min.css?ver=6.6.3' type='text/css' media='all' />
+	<!-- Font Awesome for Icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	
+	<!-- Enhanced Social Media Styling -->
+	<style>
+		.top-bar .social li a {
+			display: flex !important;
+			align-items: center !important;
+			padding: 10px 15px !important;
+			border-radius: 8px !important;
+			margin: 0 8px !important;
+			transition: all 0.3s ease !important;
+			background-color: rgba(255, 255, 255, 0.1) !important;
+			border: 2px solid transparent !important;
+			font-weight: 700 !important;
+			text-shadow: 1px 1px 2px rgba(0,0,0,0.3) !important;
+		}
+		
+		.top-bar .social li a:hover {
+			transform: translateY(-3px) !important;
+			box-shadow: 0 6px 15px rgba(0,0,0,0.3) !important;
+			border-color: currentColor !important;
+		}
+		
+		.top-bar .social li a i {
+			margin-right: 10px !important;
+			font-size: 20px !important;
+			filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.5)) !important;
+		}
+		
+		.top-bar .social li a span {
+			font-weight: 800 !important;
+			font-size: 15px !important;
+			letter-spacing: 0.5px !important;
+		}
+		
+		/* Facebook specific */
+		.top-bar .social li a[href*="facebook"] {
+			color: #1877F2 !important;
+			background-color: rgba(24, 119, 242, 0.1) !important;
+		}
+		.top-bar .social li a[href*="facebook"]:hover {
+			background-color: #1877F2 !important;
+			color: white !important;
+			border-color: #1877F2 !important;
+		}
+		
+		/* Twitter specific */
+		.top-bar .social li a[href*="x.com"] {
+			color: #000000 !important;
+			background-color: rgba(0, 0, 0, 0.1) !important;
+		}
+		.top-bar .social li a[href*="x.com"]:hover {
+			background-color: #000000 !important;
+			color: white !important;
+			border-color: #000000 !important;
+		}
+		
+		/* LinkedIn specific */
+		.top-bar .social li a[href*="linkedin"] {
+			color: #0077B5 !important;
+			background-color: rgba(0, 119, 181, 0.1) !important;
+		}
+		.top-bar .social li a[href*="linkedin"]:hover {
+			background-color: #0077B5 !important;
+			color: white !important;
+			border-color: #0077B5 !important;
+		}
+		
+		/* TikTok specific */
+		.top-bar .social li a[href*="tiktok"] {
+			color: #000000 !important;
+			background-color: rgba(0, 0, 0, 0.1) !important;
+		}
+		.top-bar .social li a[href*="tiktok"]:hover {
+			background-color: #000000 !important;
+			color: white !important;
+			border-color: #000000 !important;
+		}
+		
+		/* Enhanced top bar styling */
+		.top-bar {
+			background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
+			border-bottom: 3px solid #f39c12 !important;
+		}
+		
+		.top-bar .anpstext-desc {
+			font-weight: 600 !important;
+			color: #ecf0f1 !important;
+			text-shadow: 1px 1px 2px rgba(0,0,0,0.5) !important;
+		}
+		
+		.top-bar .fa {
+			color: #f39c12 !important;
+			filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.5)) !important;
+		}
+	</style>
 <link rel='stylesheet' id='owl-css-css' href='https://anpsthemes.com/constructo-new-demos/4/wp-content/themes/constructo/js/owl/assets/owl.carousel.css?ver=6.6.3' type='text/css' media='all' />
 <link rel='stylesheet' id='theme_main_style-css' href='https://anpsthemes.com/constructo-new-demos/4/wp-content/themes/constructo/style.css?ver=6.6.3' type='text/css' media='all' />
 <link rel='stylesheet' id='swipebox-css' href='https://anpsthemes.com/constructo-new-demos/4/wp-content/themes/constructo/css/swipebox.css?ver=6.6.3' type='text/css' media='all' />
@@ -136,155 +232,140 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
                         <button class="site-search-close">&times;</button>
                     </div>
                 </div>
-                <div class="transparent top-bar">
-                <div class="container">
-                    <!-- Left Side - Social Media Icons Only -->
-                    <div class="top-bar-left">
-                        <div id="anpssocial-2" class="widget-container widget_anpssocial">
-                            <ul class="social">
-                                <li>
-                                    <a href="https://www.facebook.com/profile.php?id=100086679484882" target="_blank" aria-label="Facebook" class="social-3d">
-                                        <i class="fab fa-facebook-f"></i>
-                                        <span class="sr-only">Facebook</span>
-                </a>
-                            </li>
-                                        <li>
-                                    <a href="https://x.com/bridanbuild" target="_blank" aria-label="Twitter" class="social-3d">
-                                        <i class="fab fa-twitter"></i>
-                                        <span class="sr-only">Twitter</span>
-                </a>
-                            </li>
-                                        <li>
-                                    <a href="https://www.linkedin.com/in/bridan-design-build-653b631a7/" target="_blank" aria-label="LinkedIn" class="social-3d">
-                                        <i class="fab fa-linkedin-in"></i>
-                                        <span class="sr-only">LinkedIn</span>
-                </a>
-                            </li>
-                                        <li>
-                                    <a href="https://www.tiktok.com/@bridandesignbuild" target="_blank" aria-label="TikTok" class="social-3d">
-                                        <i class="fab fa-tiktok"></i>
-                                        <span class="sr-only">TikTok</span>
-                </a>
-                            </li>
-                    </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- Right Side - Working Hours, WhatsApp, Email -->
-                    <div class="top-bar-right">
-                        <!-- Working Hours -->
-                        <div id="anpstext-4" class="widget-container widget_anpstext">
-        <div class="anpstext-wrap">
-                                                <span class="fa fa-clock-o"></span>
-                                                        <div class="anpstext-desc">Mon - Sat: 7:00 - 17:00</div>
-                    </div>
-                        </div>
+
                         
-                        <!-- WhatsApp -->
-                        <div id="anpstext-2" class="widget-container widget_anpstext">
-        <div class="anpstext-wrap">
-                                <a href="https://wa.me/254741400368" target="_blank" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
-                                    <i class="fa fa-whatsapp" style="color: #25D366;"></i>
-                                    <div class="anpstext-desc">+254 741 400368</div>
-                                </a>
-                    </div>
-                        </div>
-                        
-                        <!-- Email -->
-                        <div id="anpstext-3" class="widget-container widget_anpstext">
-        <div class="anpstext-wrap">
-                                                <span class="fa fa-envelope-o"></span>
-                                <div class="anpstext-desc">
-                                    <a href="mailto:bridandesignbuild@gmail.com" style="color: inherit; text-decoration: none;">bridandesignbuild@gmail.com</a>
-                    </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Top Bar Close Button -->
-                <button class="top-bar-close">
-                        <i class="fa fa-chevron-down"></i>
-                        <span class="sr-only">Close top bar</span>
-                    </button>
-                        
-		
-		
-	<header class="site-header site-header-sticky site-header-layout-normal site-header-style-transparent site-header-dropdown-1" >
-            <div class="nav-wrap">
-                <div class="container">
-                        <!-- Logo -->
-                        <div class="site-logo">
-                            <a href="../index.html">
-                                <img style="height:90px;width:70px;" class="logo-sticky" alt="Bridan Design Build Logo" src="../wp-content/uploads/img/bridanlogo.PNG">
-                                <img style="height:90px;width:70px;" class="logo-mobile" alt="Bridan Design Build" src="../wp-content/uploads/img/bridanlogo.PNG">
-                                <img class="logo-desktop" style="width:90px;height:70px" alt="Bridan Design Build Logo" src="../wp-content/uploads/img/bridanlogo.PNG">
-                                </a>
-							</div>
-                        
-                        <!-- Navigation Menu -->
-                                            <div class="nav-bar-wrapper">
-                            <div class="nav-bar">
-								<nav class="site-navigation">
-        <ul id="menu-main-menu" class="">
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-depth-0">
-                                            <a href="../index.html">Home</a>
-</li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-depth-0">
-                                            <a href="../projects/index.html">Projects</a>
-<ul class="sub-menu">
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="../projects/index.html">STANDARD VIEW</a>
-                                                </li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="../projects/index.html">CLASSIC VIEW</a>
-                                                </li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="../projects/index.html">RANDOM VIEW</a>
-                                                </li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="../projects/index.html">FULL WIDTH</a>
-                                                </li>
-</ul>
-</li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-depth-0 current-menu-item">
-                                            <a href="index.html">What we do</a>
-<ul class="sub-menu">
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="index.html">CONSTRUCTION</a>
-                                                </li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="index.html">RENOVATIONS</a>
-                                                </li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="index.html">CONSULTING</a>
-                                                </li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="index.html">BIG PROJECTS</a>
-                                                </li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="index.html">ARCHITECTURE</a>
-                                                </li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="index.html">CONCRETE TRANSPORT</a>
-                                                </li>
-</ul>
-</li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0">
-                                            <a href="../about-us/index.html">About us</a>
-                                        </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0">
-                                            <a href="../blog/index.html">Blog</a>
-                                        </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0">
-                                            <a href="../contact-us/index.html">Contact us</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
+		<!-- Top Bar - Social Icons on Left, Contact Info on Right -->
+		<div class="transparent top-bar">
+			<div class="container">
+				<!-- Left Side - Social Media Icons Only -->
+				<div class="top-bar-left">
+					<div id="anpssocial-2" class="widget-container widget_anpssocial">
+						<ul class="social">
+							<li>
+								<a href="https://www.facebook.com/profile.php?id=100086679484882" target="_blank" rel="noopener" aria-label="Facebook" class="social-3d">
+									<i class="fab fa-facebook-f"></i>
+									<span class="sr-only">Facebook</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://x.com/bridanbuild" target="_blank" rel="noopener" aria-label="Twitter" class="social-3d">
+									<i class="fab fa-twitter"></i>
+									<span class="sr-only">Twitter</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.linkedin.com/in/bridan-design-build-653b631a7/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-3d">
+									<i class="fab fa-linkedin-in"></i>
+									<span class="sr-only">LinkedIn</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.tiktok.com/@bridandesignbuild" target="_blank" rel="noopener" aria-label="TikTok" class="social-3d">
+									<i class="fab fa-tiktok"></i>
+									<span class="sr-only">TikTok</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<!-- Right Side - Working Hours, WhatsApp, Email -->
+				<div class="top-bar-right">
+					<!-- Working Hours -->
+					<div id="anpstext-4" class="widget-container widget_anpstext">
+						<div class="anpstext-wrap">
+							<span class="fa fa-clock-o"></span>
+							<div class="anpstext-desc">Mon - Sat: 7:00 - 17:00</div>
 						</div>
 					</div>
+					
+					<!-- WhatsApp -->
+					<div id="anpstext-2" class="widget-container widget_anpstext">
+						<div class="anpstext-wrap">
+							                                <a href="https://wa.me/254741400368" target="_blank" rel="noopener" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+								<i class="fa fa-whatsapp" style="color: #25D366;"></i>
+								<div class="anpstext-desc">+254 741 400368</div>
+							</a>
+						</div>
+					</div>
+					
+					<!-- Email -->
+					<div id="anpstext-3" class="widget-container widget_anpstext">
+						<div class="anpstext-wrap">
+							<span class="fa fa-envelope-o"></span>
+							<div class="anpstext-desc">
+								<a href="mailto:bridandesignbuild@gmail.com" style="color: inherit; text-decoration: none;">bridandesignbuild@gmail.com</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Top Bar Close Button -->
+			<button class="top-bar-close">
+				<i class="fa fa-chevron-down"></i>
+				<span class="sr-only">Close top bar</span>
+			</button>
+		</div>
+		
+	<header class="site-header site-header-sticky site-header-layout-normal site-header-style-normal site-header-dropdown-1" >
+            <div class="nav-wrap">
+                <div class="container">
+                    <div class="site-logo"><a href="">                    
+			<img style="height:90px;width:70px;" class="logo-sticky" alt="Bridan Design Build Logo" src="../wp-content/uploads/img/bridanlogo.PNG">
+            <img style="height:33px;width:158px;" class="logo-mobile" alt="Bridan Design Build" src="../wp-content/uploads/img/bridanlogo.PNG">
+            <img class="logo-desktop" style="width:90px;height:70px" alt="Bridan Design Build Logo" src="../wp-content/uploads/img/bridanlogo.PNG">
+                                </a>
+							</div>
+                                            <div class="nav-bar-wrapper">
+                            <div class="nav-bar">
+                                            
+								<nav class="site-navigation">
+        <ul id="menu-main-menu" class="">
+										
+			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-depth-0">
+				<a href="../index.html">Home</a>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-depth-0"><a href="../projects/index.html">Projects</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="../projects/index.html"> STANDARD VIEW</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="../projects/index.html"> CLASSIC VIEW</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="../projects/index.html"> RANDOM VIEW</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="../projects/index.html"> FULL WIDTH</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-9 current_page_item menu-item-has-children menu-item-depth-0"><a href="index.html">What we do</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="index.html">CONSTRUCTION</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="index.html">RENOVATIONS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="index.html">CONSULTING</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="index.html">BIG PROJECTS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="index.html">ARCHITECTURE</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="index.html">CONCRETE TRANSPORT </a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0"><a href="../about-us/index.html">About us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0"><a href="../blog/index.html">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0"><a href="../contact-us/index.html">Contact us</a></li>
+</ul>                                </nav>
+                                                                   
+                                                                
+<button class="navbar-toggle" type="button">
+                                    
+	<span class="sr-only">Toggle navigation</span>
+                                    
+	<i class="fa fa-bars" aria-hidden="true"></i>
+                                
+</button>
+                            </div>
+                                                    
+						</div>
+                                            
+					</div>
                     </div>
+                                            
+				
+				
 				</header>
                                                 
 <section class="container">
@@ -296,11 +377,11 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
 <script type="text/javascript" src="wp-content/plugins/revslider/sr6/assets/js/rs6.min.js"></script>
         
                                     
-<div class='page-heading ' style="background-image: url(http://anpsthemes.com/constructo/wp-content/uploads/2014/12/page-heading2.jpg);">
+<div class='page-heading ' style="background-image: url(../wp-content/uploads/img/page-heading2.jpg);">
                             <div class='container'>
                                         <h1>What we do</h1>                                
 										
-		<ul class='breadcrumbs'><li><a href="https://anpsthemes.com/constructo-new-demos/4">Home</a></li>
+		<ul class='breadcrumbs'><li><a href="../index.html">Home</a></li>
 			<li>What we do</li></ul>                            
 		</div>
                         </div>
@@ -309,13 +390,13 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
     <div class="row">
 
             <aside class="sidebar col-md-3">
-        <div id="nav_menu-3" class="widget-container widget_nav_menu"><div class="menu-side-menu-container"><ul id="menu-side-menu" class="menu"><li id="menu-item-275" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-9 current_page_item menu-item-275"><a href="https://anpsthemes.com/constructo-new-demos/4/what-we-do/" aria-current="page">ALL SERVICES</a></li>
-<li id="menu-item-274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-274"><a href="https://anpsthemes.com/constructo-new-demos/4/construction/">CONSTRUCTION</a></li>
-<li id="menu-item-273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-273"><a href="https://anpsthemes.com/constructo-new-demos/4/renovations/">RENOVATIONS</a></li>
-<li id="menu-item-271" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-271"><a href="https://anpsthemes.com/constructo-new-demos/4/big-projects/">BIG PROJECTS</a></li>
-<li id="menu-item-272" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-272"><a href="https://anpsthemes.com/constructo-new-demos/4/consulting/">CONSULTING</a></li>
-<li id="menu-item-270" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-270"><a href="https://anpsthemes.com/constructo-new-demos/4/architecture/">ARCHITECTURE</a></li>
-<li id="menu-item-269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269"><a href="https://anpsthemes.com/constructo-new-demos/4/concrete-transport/">CONCRETE TRANSPORT</a></li>
+        <div id="nav_menu-3" class="widget-container widget_nav_menu"><div class="menu-side-menu-container"><ul id="menu-side-menu" class="menu"><li id="menu-item-275" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-9 current_page_item menu-item-275"><a href="index.html" aria-current="page">ALL SERVICES</a></li>
+<li id="menu-item-274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-274"><a href="index.html">CONSTRUCTION</a></li>
+<li id="menu-item-273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-273"><a href="index.html">RENOVATIONS</a></li>
+<li id="menu-item-271" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-271"><a href="index.html">BIG PROJECTS</a></li>
+<li id="menu-item-272" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-272"><a href="index.html">CONSULTING</a></li>
+<li id="menu-item-270" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-270"><a href="index.html">ARCHITECTURE</a></li>
+<li id="menu-item-269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269"><a href="index.html">CONCRETE TRANSPORT</a></li>
 </ul></div></div><div id="anpsdownload-2" class="widget-container widget_anpsdownload">
                     <h3 class="widget-title">Download your files</h3>
                     <div class="anps_download">
@@ -392,7 +473,7 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
 <h5 class='heading-content  style-1' ><span>CONSULTING</span></h5>
 	<div class="wpb_text_column wpb_content_element" >
 		<div class="wpb_wrapper">
-			<p>Not sure how to start? No worries, we can take for your documentation, consulting and project plans,  from start to finalization. Let us succeed together for your goals.</p>
+			<p>Not sure how to start? No worries, we can take for your documentation, consulting and project plans,  from start to finalization. Let us succeed together for your goals.</p>
 
 		</div>
 	</div>
@@ -437,106 +518,65 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
                             <div class="col-md-3 col-xs-12"><div id="anpsimages-2" class="widget-container widget_anpsimages">
                     <h3 class="widget-title">About us</h3>
         
-        <img alt="BRIDAN DESIGN BUILD LIMITED" src="../wp-content/uploads/img/bridanlogo.PNG" style="max-width: 70px; height: auto;">
+        <img alt="BRIDANDESIGNBULD LIMITED" src="../img/bridanlogo.PNG" style="max-width: 100px; height: auto;">
 
-        </div><div id="text-4" class="widget-container widget_text">			<div class="textwidget"><p>Bridan Design Build Ltd. is a locally owned company incorporated in Kenya. We offer a straightforward method of project delivery. Our goal is to provide a unified flow of work from the initial concept design to construction completion.</p>
+        </div><div id="text-4" class="widget-container widget_text">			
+            <div class="textwidget">
+                <p>Bridan Design Build Ltd. is a locally owned company incorporated in Kenya. We offer a straight forward method of project delivery.Our goal is to pro- vide a unified flow of work from the initial concept design to construction completion.</p>
 </div>
 		</div></div>
-                <div class="col-md-3 col-xs-12">
-                    <div id="nav_menu-2" class="widget-container widget_nav_menu">
-                        <h3 class="widget-title">Navigation</h3>
-                        <div class="menu-main-menu-container">
-                            <ul id="menu-main-menu-1" class="menu">
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home">
-                                    <a href="../index.html">Home</a>
-                                </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
-                                    <a href="../projects/index.html">Projects</a>
-                                    <ul class="sub-menu">
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="../projects/index.html">All Projects</a>
-                                        </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="../projects/ans project/anpsthemes.com/constructo-new-demos/4/portfolio/modern-building/index.html">Modern Building</a>
-                                        </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="../projects/ans project/anpsthemes.com/constructo-new-demos/4/portfolio/de-vries-africa-office-fitout/index.html">De Vries Africa</a>
-                                        </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="../projects/ans project/anpsthemes.com/constructo-new-demos/4/portfolio/lil-motors-isuzu-dealership/index.html">Lil Motors Isuzu</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
-                                    <a href="index.html">What We Do</a>
-                                    <ul class="sub-menu">
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="index.html">CONSTRUCTION</a>
-                                        </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="index.html">RENOVATIONS</a>
-                                        </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="index.html">CONSULTING</a>
-                                        </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="index.html">BIG PROJECTS</a>
-                                        </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="index.html">ARCHITECTURE</a>
-                                        </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="index.html">CONCRETE TRANSPORT</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                    <a href="../about-us/index.html">About Us</a>
-                                </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                    <a href="../blog/index.html">Blog</a>
-                                </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                    <a href="../contact-us/index.html">Contact Us</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 tablets-clear col-xs-12"><div id="tag_cloud-2" class="widget-container widget_tag_cloud"><h3 class="widget-title">Tags</h3><div class="tagcloud"><a href="tag/big/" class="tag-cloud-link tag-link-9 tag-link-position-1" style="font-size: 12pt;">big</a>
-<a href="tag/buildings-2/" class="tag-cloud-link tag-link-10 tag-link-position-2" style="font-size: 12pt;">buildings</a>
-<a href="tag/home-2/" class="tag-cloud-link tag-link-12 tag-link-position-3" style="font-size: 12pt;">home</a>
-<a href="tag/modern/" class="tag-cloud-link tag-link-13 tag-link-position-4" style="font-size: 12pt;">modern</a>
-<a href="tag/simple/" class="tag-cloud-link tag-link-14 tag-link-position-5" style="font-size: 12pt;">simple</a></div>
+                <div class="col-md-3 col-xs-12"><div id="nav_menu-2" class="widget-container widget_nav_menu"><h3 class="widget-title">Navigation</h3><div class="menu-main-menu-container"><ul id="menu-main-menu-1" class="menu"><li class="menu-item"><a href="../index.html">Home</a></li>
+<li class="menu-item"><a href="../projects/index.html">Projects</a></li>
+<li class="menu-item"><a href="index.html">What we do</a></li>
+<li class="menu-item"><a href="../about-us/index.html">About us</a></li>
+<li class="menu-item"><a href="../blog/index.html">Blog</a></li>
+<li class="menu-item"><a href="../contact-us/index.html">Contact us</a></li>
+</ul></div></div></div>
+                <div class="col-md-3 tablets-clear col-xs-12"><div id="tag_cloud-2" class="widget-container widget_tag_cloud"><h3 class="widget-title">Tags</h3><div class="tagcloud"><a href="#" class="tag-cloud-link tag-link-9 tag-link-position-1" style="font-size: 12pt;">consultation</a>
+<a href="#" class="tag-cloud-link tag-link-10 tag-link-position-2" style="font-size: 12pt;">estimate</a>
+<a href="#" class="tag-cloud-link tag-link-12 tag-link-position-3" style="font-size: 12pt;">quote</a>
+<a href="#" class="tag-cloud-link tag-link-13 tag-link-position-4" style="font-size: 12pt;">support</a>
+<a href="#" class="tag-cloud-link tag-link-14 tag-link-position-5" style="font-size: 12pt;">contact</a></div>
 </div></div>
-                <div class="col-md-3 col-xs-12">
-                    <div id="anpsrecentprojects-2" class="widget-container anps-recent-posts">
-                        <h3 class="widget-title">Our recent projects</h3>
-                        <ul class="widget_recent_entries">            
-                            <li>
-                                <a href="../projects/ans project/anpsthemes.com/constructo-new-demos/4/portfolio/modern-building/index.html">Modern Building</a>
-                            </li>
-                            <li>
-                                <a href="../projects/ans project/anpsthemes.com/constructo-new-demos/4/portfolio/de-vries-africa-office-fitout/index.html">De Vries Africa Office</a>
-                            </li>
-                            <li>
-                                <a href="../projects/ans project/anpsthemes.com/constructo-new-demos/4/portfolio/lil-motors-isuzu-dealership/index.html">Lil Motors Isuzu</a>
-                            </li>
-                            <li>
-                                <a href="../projects/ans project/anpsthemes.com/constructo-new-demos/4/portfolio/freds-ranch-hotel-rooms/index.html">Fred's Ranch Hotel</a>
-                            </li>
-                            <li>
-                                <a href="../projects/ans project/anpsthemes.com/constructo-new-demos/4/portfolio/mukinduri-gazebo-bedroom-extension/index.html">Mukinduri Gazebo</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <div class="col-md-3 col-xs-12"><div id="anpsrecentprojects-2" class="widget-container anps-recent-posts"><h3 class="widget-title">Our recent projects</h3><ul class="widget_recent_entries">            
+            
+            <li>
+                <a href="../projects/index.html">Modern Kitchen Renovation - Bridan Design Build</a>
+            </li>
+
+                    
+            
+            <li>
+                <a href="../projects/index.html">Luxury Bathroom Remodel - Bridan Design Build</a>
+            </li>
+
+                    
+            
+            <li>
+                <a href="../projects/index.html">Corporate concept</a>
+            </li>
+
+                    
+            
+            <li>
+                <a href="../projects/index.html">Corporate Tower</a>
+            </li>
+
+                    
+            
+            <li>
+                <a href="../projects/index.html">Sea side residence</a>
+            </li>
+
+        </ul></div></div>
             	</div>
     </div>
                 <div class="copyright-footer">
             <div class="container">
                 <div class="row">
-                                            <div class="text-center"><div id="text-5" class="widget-container widget_text">			<div class="textwidget">Bridan Build Design | © 2025 BRIDAN, All rights reserved</div>
+                                            
+                    <div class="text-center"><div id="text-5" class="widget-container widget_text">			
+                                                <div class="textwidget">BRIDANDESIGNBULD LIMITED | © 2025 buildwithbridan.com, All rights reserved</div>
 		</div></div>
                                     </div>
             </div>
@@ -544,6 +584,11 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
     </footer>
 
      </div>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/254741400368" class="whatsapp-btn" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
 
 <div id="scrolltop" class="fixed scrollup"><a href="#"  title="Scroll to top"><i class="fa fa-angle-up"></i></a></div>
 <input type="hidden" id="theme-path" value="https://anpsthemes.com/constructo-new-demos/4/wp-content/themes/constructo" />
@@ -599,139 +644,5 @@ var anps = {"search_placeholder":"Search...","home_url":"https:\/\/anpsthemes.co
 <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyB1XyVVcRpbPjzaRCwMbM32lTE3T2WYPog&amp;v=3.57&amp;loading=async&amp;callback=initMap&amp;ver=6.6.3" id="gmap3_link-js"></script>
 <script type="text/javascript" src="https://anpsthemes.com/constructo-new-demos/4/wp-content/themes/constructo/js/gmap3.min.js?ver=6.6.3" id="gmap3-js"></script>
 <script></script>
-
-<!-- Enhanced Dropdown Menu Styling -->
-<style>
-	.site-navigation .menu-item-has-children > a::after {
-		content: '▼';
-		margin-left: 8px;
-		font-size: 12px;
-		color: #ffc329;
-		transition: transform 0.3s ease;
-	}
-	
-	.site-navigation .menu-item-has-children:hover > a::after {
-		transform: rotate(180deg);
-	}
-	
-	.site-navigation .sub-menu {
-		display: none;
-		position: absolute;
-		top: 100%;
-		left: 0;
-		background: #fff;
-		min-width: 200px;
-		box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-		border-radius: 8px;
-		padding: 10px 0;
-		z-index: 1000;
-		border: 1px solid #e0e0e0;
-	}
-	
-	.site-navigation .menu-item-has-children:hover .sub-menu {
-		display: block;
-		animation: fadeInDown 0.3s ease;
-	}
-	
-	.site-navigation .sub-menu li {
-		list-style: none;
-		margin: 0;
-	}
-	
-	.site-navigation .sub-menu a {
-		display: block;
-		padding: 12px 20px;
-		color: #333 !important;
-		text-decoration: none;
-		transition: all 0.3s ease;
-		border-bottom: 1px solid #f0f0f0;
-		font-weight: 500;
-	}
-	
-	.site-navigation .sub-menu a:hover {
-		background: #ffc329;
-		color: #fff !important;
-		padding-left: 25px;
-	}
-	
-	.site-navigation .sub-menu li:last-child a {
-		border-bottom: none;
-	}
-	
-	@keyframes fadeInDown {
-		from {
-			opacity: 0;
-			transform: translateY(-10px);
-		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
-	
-	/* Mobile Dropdown Enhancement */
-	@media (max-width: 991px) {
-		.site-navigation .sub-menu {
-			position: static;
-			display: none;
-			background: transparent;
-			box-shadow: none;
-			border: none;
-			padding-left: 20px;
-		}
-		
-		.site-navigation .menu-item-has-children.active .sub-menu {
-			display: block;
-		}
-		
-		.site-navigation .sub-menu a {
-			color: #fff !important;
-			border-bottom: none;
-			padding: 8px 20px;
-		}
-		
-		.site-navigation .sub-menu a:hover {
-			background: transparent;
-			color: #ffc329 !important;
-			padding-left: 25px;
-		}
-	}
-</style>
-
-<!-- Enhanced Dropdown JavaScript -->
-<script>
-	document.addEventListener('DOMContentLoaded', function() {
-		// Mobile Dropdown Toggle Functionality
-		document.querySelectorAll('.menu-item-has-children > a').forEach(menuItem => {
-			menuItem.addEventListener('click', function(e) {
-				if (window.innerWidth <= 991) {
-					e.preventDefault();
-					const parent = this.parentElement;
-					const subMenu = parent.querySelector('.sub-menu');
-					
-					// Close other open dropdowns
-					document.querySelectorAll('.menu-item-has-children.active').forEach(activeItem => {
-						if (activeItem !== parent) {
-							activeItem.classList.remove('active');
-						}
-					});
-					
-					// Toggle current dropdown
-					parent.classList.toggle('active');
-				}
-			});
-		});
-		
-		// Close dropdowns when clicking outside
-		document.addEventListener('click', function(e) {
-			if (!e.target.closest('.site-navigation')) {
-				document.querySelectorAll('.menu-item-has-children.active').forEach(item => {
-					item.classList.remove('active');
-				});
-			}
-		});
-	});
-</script>
-
 </body>
 </html>
