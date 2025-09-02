@@ -4,29 +4,17 @@ Allow: /
 # Sitemap
 Sitemap: https://buildwithbridan.com/sitemap.xml
 
-# Allow all major search engines
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
 # Disallow admin areas
 Disallow: /wp-admin/
 Disallow: /wp-includes/
 Disallow: /wp-content/plugins/
 Disallow: /wp-content/themes/
-Disallow: /wp-json/
+Disallow: /wp-content/uploads/
 
-# Allow important content
-Allow: /wp-content/uploads/
+# Allow important files
 Allow: /wp-content/uploads/img/
+Allow: /wp-content/uploads/2024/
+Allow: /wp-content/uploads/2025/
 
-# Crawl delay (optional)
+# Crawl delay
 Crawl-delay: 1
