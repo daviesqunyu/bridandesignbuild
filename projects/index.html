@@ -318,6 +318,32 @@
             opacity: 1 !important;
         }
         
+        /* Navigation styling to match screenshot format */
+        .site-navigation a {
+            color: #333 !important;
+            font-weight: 500 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
+            font-size: 13px !important;
+        }
+        
+        .site-navigation a:hover {
+            color: #ffc329 !important;
+        }
+        
+        .site-navigation .current-menu-item a {
+            color: #ffc329 !important;
+        }
+        
+        .search-toggle .fa-search {
+            color: #333 !important;
+            font-size: 16px !important;
+        }
+        
+        .navbar-toggle .fa-bars {
+            color: #333 !important;
+        }
+        
         /* Add top padding to body when header is sticky */
         body.sticky-header-active {
             padding-top: 160px !important;
@@ -1985,6 +2011,122 @@
         .vc_custom_1418303236699 {
             margin-top: -75px !important;
         }
+    </style>
+    
+    <!-- Header Background Color Override - Apply consistent styling across all pages -->
+    <style type="text/css">
+        /* Header Background Color Override - Apply to ALL pages including home */
+        .top-bar {
+            background-color: #2c323c !important;
+            color: #ffffff !important;
+            position: sticky !important;
+            top: 0 !important;
+            z-index: 1001 !important;
+        }
+        
+        .nav-wrap {
+            background-color: #2c323c !important;
+            border-bottom: 2px solid #ffc329 !important;
+            position: sticky !important;
+            top: 0 !important;
+            z-index: 1000 !important;
+        }
+        
+        /* Fix white space in header */
+        .site-header {
+            background-color: #2c323c !important;
+        }
+        
+        .site-header-style-normal {
+            background-color: #2c323c !important;
+        }
+        
+        /* Ensure navigation text is visible on dark background */
+        .site-navigation a {
+            color: #ffffff !important;
+            font-weight: 600 !important;
+            text-shadow: none !important;
+        }
+        
+        .site-navigation a:hover {
+            color: #ffc329 !important;
+        }
+        
+        /* Fix dropdown visibility and ensure black text */
+        .site-navigation .sub-menu {
+            background-color: #ffffff !important;
+            border: 1px solid #e9ecef !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        
+        .site-navigation .sub-menu a {
+            color: #000000 !important;
+            background-color: transparent !important;
+            font-weight: 500 !important;
+            font-size: 13px !important;
+            padding: 8px 15px !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            text-decoration: none !important;
+        }
+        
+        .site-navigation .sub-menu a:hover {
+            background-color: #ffc329 !important;
+            color: #000000 !important;
+        }
+        
+        /* Override any yellow text colors */
+        .site-navigation .sub-menu a[style*="color: #ffc329"],
+        .site-navigation .sub-menu a[style*="color: seashell"] {
+            color: #000000 !important;
+        }
+        
+        /* Mobile dropdown styling */
+        @media (max-width: 991px) {
+            .site-navigation .sub-menu {
+                background-color: #ffffff !important;
+                border: 1px solid #e9ecef !important;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                position: relative !important;
+            }
+            
+            .site-navigation .sub-menu a {
+                color: #000000 !important;
+                background-color: transparent !important;
+                font-weight: 500 !important;
+                font-size: 13px !important;
+                padding: 8px 15px !important;
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                text-decoration: none !important;
+            }
+            
+            .site-navigation .sub-menu a:hover {
+                background-color: #ffc329 !important;
+                color: #000000 !important;
+            }
+        }
+        
+
+        
+        /* Top bar text styling for visibility */
+        .top-bar, .top-bar a {
+            color: #000000 !important;
+        }
+        
+        /* Remove background image from body to prevent conflicts */
+        body, html {
+            background-image: none !important;
+            background-color: #ffffff !important;
+        }
     </style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
 	<!-- Enhanced Social Media Styling -->
 	<style>
@@ -2802,6 +2944,252 @@
 		body.sticky-header-active {
 			padding-top: 160px !important;
 		}
+		
+		/* Search Overlay Styles */
+		.site-search {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 99999;
+			background: rgba(0, 0, 0, 0.8);
+			backdrop-filter: blur(5px);
+		}
+		
+		.site-search.active {
+			display: block;
+		}
+		
+		.search-overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		
+		.search-content {
+			position: relative;
+			width: 100%;
+			max-width: 600px;
+			padding: 0 20px;
+		}
+		
+		.search-form {
+			width: 100%;
+		}
+		
+		.search-input {
+			width: 100%;
+			background: transparent;
+			border: none;
+			border-bottom: 2px solid #ffc329;
+			color: white;
+			font-size: 24px;
+			padding: 20px 0;
+			outline: none;
+			text-align: center;
+		}
+		
+		.search-input::placeholder {
+			color: rgba(255, 255, 255, 0.7);
+		}
+		
+		.search-close {
+			position: absolute;
+			top: -60px;
+			right: 0;
+			background: none;
+			border: none;
+			color: white;
+			font-size: 30px;
+			cursor: pointer;
+			transition: color 0.3s ease;
+		}
+		
+		.search-close:hover {
+			color: #ffc329;
+		}
+		
+		/* Mobile search overlay */
+		@media (max-width: 768px) {
+			.search-input {
+				font-size: 18px;
+				padding: 15px 0;
+			}
+			
+			.search-close {
+				top: -50px;
+				font-size: 24px;
+			}
+		}
+		
+		/* Mobile Toggle Buttons - Force Visibility */
+		@media (max-width: 991px) {
+			.navbar-toggle {
+				display: block !important;
+				background: #ffc329 !important;
+				border: none !important;
+				padding: 12px 15px !important;
+				border-radius: 6px !important;
+				cursor: pointer !important;
+				transition: all 0.3s ease !important;
+				position: relative !important;
+				z-index: 1001 !important;
+				margin-left: 10px !important;
+			}
+			
+			.navbar-toggle:hover {
+				background: #e6b025 !important;
+				transform: translateY(-2px) !important;
+				box-shadow: 0 4px 12px rgba(255, 195, 41, 0.4) !important;
+			}
+			
+			.navbar-toggle .fa-bars {
+				color: #333 !important;
+				font-size: 18px !important;
+				font-weight: bold !important;
+			}
+			
+			.search-toggle {
+				display: block !important;
+				background: #6c757d !important;
+				border: none !important;
+				padding: 12px 15px !important;
+				border-radius: 6px !important;
+				cursor: pointer !important;
+				transition: all 0.3s ease !important;
+				position: relative !important;
+				z-index: 1001 !important;
+				margin-right: 10px !important;
+			}
+			
+			.search-toggle:hover {
+				background: #5a6268 !important;
+				transform: translateY(-2px) !important;
+				box-shadow: 0 4px 12px rgba(108, 117, 125, 0.4) !important;
+			}
+			
+			.search-toggle .fa-search {
+				color: white !important;
+				font-size: 16px !important;
+				font-weight: bold !important;
+			}
+			
+			/* Ensure nav bar wrapper shows both buttons */
+			.nav-bar-wrapper {
+				display: flex !important;
+				align-items: center !important;
+				justify-content: flex-end !important;
+				gap: 10px !important;
+			}
+			
+			/* Mobile navigation positioning */
+			.site-navigation {
+				display: none !important;
+				position: absolute !important;
+				top: 100% !important;
+				left: 0 !important;
+				right: 0 !important;
+				background: white !important;
+				box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+				z-index: 1000 !important;
+				padding: 20px !important;
+			}
+			
+			.site-navigation.active {
+				display: block !important;
+			}
+			
+			.site-navigation ul {
+				flex-direction: column !important;
+				gap: 15px !important;
+			}
+			
+			.site-navigation li {
+				width: 100% !important;
+			}
+			
+			.site-navigation a {
+				display: block !important;
+				padding: 12px 15px !important;
+				color: #333 !important;
+				text-decoration: none !important;
+				border-radius: 6px !important;
+				transition: all 0.3s ease !important;
+				font-weight: 500 !important;
+			}
+			
+			.site-navigation a:hover {
+				background: #ffc329 !important;
+				color: #333 !important;
+				transform: translateX(5px) !important;
+			}
+		}
+		
+		/* Extra small mobile devices */
+		@media (max-width: 480px) {
+			.navbar-toggle,
+			.search-toggle {
+				padding: 10px 12px !important;
+			}
+			
+			.navbar-toggle .fa-bars,
+			.search-toggle .fa-search {
+				font-size: 16px !important;
+			}
+			
+			.nav-bar-wrapper {
+				gap: 8px !important;
+			}
+		}
+		
+		/* Mobile Top Bar Visibility */
+		@media (max-width: 991px) {
+			.top-bar {
+				display: block !important;
+				visibility: visible !important;
+				opacity: 1 !important;
+				position: relative !important;
+				z-index: 1002 !important;
+				width: 100% !important;
+				height: auto !important;
+				min-height: 40px !important;
+				padding: 8px 0 !important;
+			}
+			
+			.top-bar .container {
+				flex-direction: column !important;
+				gap: 10px !important;
+				text-align: center !important;
+			}
+			
+			.top-bar-left,
+			.top-bar-right {
+				justify-content: center !important;
+				flex-wrap: wrap !important;
+			}
+			
+			.top-bar .social-links a {
+				margin: 0 8px !important;
+				font-size: 14px !important;
+			}
+			
+			.top-bar .contact-info {
+				flex-wrap: wrap !important;
+				justify-content: center !important;
+				gap: 8px !important;
+			}
+			
+			.top-bar .contact-item {
+				font-size: 12px !important;
+			}
+		}
 	</style>
 </head>
 
@@ -2853,15 +3241,15 @@
                                 <i class="fa fa-envelope" style="color: #6c757d; margin-right: 8px;"></i>
                                 <a href="mailto:bridandesignbuild@gmail.com" style="color: #6c757d; text-decoration: none;">bridandesignbuild@gmail.com</a>
                             </span>
+                    </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                        </div>
+                        
 
 
-
-            <header class="site-header site-header-sticky site-header-style-normal site-header-layout-normal site-header-dropdown-1" style="background-color: white;">
-                <div class="nav-wrap" style="background-color: white;">
+            <header class="site-header site-header-sticky site-header-layout-normal site-header-style-normal site-header-dropdown-1">
+                <div class="nav-wrap" style="background-color: white; border-bottom: 1px solid #e9ecef;">
                     <div class="container">
                         <div class="site-logo"><a href="/index.html">  
                              
@@ -2877,25 +3265,25 @@
         <ul id="menu-main-menu" class=""><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-depth-0"><a href="/index.html" style="color: #333; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='#333'">Home</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-depth-0 current-menu-item"><a href="/projects/index.html" style="color: #ffc329; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='#ffc329'">Projects</a>
 <ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/lil-motors-isuzu-dealership/index.html">LIL MOTORS ISUZU</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/freds-ranch-hotel-rooms/index.html">DE VRIES AFRICA</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/freds-ranch-hotel-rooms/index.html">FRED'S RANCH HOTEL</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/twiva-media-office-renovation/index.html">TWIVA MEDIA OFFICE</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/Kitale-Club-Main- Kitchen-Facility/index.html">KITALE CLUB</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/res_home_ngong/index.html">NGONG RESIDENTIAL</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/grand-westpeak-kilimani/index.html">GRAND-WESTPEAK</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/Residential House, Lukhhome, Trans Nzoia/index.html">LUKHHOME HOUSE</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/mukinduri-gazebo-bedroom-extension/index.html">MUKINDURI GAZEBO</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/ngong-kitchen-design/index.html">KITCHEN DESIGN</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/milimani-kitale-residential/index.html">MILIMANI RESIDENTIAL</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/lil-motors-isuzu-dealership/index.html">Lil Motors Isuzu </a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/de-vries-africa-office-fitout/index.html">De Vries Africa</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/freds-ranch-hotel-rooms/index.html">Fred's Ranch Hotel</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/twiva-media-office-renovation/index.html">Twiva Media Office</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/Kitale-Club-Main- Kitchen-Facility/index.html">Kitale Club</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/res_home_ngong/index.html">Ngong Residential</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/grand-westpeak-kilimani/index.html">Grand-Westpeak</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/Residential House, Lukhhome, Trans Nzoia/index.html">Lukhhome House</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/mukinduri-gazebo-bedroom-extension/index.html">Mukinduri Gazebo</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/ngong-kitchen-design/index.html">Kitchen Design</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/milimani-kitale-residential/index.html">Milimani Residential</a></li>
 
 
 </ul>
 </li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-depth-0"><a href="/what-we-do/index.html" style="color: #333; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='#333'">What we do</a>
 <ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/what-we-do/architectural_services/index.html">CONSTRUCTION</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/what-we-do/interior_design_services/index.html">RENOVATIONS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/what-we-do/architectural_services/index.html">ARCHITECTURE</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/what-we-do/interior_design_services/index.html">INTERIOR DESIGN</a></li>
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/what-we-do/building_construction/index.html">BUILDING CONSTRUCTION</a></li>
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/what-we-do/construction_managemet/index.html">CONSTRUCTION MANAGEMENT</a></li>
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/what-we-do/skilled_labour-provision/index.html">SKILLED LABOUR PROVISION</a></li>
@@ -2912,6 +3300,20 @@
                                     <span class="sr-only">Search</span>
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </button>
+                                
+                                <!-- Search Overlay -->
+                                <div class="site-search" id="site-search">
+                                    <div class="search-overlay">
+                                        <div class="search-content">
+                                            <form class="search-form" action="/search" method="get">
+                                                <input type="text" name="s" class="search-input" placeholder="type and press 'enter'" autocomplete="off">
+                                            </form>
+                                            <button class="search-close" onclick="closeSearch()">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
      
                                                                 <button class="navbar-toggle" type="button">
                                     <span class="sr-only">Toggle navigation</span>
@@ -3150,6 +3552,50 @@
     <script type="text/javascript" src="/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=7.8" id="wpb_composer_front_js-js"></script>
     <script type="text/javascript" src="/wp-content/themes/constructo/js/jquery.isotope.min.js?ver=6.6.3" id="anps-isotope-js"></script>
     <script></script>
+
+    <!-- Search Functions -->
+    <script>
+        // Search toggle function
+        function toggleSearch() {
+            const searchOverlay = document.getElementById('site-search');
+            if (searchOverlay) {
+                searchOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                
+                // Focus on search input
+                const searchInput = searchOverlay.querySelector('.search-input');
+                if (searchInput) {
+                    setTimeout(() => searchInput.focus(), 100);
+                }
+            }
+        }
+        
+        // Close search function
+        function closeSearch() {
+            const searchOverlay = document.getElementById('site-search');
+            if (searchOverlay) {
+                searchOverlay.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+        }
+        
+        // Close search on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeSearch();
+            }
+        });
+        
+        // Close search when clicking outside
+        document.addEventListener('click', function(e) {
+            const searchOverlay = document.getElementById('site-search');
+            if (searchOverlay && searchOverlay.classList.contains('active')) {
+                if (e.target === searchOverlay) {
+                    closeSearch();
+                }
+            }
+        });
+    </script>
 
     <!-- Enhanced Dropdown JavaScript -->
     <script>
