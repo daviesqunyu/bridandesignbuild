@@ -377,6 +377,84 @@
 			color: #ebebeb !important;
 			font-weight: bold !important;
 		}
+
+		/* Top bar collapse functionality */
+		.top-bar-close {
+			position: absolute !important;
+			bottom: -15px !important;
+			left: 50% !important;
+			transform: translateX(-50%) !important;
+			background: transparent !important;
+			border: none !important;
+			border-radius: 0 !important;
+			width: 30px !important;
+			height: 30px !important;
+			display: flex !important;
+			align-items: center !important;
+			justify-content: center !important;
+			cursor: pointer !important;
+			transition: all 0.3s ease !important;
+			z-index: 10001 !important;
+		}
+
+		.top-bar-close:hover {
+			background: transparent !important;
+			transform: translateX(-50%) scale(1.1) !important;
+		}
+
+		.top-bar-close i {
+			color: #ffc329 !important;
+			font-size: 16px !important;
+			transition: all 0.3s ease !important;
+		}
+
+		.top-bar-close:hover i {
+			color: #ffc329 !important;
+		}
+
+		.top-bar.collapsed {
+			height: 20px !important;
+			overflow: hidden !important;
+		}
+
+		.top-bar.collapsed .container {
+			display: none !important;
+		}
+
+		/* Mobile top bar adjustments */
+		@media (max-width: 991px) {
+			.top-bar {
+				padding: 10px 0 !important;
+			}
+
+			.top-bar .container {
+				flex-direction: column !important;
+				text-align: center !important;
+			}
+
+			.top-bar-left,
+			.top-bar-right {
+				width: 100% !important;
+				margin: 5px 0 !important;
+			}
+
+			.top-bar-right {
+				display: flex !important;
+				flex-direction: column !important;
+				align-items: center !important;
+				gap: 10px !important;
+			}
+
+			.top-bar-close {
+				bottom: -12px !important;
+				width: 25px !important;
+				height: 25px !important;
+			}
+
+			.top-bar-close i {
+				font-size: 10px !important;
+			}
+		}
 		
 		.top-bar a:not(:hover) {
 			color: #ebebeb !important;
@@ -522,6 +600,98 @@
 		
 		.search-toggle:hover .fa-search {
 			color: #ffc329 !important;
+		}
+
+		/* Remove white underline from navigation links */
+		.site-navigation a {
+			text-decoration: none !important;
+			border-bottom: none !important;
+		}
+
+		.site-navigation a:hover {
+			text-decoration: none !important;
+			border-bottom: none !important;
+		}
+
+		/* Desktop search button visibility */
+		@media (min-width: 992px) {
+			.search-toggle {
+				display: flex !important;
+				background: #ffc329 !important;
+				border: 2px solid #ffc329 !important;
+				border-radius: 50% !important;
+				padding: 12px !important;
+				width: 44px !important;
+				height: 44px !important;
+				align-items: center !important;
+				justify-content: center !important;
+				box-shadow: 0 4px 15px rgba(255, 195, 41, 0.4) !important;
+			}
+
+			.search-toggle .fa-search {
+				color: #333 !important;
+				font-size: 18px !important;
+				font-weight: bold !important;
+			}
+
+			/* Hide mobile toggle on desktop */
+			.navbar-toggle {
+				display: none !important;
+			}
+		}
+
+		/* Mobile view - show both buttons */
+		@media (max-width: 991px) {
+			.search-toggle {
+				display: flex !important;
+			}
+
+			.navbar-toggle {
+				display: flex !important;
+			}
+
+			/* Better mobile display */
+			.nav-wrap {
+				padding: 10px 0 !important;
+				min-height: 70px !important;
+			}
+
+			.nav-bar-wrapper {
+				position: relative !important;
+				display: flex !important;
+				align-items: center !important;
+				justify-content: space-between !important;
+				width: 100% !important;
+			}
+
+			.site-logo {
+				position: absolute !important;
+				left: 50% !important;
+				transform: translateX(-50%) !important;
+				z-index: 1000 !important;
+			}
+
+			.site-logo img {
+				max-width: 60px !important;
+				height: auto !important;
+			}
+
+			/* Better button positioning */
+			.search-toggle {
+				position: absolute !important;
+				right: 70px !important;
+				top: 50% !important;
+				transform: translateY(-50%) !important;
+				z-index: 1001 !important;
+			}
+
+			.navbar-toggle {
+				position: absolute !important;
+				right: 20px !important;
+				top: 50% !important;
+				transform: translateY(-50%) !important;
+				z-index: 1001 !important;
+			}
 		}
 		
 		/* Desktop layout - ensure search icon is after navigation */
@@ -1400,6 +1570,13 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
                     </div>
                                                             </div>
                                                                 </div>
+                                                                
+                                                                <!-- Top Bar Close Button -->
+                                                                <button class="top-bar-close">
+                                                                    <i class="fa fa-chevron-down"></i>
+                                                                    <span class="sr-only">Close top bar</span>
+                                                                </button>
+                                                            </div>
                     </div>
                                     <header class="site-header site-header-sticky site-header-layout-normal site-header-style-normal site-header-dropdown-1">
                 <div class="nav-wrap" style="background-color: white; border-bottom: 1px solid #e9ecef;">
@@ -1894,11 +2071,11 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
                     <div id="tag_cloud-2" class="widget-container widget_tag_cloud">
                         <h3 class="widget-title">Tags</h3>
                         <div class="tagcloud">
-                            <a href="tag/big/" class="tag-cloud-link tag-link-9 tag-link-position-1" style="font-size: 12pt;">big</a>
-                            <a href="tag/buildings-2/" class="tag-cloud-link tag-link-10 tag-link-position-2" style="font-size: 12pt;">Builds</a>
-                            <a href="tag/home-2/" class="tag-cloud-link tag-link-12 tag-link-position-3" style="font-size: 12pt;">Homes</a>
-                            <a href="tag/modern/" class="tag-cloud-link tag-link-13 tag-link-position-4" style="font-size: 12pt;">Elegant Design</a>
-                            <a href="tag/simple/" class="tag-cloud-link tag-link-14 tag-link-position-5" style="font-size: 12pt;">Architecture</a>
+                            <a href="/projects/grand-westpeak-kilimani/index.html" class="tag-cloud-link tag-link-9 tag-link-position-1" style="font-size: 12pt;">Grand Westpeak</a>
+                            <a href="/projects/freds-ranch-hotel-rooms/index.html" class="tag-cloud-link tag-link-10 tag-link-position-2" style="font-size: 12pt;">Hotel Design</a>
+                            <a href="/projects/res_home_ngong/index.html" class="tag-cloud-link tag-link-12 tag-link-position-3" style="font-size: 12pt;">Residential</a>
+                            <a href="/projects/de-vries-africa-office-fitout/index.html" class="tag-cloud-link tag-link-13 tag-link-position-4" style="font-size: 12pt;">Office Fitout</a>
+                            <a href="/projects/lil-motors-isuzu-dealership/index.html" class="tag-cloud-link tag-link-14 tag-link-position-5" style="font-size: 12pt;">Dealership</a>
                         </div>
                     </div>
                 </div>
@@ -1940,6 +2117,29 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
     </footer>
 
     <script>
+        // Top bar collapse functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const topBar = document.querySelector('.top-bar');
+            const topBarClose = document.querySelector('.top-bar-close');
+            const topBarContent = document.querySelector('.top-bar .container');
+            
+            if (topBarClose && topBar) {
+                topBarClose.addEventListener('click', function() {
+                    if (topBar.classList.contains('collapsed')) {
+                        // Expand
+                        topBar.classList.remove('collapsed');
+                        topBarContent.style.display = 'flex';
+                        topBarClose.innerHTML = '<i class="fa fa-chevron-down"></i><span class="sr-only">Close top bar</span>';
+                    } else {
+                        // Collapse
+                        topBar.classList.add('collapsed');
+                        topBarContent.style.display = 'none';
+                        topBarClose.innerHTML = '<i class="fa fa-chevron-up"></i><span class="sr-only">Open top bar</span>';
+                    }
+                });
+            }
+        });
+
         // Sticky header functionality
         document.addEventListener('DOMContentLoaded', function() {
             const header = document.querySelector('.site-header-sticky');

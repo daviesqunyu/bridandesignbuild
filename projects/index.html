@@ -1126,6 +1126,84 @@
             white-space: nowrap !important;
         }
 
+        /* Top bar collapse functionality */
+        .top-bar-close {
+            position: absolute !important;
+            bottom: -15px !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            background: transparent !important;
+            border: none !important;
+            border-radius: 0 !important;
+            width: 30px !important;
+            height: 30px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+            z-index: 10001 !important;
+        }
+
+        .top-bar-close:hover {
+            background: transparent !important;
+            transform: translateX(-50%) scale(1.1) !important;
+        }
+
+        .top-bar-close i {
+            color: #ffc329 !important;
+            font-size: 16px !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .top-bar-close:hover i {
+            color: #ffc329 !important;
+        }
+
+        .top-bar.collapsed {
+            height: 20px !important;
+            overflow: hidden !important;
+        }
+
+        .top-bar.collapsed .container {
+            display: none !important;
+        }
+
+        /* Mobile top bar adjustments */
+        @media (max-width: 991px) {
+            .top-bar {
+                padding: 10px 0 !important;
+            }
+
+            .top-bar .container {
+                flex-direction: column !important;
+                text-align: center !important;
+            }
+
+            .top-bar-left,
+            .top-bar-right {
+                width: 100% !important;
+                margin: 5px 0 !important;
+            }
+
+            .top-bar-right {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 10px !important;
+            }
+
+            .top-bar-close {
+                bottom: -12px !important;
+                width: 25px !important;
+                height: 25px !important;
+            }
+
+            .top-bar-close i {
+                font-size: 10px !important;
+            }
+        }
+
         .top-bar a:not(:hover) {
             color: #ebebeb;
         }
@@ -3246,23 +3324,30 @@
                     </div>
                         </div>
                         
+                        <!-- Top Bar Close Button -->
+                        <button class="top-bar-close">
+                            <i class="fa fa-chevron-down"></i>
+                            <span class="sr-only">Close top bar</span>
+                        </button>
+                    </div>
+                        
 
 
-            <header class="site-header site-header-sticky site-header-layout-normal site-header-style-normal site-header-dropdown-1">
-                <div class="nav-wrap" style="background-color: white; border-bottom: 1px solid #e9ecef;">
+            <header class="site-header site-header-sticky site-header-layout-normal site-header-style-transparent site-header-dropdown-1">
+                                    <div class="nav-wrap">
                     <div class="container">
                         <div class="site-logo"><a href="/index.html">  
                              
-                <img style="height:70px;width:70px;" class="logo-sticky" alt="Bridan Design Build Logo" src="/wp-content/uploads/img/bridanlogo-removebg-preview.png">
-                <img style="height:70px;width:70px;" class="logo-mobile" alt="Bridan Design Build" src="/wp-content/uploads/img/bridanlogo-removebg-preview.png">
-                <img class="logo-desktop" style="width:100px;height:100px" alt="Bridan Design Build Logo" src="/wp-content/uploads/img/bridanlogo-removebg-preview.png">
+                <img style="height:90px;width:70px;" class="logo-sticky" alt="Bridan Design Build Logo" src="/wp-content/uploads/img/bridanlogo-removebg-preview.png">
+                <img style="height:90px;width:70px;" class="logo-mobile" alt="Bridan Design Build" src="/wp-content/uploads/img/bridanlogo-removebg-preview.png">
+                                    <img class="logo-desktop" style="width:90px;height:70px" alt="Bridan Design Build Logo" src="/wp-content/uploads/img/bridanlogo-removebg-preview.png">
             </a>
         </div>
                   <div class="nav-bar-wrapper">
                             <div class="nav-bar">
                                             
 								<nav class="site-navigation">
-        <ul id="menu-main-menu" class=""><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-depth-0"><a href="/index.html" style="color: #333; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='#333'">Home</a></li>
+        <ul id="menu-main-menu" class=""><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-depth-0"><a href="/index.html" style="color: seashell; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='seashell'">Home</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-depth-0 current-menu-item"><a href="/projects/index.html" style="color: #ffc329; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='#ffc329'">Projects</a>
 <ul class="sub-menu">
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/lil-motors-isuzu-dealership/index.html">Lil Motors Isuzu </a></li>
@@ -3280,7 +3365,7 @@
 
 </ul>
 </li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-depth-0"><a href="/what-we-do/index.html" style="color: #333; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='#333'">What we do</a>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-depth-0"><a href="/what-we-do/index.html" style="color: seashell; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='seashell'">What we do</a>
 <ul class="sub-menu">
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/what-we-do/architectural_services/index.html">ARCHITECTURE</a></li>
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/what-we-do/interior_design_services/index.html">INTERIOR DESIGN</a></li>
@@ -3290,15 +3375,15 @@
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/what-we-do/renovations/index.html">RENOVATIONS</a></li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0"><a href="/about-us/index.html" style="color: #333; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='#333'">About us</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0"><a href="/blog/index.html" style="color: #333; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='#333'">Blog</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0"><a href="/contact-us/index.html" style="color: #333; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='#333'">Contact us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0"><a href="/about-us/index.html" style="color: seashell; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='seashell'">About us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0"><a href="/blog/index.html" style="color: seashell; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='seashell'">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0"><a href="/contact-us/index.html" style="color: seashell; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='seashell'">Contact us</a></li>
 </ul>                                
 </nav>
 
-                                                                <button class="search-toggle" type="button" onclick="toggleSearch()">
+                                                                <button class="search-toggle" type="button" onclick="toggleSearch()" style="color: #ffc329;">
                                     <span class="sr-only">Search</span>
-                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                    <i class="fa fa-search" aria-hidden="true" style="color: #ffc329;"></i>
                                 </button>
                                 
                                 <!-- Search Overlay -->
@@ -3315,9 +3400,9 @@
                                     </div>
                                 </div>
      
-                                                                <button class="navbar-toggle" type="button">
+                                                                <button class="navbar-toggle" type="button" onclick="toggleMobileMenu()" style="color: #ffc329;">
                                     <span class="sr-only">Toggle navigation</span>
-                                    <i class="fa fa-bars" aria-hidden="true"></i>
+                                    <i class="fa fa-bars" aria-hidden="true" style="color: #ffc329;"></i>
                                 </button>
                                                                    
                                                                 
@@ -3503,6 +3588,346 @@
         .tp-caption a:hover {
             color: #ffa902
         }
+
+		/* Mobile Navigation Styles */
+		@media (max-width: 991px) {
+			/* Header adjustments for mobile */
+			.site-header {
+				position: relative !important;
+				z-index: 1000 !important;
+			}
+
+			.nav-wrap {
+				position: relative !important;
+				background: rgba(44, 50, 60, 0.95) !important;
+				backdrop-filter: blur(10px) !important;
+			}
+
+			/* Logo adjustments for mobile */
+			.site-logo {
+				display: flex !important;
+				align-items: center !important;
+				justify-content: center !important;
+				width: 100% !important;
+				text-align: center !important;
+			}
+
+			.site-logo img {
+				max-width: 80px !important;
+				height: auto !important;
+			}
+
+			/* Search and menu toggle positioning */
+			.search-toggle {
+				display: flex !important;
+				position: absolute !important;
+				top: 50% !important;
+				right: 70px !important;
+				transform: translateY(-50%) !important;
+				z-index: 1001 !important;
+				background: rgba(255, 195, 41, 0.9) !important;
+				border: 2px solid #ffc329 !important;
+				border-radius: 50% !important;
+				padding: 10px !important;
+				width: 40px !important;
+				height: 40px !important;
+				align-items: center !important;
+				justify-content: center !important;
+				box-shadow: 0 2px 10px rgba(255, 195, 41, 0.3) !important;
+			}
+			
+			.search-toggle .fa-search {
+				color: #333 !important;
+				font-size: 16px !important;
+			}
+
+			.navbar-toggle {
+				display: flex !important;
+				position: absolute !important;
+				top: 50% !important;
+				right: 20px !important;
+				transform: translateY(-50%) !important;
+				z-index: 1001 !important;
+				background: rgba(255, 195, 41, 0.9) !important;
+				border: 2px solid #ffc329 !important;
+				border-radius: 50% !important;
+				padding: 10px !important;
+				width: 40px !important;
+				height: 40px !important;
+				align-items: center !important;
+				justify-content: center !important;
+				box-shadow: 0 2px 10px rgba(255, 195, 41, 0.3) !important;
+			}
+			
+			.navbar-toggle .fa-bars {
+				color: #333 !important;
+				font-size: 16px !important;
+			}
+
+			/* Mobile Navigation Menu */
+			.site-navigation {
+				position: fixed !important;
+				top: 0 !important;
+				left: -100% !important;
+				width: 85% !important;
+				max-width: 320px !important;
+				height: 100vh !important;
+				background: linear-gradient(135deg, rgba(0, 0, 0, 0.98), rgba(44, 50, 60, 0.95)) !important;
+				z-index: 9999 !important;
+				transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+				padding: 100px 0 20px 0 !important;
+				overflow-y: auto !important;
+				box-shadow: 5px 0 25px rgba(0, 0, 0, 0.5) !important;
+			}
+
+			.site-navigation.mobile-active {
+				left: 0 !important;
+			}
+
+			.site-navigation ul {
+				flex-direction: column !important;
+				width: 100% !important;
+				padding: 0 20px !important;
+			}
+
+			.site-navigation li {
+				width: 100% !important;
+				margin: 0 !important;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+				position: relative !important;
+			}
+
+			.site-navigation a {
+				display: block !important;
+				padding: 18px 15px !important;
+				color: #fff !important;
+				font-size: 16px !important;
+				font-weight: 500 !important;
+				text-decoration: none !important;
+				transition: all 0.3s ease !important;
+				position: relative !important;
+			}
+
+			.site-navigation a:hover {
+				color: #ffc329 !important;
+				background: rgba(255, 195, 41, 0.1) !important;
+				padding-left: 25px !important;
+			}
+
+			.site-navigation .sub-menu {
+				position: static !important;
+				display: none !important;
+				background: rgba(255, 195, 41, 0.05) !important;
+				margin: 0 !important;
+				padding: 0 !important;
+				box-shadow: none !important;
+				border-left: 3px solid #ffc329 !important;
+			}
+
+			.site-navigation .sub-menu li {
+				border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+			}
+
+			.site-navigation .sub-menu a {
+				padding: 12px 25px !important;
+				font-size: 14px !important;
+				color: #ccc !important;
+			}
+
+			.site-navigation .sub-menu a:hover {
+				color: #ffc329 !important;
+				background: rgba(255, 195, 41, 0.1) !important;
+			}
+
+			/* Mobile menu overlay */
+			.site-navigation.mobile-active::before {
+				content: '' !important;
+				position: fixed !important;
+				top: 0 !important;
+				left: 0 !important;
+				width: 100vw !important;
+				height: 100vh !important;
+				background: rgba(0, 0, 0, 0.7) !important;
+				z-index: -1 !important;
+				backdrop-filter: blur(5px) !important;
+			}
+
+			/* Content adjustments for mobile */
+			.container {
+				padding: 0 15px !important;
+			}
+
+			/* Page heading adjustments */
+			.page-heading {
+				padding: 60px 0 40px 0 !important;
+				text-align: center !important;
+			}
+
+			.page-heading h1 {
+				font-size: 24px !important;
+				margin-bottom: 10px !important;
+			}
+
+			.breadcrumbs {
+				justify-content: center !important;
+				margin-top: 10px !important;
+			}
+
+			/* Main content centering */
+			.wpb-content-wrapper {
+				padding: 20px 0 !important;
+			}
+
+			/* Ensure content is visible and centered */
+			.vc_row {
+				margin: 0 !important;
+			}
+
+			.vc_column-inner {
+				padding: 15px !important;
+			}
+		}
+
+		/* Extra small screens */
+		@media (max-width: 480px) {
+			.search-toggle {
+				right: 60px !important;
+				width: 35px !important;
+				height: 35px !important;
+				padding: 8px !important;
+			}
+
+			.navbar-toggle {
+				right: 15px !important;
+				width: 35px !important;
+				height: 35px !important;
+				padding: 8px !important;
+			}
+
+			.site-navigation {
+				width: 90% !important;
+				max-width: 280px !important;
+			}
+
+			.site-navigation a {
+				padding: 15px 12px !important;
+				font-size: 15px !important;
+			}
+
+					.page-heading h1 {
+			font-size: 20px !important;
+		}
+	}
+
+	/* Remove white underline from navigation links */
+	.site-navigation a {
+		text-decoration: none !important;
+		border-bottom: none !important;
+	}
+
+	.site-navigation a:hover {
+		text-decoration: none !important;
+		border-bottom: none !important;
+	}
+
+	/* Make search button more visible */
+	.search-toggle {
+		background: #ffc329 !important;
+		border: 2px solid #ffc329 !important;
+		box-shadow: 0 4px 15px rgba(255, 195, 41, 0.4) !important;
+	}
+
+	.search-toggle:hover {
+		background: #e6b025 !important;
+		border-color: #e6b025 !important;
+		transform: translateY(-50%) scale(1.1) !important;
+	}
+
+	.search-toggle .fa-search {
+		color: #333 !important;
+		font-weight: bold !important;
+	}
+
+	/* Desktop search button visibility */
+	@media (min-width: 992px) {
+		.search-toggle {
+			display: flex !important;
+			background: #ffc329 !important;
+			border: 2px solid #ffc329 !important;
+			border-radius: 50% !important;
+			padding: 12px !important;
+			width: 44px !important;
+			height: 44px !important;
+			align-items: center !important;
+			justify-content: center !important;
+			box-shadow: 0 4px 15px rgba(255, 195, 41, 0.4) !important;
+		}
+
+		.search-toggle .fa-search {
+			color: #333 !important;
+			font-size: 18px !important;
+			font-weight: bold !important;
+		}
+
+		/* Hide mobile toggle on desktop */
+		.navbar-toggle {
+			display: none !important;
+		}
+	}
+
+	/* Mobile view - show both buttons */
+	@media (max-width: 991px) {
+		.search-toggle {
+			display: flex !important;
+		}
+
+		.navbar-toggle {
+			display: flex !important;
+		}
+
+		/* Better mobile display */
+		.nav-wrap {
+			padding: 10px 0 !important;
+			min-height: 70px !important;
+		}
+
+		.nav-bar-wrapper {
+			position: relative !important;
+			display: flex !important;
+			align-items: center !important;
+			justify-content: space-between !important;
+			width: 100% !important;
+		}
+
+		.site-logo {
+			position: absolute !important;
+			left: 50% !important;
+			transform: translateX(-50%) !important;
+			z-index: 1000 !important;
+		}
+
+		.site-logo img {
+			max-width: 60px !important;
+			height: auto !important;
+		}
+
+		/* Better button positioning */
+		.search-toggle {
+			position: absolute !important;
+			right: 70px !important;
+			top: 50% !important;
+			transform: translateY(-50%) !important;
+			z-index: 1001 !important;
+		}
+
+		.navbar-toggle {
+			position: absolute !important;
+			right: 20px !important;
+			top: 50% !important;
+			transform: translateY(-50%) !important;
+			z-index: 1001 !important;
+		}
+	}
     </style>
     <script type="text/javascript" src="/wp-includes/js/comment-reply.min.js?ver=6.6.3" id="comment-reply-js" async="async" data-wp-strategy="async"></script>
     <script type="text/javascript" src="/wp-includes/js/dist/hooks.min.js?ver=2810c76e705dd1a53b18" id="wp-hooks-js"></script>
@@ -3678,11 +4103,11 @@
                     <div id="tag_cloud-2" class="widget-container widget_tag_cloud">
                         <h3 class="widget-title">Tags</h3>
                         <div class="tagcloud">
-                            <a href="tag/big/" class="tag-cloud-link tag-link-9 tag-link-position-1" style="font-size: 12pt;">big</a>
-                            <a href="tag/buildings-2/" class="tag-cloud-link tag-link-10 tag-link-position-2" style="font-size: 12pt;">Builds</a>
-                            <a href="tag/home-2/" class="tag-cloud-link tag-link-12 tag-link-position-3" style="font-size: 12pt;">Homes</a>
-                            <a href="tag/modern/" class="tag-cloud-link tag-link-13 tag-link-position-4" style="font-size: 12pt;">Elegant Design</a>
-                            <a href="tag/simple/" class="tag-cloud-link tag-link-14 tag-link-position-5" style="font-size: 12pt;">Architecture</a>
+                            <a href="/projects/grand-westpeak-kilimani/index.html" class="tag-cloud-link tag-link-9 tag-link-position-1" style="font-size: 12pt;">Grand Westpeak</a>
+                            <a href="/projects/freds-ranch-hotel-rooms/index.html" class="tag-cloud-link tag-link-10 tag-link-position-2" style="font-size: 12pt;">Hotel Design</a>
+                            <a href="/projects/res_home_ngong/index.html" class="tag-cloud-link tag-link-12 tag-link-position-3" style="font-size: 12pt;">Residential</a>
+                            <a href="/projects/de-vries-africa-office-fitout/index.html" class="tag-cloud-link tag-link-13 tag-link-position-4" style="font-size: 12pt;">Office Fitout</a>
+                            <a href="/projects/lil-motors-isuzu-dealership/index.html" class="tag-cloud-link tag-link-14 tag-link-position-5" style="font-size: 12pt;">Dealership</a>
                         </div>
                     </div>
                 </div>
@@ -3802,6 +4227,29 @@
 </script>
 
 <script>
+    // Top bar collapse functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const topBar = document.querySelector('.top-bar');
+        const topBarClose = document.querySelector('.top-bar-close');
+        const topBarContent = document.querySelector('.top-bar .container');
+        
+        if (topBarClose && topBar) {
+            topBarClose.addEventListener('click', function() {
+                if (topBar.classList.contains('collapsed')) {
+                    // Expand
+                    topBar.classList.remove('collapsed');
+                    topBarContent.style.display = 'flex';
+                    topBarClose.innerHTML = '<i class="fa fa-chevron-down"></i><span class="sr-only">Close top bar</span>';
+                } else {
+                    // Collapse
+                    topBar.classList.add('collapsed');
+                    topBarContent.style.display = 'none';
+                    topBarClose.innerHTML = '<i class="fa fa-chevron-up"></i><span class="sr-only">Open top bar</span>';
+                }
+            });
+        }
+    });
+
     // Sticky header functionality
     document.addEventListener('DOMContentLoaded', function() {
         const header = document.querySelector('.site-header-sticky');
@@ -3825,6 +4273,60 @@
             });
         }
     });
+
+		// Search toggle function
+		function toggleSearch() {
+			console.log('toggleSearch called');
+			const searchForm = document.querySelector('.site-search');
+			if (searchForm) {
+				// Toggle mobile search
+				if (window.innerWidth <= 991) {
+					searchForm.classList.toggle('mobile-active');
+					// Close mobile nav if open
+					const nav = document.querySelector('.site-navigation');
+					if (nav) {
+						nav.classList.remove('mobile-active');
+					}
+				} else {
+					// Desktop search functionality
+					searchForm.style.display = searchForm.style.display === 'block' ? 'none' : 'block';
+					if (searchForm.style.display === 'block') {
+						const searchInput = searchForm.querySelector('.site-search-input');
+						if (searchInput) {
+							searchInput.focus();
+						}
+					}
+				}
+			}
+		}
+
+		// Mobile menu toggle function
+		function toggleMobileMenu() {
+			console.log('toggleMobileMenu called');
+			const nav = document.querySelector('.site-navigation');
+			const searchForm = document.querySelector('.site-search');
+			
+			if (nav) {
+				nav.classList.toggle('mobile-active');
+				// Close search if open
+				if (searchForm) {
+					searchForm.classList.remove('mobile-active');
+				}
+			}
+		}
+
+		// Close mobile menu when clicking outside
+		document.addEventListener('click', function(event) {
+			const nav = document.querySelector('.site-navigation');
+			const navbarToggle = document.querySelector('.navbar-toggle');
+			const searchToggle = document.querySelector('.search-toggle');
+			
+			if (nav && nav.classList.contains('mobile-active')) {
+				if (!nav.contains(event.target) && !navbarToggle.contains(event.target) && !searchToggle.contains(event.target)) {
+					nav.classList.remove('mobile-active');
+				}
+			}
+		});
 </script>
 
 </body>

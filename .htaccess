@@ -1,4 +1,9 @@
-# Bridan Design Build - Performance & SEO Optimizations
+# Bridan Design Build - Advanced Server Configuration
+# Optimized for buildwithbridan.com
+
+# ===========================================
+# SECURITY & PERFORMANCE OPTIMIZATIONS
+# ===========================================
 
 # Enable GZIP Compression
 <IfModule mod_deflate.c>
@@ -11,47 +16,224 @@
     AddOutputFilterByType DEFLATE application/rss+xml
     AddOutputFilterByType DEFLATE application/javascript
     AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
     AddOutputFilterByType DEFLATE image/svg+xml
 </IfModule>
 
 # Browser Caching
 <IfModule mod_expires.c>
-    ExpiresActive on
-    ExpiresByType text/css "access plus 1 year"
-    ExpiresByType application/javascript "access plus 1 year"
-    ExpiresByType image/png "access plus 1 year"
+    ExpiresActive On
+    
+    # Images
     ExpiresByType image/jpg "access plus 1 year"
     ExpiresByType image/jpeg "access plus 1 year"
     ExpiresByType image/gif "access plus 1 year"
-    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
     ExpiresByType image/webp "access plus 1 year"
-    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    
+    # CSS and JavaScript
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/x-javascript "access plus 1 month"
+    
+    # Fonts
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+    
+    # HTML
     ExpiresByType text/html "access plus 1 hour"
+    
+    # XML and JSON
+    ExpiresByType application/xml "access plus 1 hour"
+    ExpiresByType application/json "access plus 1 hour"
 </IfModule>
 
-# Security Headers
+# Cache Control Headers
 <IfModule mod_headers.c>
+    # Cache static assets
+    <FilesMatch "\.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$">
+        Header set Cache-Control "public, max-age=31536000"
+    </FilesMatch>
+    
+    # Cache HTML files for shorter time
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "public, max-age=3600"
+    </FilesMatch>
+    
+    # Security Headers
     Header always set X-Content-Type-Options nosniff
     Header always set X-Frame-Options DENY
     Header always set X-XSS-Protection "1; mode=block"
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
     Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    
+    # Remove Server Information
+    Header unset Server
+    Header unset X-Powered-By
 </IfModule>
 
-# Redirect to HTTPS
+# ===========================================
+# HTTPS REDIRECTS
+# ===========================================
+
+# Force HTTPS
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteCond %{HTTPS} off
     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    
+    # Force www to non-www (or vice versa based on preference)
+    RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+    RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 </IfModule>
 
-# Remove trailing slashes
+# ===========================================
+# URL OPTIMIZATIONS
+# ===========================================
+
 <IfModule mod_rewrite.c>
-    RewriteEngine On
+    # Remove trailing slashes
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)/$ /$1 [R=301,L]
+    RewriteCond %{THE_REQUEST} \s/+([^?\s]*?)/+(\?[^\s]*)?\s [OR]
+    RewriteCond %{THE_REQUEST} \s/+([^?\s]*?)/+(\?[^\s]*)?\s
+    RewriteRule ^ /%1%2 [R=301,L]
+    
+    # Remove .html extension from URLs
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^([^\.]+)$ $1.html [NC,L]
+    
+    # Redirect .html to clean URLs
+    RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+    RewriteRule ^ /%1 [NC,L,R=301]
 </IfModule>
 
-# Custom Error Pages
+# ===========================================
+# ERROR PAGES
+# ===========================================
+
 ErrorDocument 404 /404.html
 ErrorDocument 500 /500.html
+
+# ===========================================
+# FILE PROTECTION
+# ===========================================
+
+# Protect sensitive files
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Protect wp-config and other sensitive files
+<Files "wp-config.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# ===========================================
+# PERFORMANCE OPTIMIZATIONS
+# ===========================================
+
+# Disable ETags
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+FileETag None
+
+# Enable Keep-Alive
+<IfModule mod_headers.c>
+    Header set Connection keep-alive
+</IfModule>
+
+# ===========================================
+# KENYA-SPECIFIC OPTIMIZATIONS
+# ===========================================
+
+# Optimize for Kenya's internet infrastructure
+<IfModule mod_deflate.c>
+    # More aggressive compression for slower connections
+    DeflateCompressionLevel 9
+    DeflateBufferSize 8096
+    DeflateMemLevel 9
+</IfModule>
+
+# ===========================================
+# CONSTRUCTION INDUSTRY OPTIMIZATIONS
+# ===========================================
+
+# Optimize for construction industry keywords
+<IfModule mod_rewrite.c>
+    # Redirect common construction-related searches
+    RewriteRule ^construction-kenya/?$ /what-we-do/building_construction/ [R=301,L]
+    RewriteRule ^architectural-design/?$ /what-we-do/architectural_services/ [R=301,L]
+    RewriteRule ^interior-design/?$ /what-we-do/interior_design_services/ [R=301,L]
+    RewriteRule ^renovation-services/?$ /what-we-do/renovations/ [R=301,L]
+    RewriteRule ^construction-management/?$ /what-we-do/construction_managemet/ [R=301,L]
+</IfModule>
+
+# ===========================================
+# MOBILE OPTIMIZATIONS
+# ===========================================
+
+# Optimize for mobile devices (common in Kenya)
+<IfModule mod_headers.c>
+    # Add mobile-friendly headers
+    Header set Vary "Accept-Encoding, User-Agent"
+</IfModule>
+
+# ===========================================
+# SEO OPTIMIZATIONS
+# ===========================================
+
+# Canonical URL enforcement
+<IfModule mod_rewrite.c>
+    # Ensure consistent URL structure
+    RewriteCond %{QUERY_STRING} ^$
+    RewriteRule ^index\.html$ / [R=301,L]
+</IfModule>
+
+# ===========================================
+# ANALYTICS & TRACKING OPTIMIZATIONS
+# ===========================================
+
+# Optimize for Google Analytics and Search Console
+<IfModule mod_headers.c>
+    # Allow Google Analytics
+    Header set Access-Control-Allow-Origin "https://www.google-analytics.com"
+    Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type"
+</IfModule>
+
+# ===========================================
+# BRIDAN DESIGN BUILD SPECIFIC
+# ===========================================
+
+# Optimize for buildwithbridan.com domain
+<IfModule mod_rewrite.c>
+    # Redirect old URLs to new structure
+    RewriteRule ^bridan/?$ / [R=301,L]
+    RewriteRule ^bridan-design-build/?$ / [R=301,L]
+    RewriteRule ^construction-company/?$ /about-us/ [R=301,L]
+    RewriteRule ^contact/?$ /contact-us/ [R=301,L]
+    RewriteRule ^services/?$ /what-we-do/ [R=301,L]
+    RewriteRule ^portfolio/?$ /projects/ [R=301,L]
+</IfModule>
+
+# ===========================================
+# FINAL OPTIMIZATIONS
+# ===========================================
+
+# Disable server signature
+ServerSignature Off
+
+# Limit file upload size (if applicable)
+LimitRequestBody 10485760
+
+# ===========================================
+# END OF CONFIGURATION
+# ===========================================
