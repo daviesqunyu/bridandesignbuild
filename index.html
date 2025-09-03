@@ -1092,6 +1092,25 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
 
 		/* Mobile view - show both buttons */
 		@media (max-width: 991px) {
+			/* Logo positioning - ensure it stays in top left */
+			.site-logo {
+				position: absolute !important;
+				left: 15px !important;
+				top: 50% !important;
+				transform: translateY(-50%) !important;
+				z-index: 1002 !important;
+			}
+			
+			/* Ensure proper positioning of nav wrapper */
+			.nav-bar-wrapper {
+				position: relative !important;
+				display: flex !important;
+				align-items: center !important;
+				justify-content: space-between !important;
+				width: 100% !important;
+				height: 80px !important;
+			}
+			
 			.search-toggle {
 				display: flex !important;
 			}
@@ -2840,7 +2859,24 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 				if (searchForm) {
 					searchForm.classList.remove('mobile-active');
 				}
+				
+				// Prevent body scroll when menu is open
+				if (nav.classList.contains('mobile-active')) {
+					document.body.style.overflow = 'hidden';
+				} else {
+					document.body.style.overflow = '';
+				}
 			}
+		}
+		
+		// Mobile submenu toggle function
+		function toggleMobileSubmenu(element) {
+			const submenu = element.nextElementSibling;
+			if (submenu && submenu.classList.contains('sub-menu')) {
+				submenu.classList.toggle('mobile-submenu-active');
+				element.classList.toggle('mobile-submenu-open');
+			}
+		}
 		}
 
 		// Close mobile menu when clicking outside

@@ -137,7 +137,223 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
 				}
 			//});
 		  };</script>
-<style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1418650600843{margin-bottom: 20px !important;}.vc_custom_1418650606516{margin-bottom: 20px !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
+<style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1418650600843{margin-bottom: 20px !important;}.vc_custom_1418650606516{margin-bottom: 20px !important;}</style>
+
+<style>
+		/* Top bar collapse functionality */
+		.top-bar-close {
+			position: absolute !important;
+			bottom: -15px !important;
+			left: 50% !important;
+			transform: translateX(-50%) !important;
+			background: transparent !important;
+			border: none !important;
+			border-radius: 0 !important;
+			width: 30px !important;
+			height: 30px !important;
+			display: flex !important;
+			align-items: center !important;
+			justify-content: center !important;
+			cursor: pointer !important;
+			transition: all 0.3s ease !important;
+			z-index: 10001 !important;
+		}
+		
+		.top-bar-close:hover {
+			background: transparent !important;
+			transform: translateX(-50%) scale(1.1) !important;
+		}
+		
+		/* Desktop view - hide mobile buttons */
+		@media (min-width: 992px) {
+			.search-toggle {
+				display: none !important;
+			}
+			
+			.navbar-toggle {
+				display: none !important;
+			}
+		}
+		
+		/* Mobile view - show both buttons and fix logo positioning */
+		@media (max-width: 991px) {
+			/* Logo positioning - ensure it stays in top left */
+			.site-logo {
+				position: absolute !important;
+				left: 15px !important;
+				top: 50% !important;
+				transform: translateY(-50%) !important;
+				z-index: 1002 !important;
+			}
+			
+			/* Ensure proper positioning of nav wrapper */
+			.nav-bar-wrapper {
+				position: relative !important;
+				display: flex !important;
+				align-items: center !important;
+				justify-content: space-between !important;
+				width: 100% !important;
+				height: 80px !important;
+			}
+			
+			/* Search button styling */
+			.search-toggle {
+				display: block !important;
+				background: #ffc329 !important;
+				border: 2px solid #ffc329 !important;
+				padding: 12px 15px !important;
+				border-radius: 6px !important;
+				cursor: pointer !important;
+				transition: all 0.3s ease !important;
+				position: absolute !important;
+				right: 80px !important;
+				top: 50% !important;
+				transform: translateY(-50%) !important;
+				z-index: 1001 !important;
+				box-shadow: 0 2px 4px rgba(255, 195, 41, 0.3) !important;
+			}
+			
+			.search-toggle:hover {
+				background: #e6b025 !important;
+				border-color: #e6b025 !important;
+				transform: translateY(-50%) scale(1.05) !important;
+				box-shadow: 0 4px 12px rgba(255, 195, 41, 0.4) !important;
+			}
+			
+			.search-toggle .fa-search {
+				color: #000000 !important;
+				font-size: 16px !important;
+				font-weight: bold !important;
+			}
+			
+			/* Hamburger menu button styling */
+			.navbar-toggle {
+				display: block !important;
+				background: #ffc329 !important;
+				border: 2px solid #ffc329 !important;
+				padding: 12px 15px !important;
+				border-radius: 6px !important;
+				cursor: pointer !important;
+				transition: all 0.3s ease !important;
+				position: absolute !important;
+				right: 15px !important;
+				top: 50% !important;
+				transform: translateY(-50%) !important;
+				z-index: 1001 !important;
+				box-shadow: 0 2px 4px rgba(255, 195, 41, 0.3) !important;
+			}
+			
+			.navbar-toggle:hover {
+				background: #e6b025 !important;
+				border-color: #e6b025 !important;
+				transform: translateY(-50%) scale(1.05) !important;
+				box-shadow: 0 4px 12px rgba(255, 195, 41, 0.4) !important;
+			}
+			
+			.navbar-toggle .fa-bars {
+				color: #000000 !important;
+				font-size: 16px !important;
+				font-weight: bold !important;
+			}
+			
+			/* Mobile navigation menu - Enhanced for all small screens */
+			.site-navigation {
+				display: none !important;
+				position: fixed !important;
+				top: 0 !important;
+				left: 0 !important;
+				width: 100% !important;
+				height: 100vh !important;
+				background: rgba(0, 0, 0, 0.95) !important;
+				z-index: 9999 !important;
+				padding-top: 80px !important;
+				overflow-y: auto !important;
+				transition: all 0.3s ease !important;
+			}
+			
+			/* Show mobile navigation when active */
+			.site-navigation.mobile-active {
+				display: block !important;
+			}
+			
+			/* Mobile navigation menu items */
+			.site-navigation.mobile-active ul {
+				list-style: none !important;
+				padding: 0 !important;
+				margin: 0 !important;
+				text-align: center !important;
+			}
+			
+			.site-navigation.mobile-active li {
+				margin: 0 !important;
+				padding: 0 !important;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+			}
+			
+			.site-navigation.mobile-active a {
+				display: block !important;
+				padding: 20px 30px !important;
+				color: #ffffff !important;
+				text-decoration: none !important;
+				font-size: 18px !important;
+				font-weight: 500 !important;
+				transition: all 0.3s ease !important;
+				border: none !important;
+			}
+			
+			.site-navigation.mobile-active a:hover {
+				background: #ffc329 !important;
+				color: #000000 !important;
+				transform: translateX(10px) !important;
+			}
+			
+			/* Mobile sub-menu */
+			.site-navigation.mobile-active .sub-menu {
+				background: rgba(255, 195, 41, 0.1) !important;
+				margin: 0 !important;
+				padding: 0 !important;
+				display: none !important;
+				transition: all 0.3s ease !important;
+			}
+			
+			.site-navigation.mobile-active .sub-menu.mobile-submenu-active {
+				display: block !important;
+			}
+			
+			.site-navigation.mobile-active .sub-menu a {
+				padding: 15px 50px !important;
+				font-size: 16px !important;
+				color: #cccccc !important;
+			}
+			
+			.site-navigation.mobile-active .sub-menu a:hover {
+				background: #ffc329 !important;
+				color: #000000 !important;
+			}
+			
+			/* Mobile menu items with submenus */
+			.site-navigation.mobile-active .menu-item-has-children > a {
+				position: relative !important;
+				cursor: pointer !important;
+			}
+			
+			.site-navigation.mobile-active .menu-item-has-children > a::after {
+				content: '\f107' !important;
+				font-family: 'FontAwesome' !important;
+				position: absolute !important;
+				right: 30px !important;
+				top: 50% !important;
+				transform: translateY(-50%) !important;
+				transition: transform 0.3s ease !important;
+			}
+			
+			.site-navigation.mobile-active .menu-item-has-children > a.mobile-submenu-open::after {
+				transform: translateY(-50%) rotate(180deg) !important;
+			}
+		}
+</style>
+
+<noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
 
 <body class="portfolio-template-default single single-portfolio postid-356 wp-embed-responsive wpb-js-composer js-comp-ver-7.8 vc_responsive">
         <div class="site-wrap">
@@ -209,7 +425,7 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
                                                 <nav class="site-navigation">
                                     <ul id="menu-main-menu" class=""><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-depth-0"><a href="/index.html" style="color: seashell; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='seashell'">Home</a>
 </li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-depth-0"><a href="/projects/index.html" style="color: seashell; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='seashell'">Projects</a>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-depth-0"><a href="/projects/index.html" style="color: seashell; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='seashell'" onclick="if(window.innerWidth <= 991) { event.preventDefault(); toggleMobileSubmenu(this); }">Projects</a>
 <ul class="sub-menu">
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/lil-motors-isuzu-dealership/index.html">LIL MOTORS ISUZU</a></li>
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/de-vries-africa-office-fitout/index.html">DE VRIES AFRICA</a></li>
@@ -224,7 +440,7 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/milimani-kitale-residential/index.html">MILIMANI RESIDENTIAL</a></li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-depth-0"><a href="/what-we-do/index.html" style="color: seashell; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='seashell'">What we do</a>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-depth-0"><a href="/what-we-do/index.html" style="color: seashell; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='seashell'" onclick="if(window.innerWidth <= 991) { event.preventDefault(); toggleMobileSubmenu(this); }">What we do</a>
 <ul class="sub-menu">
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/what-we-do/index.html">CONSTRUCTION</a></li>
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/what-we-do/index.html">RENOVATIONS</a></li>
@@ -239,6 +455,10 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0"><a href="/contact-us/index.html" style="color: seashell; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='seashell'">Contact us</a></li>
 </ul>                                </nav>
                                                                    
+                                                                <button class="search-toggle" type="button" onclick="toggleSearch()">
+                                    <span class="sr-only">Search</span>
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </button>
                                                                 <button class="navbar-toggle" type="button" onclick="toggleMobileMenu()" style="color: #ffc329;">
                                     <span class="sr-only">Toggle navigation</span>
                                     <i class="fa fa-bars" aria-hidden="true" style="color: #ffc329;"></i>
@@ -824,6 +1044,63 @@ var wpcf7 = {"api":{"root":"/wp-json\/","namespace":"contact-form-7\/v1"},"cache
 				if (!nav.contains(event.target) && !navbarToggle.contains(event.target)) {
 					nav.classList.remove('mobile-active');
 				}
+			}
+		});
+		
+		// Mobile menu toggle function
+		function toggleMobileMenu() {
+			console.log('toggleMobileMenu called');
+			const nav = document.querySelector('.site-navigation');
+			const searchForm = document.querySelector('.site-search');
+
+			if (nav) {
+				nav.classList.toggle('mobile-active');
+				// Close search if open
+				if (searchForm) {
+					searchForm.classList.remove('mobile-active');
+				}
+
+				// Prevent body scroll when menu is open
+				if (nav.classList.contains('mobile-active')) {
+					document.body.style.overflow = 'hidden';
+				} else {
+					document.body.style.overflow = '';
+				}
+			}
+		}
+
+		// Mobile submenu toggle function
+		function toggleMobileSubmenu(element) {
+			const submenu = element.nextElementSibling;
+			if (submenu && submenu.classList.contains('sub-menu')) {
+				submenu.classList.toggle('mobile-submenu-active');
+				element.classList.toggle('mobile-submenu-open');
+			}
+		}
+
+		// Search toggle function
+		function toggleSearch() {
+			const searchForm = document.querySelector('.site-search');
+			const nav = document.querySelector('.site-navigation');
+
+			if (searchForm) {
+				searchForm.classList.toggle('mobile-active');
+				// Close mobile menu if open
+				if (nav) {
+					nav.classList.remove('mobile-active');
+				}
+			}
+		}
+
+		// Top bar collapse functionality
+		document.addEventListener('DOMContentLoaded', function() {
+			const topBarClose = document.querySelector('.top-bar-close');
+			const topBar = document.querySelector('.top-bar');
+			
+			if (topBarClose && topBar) {
+				topBarClose.addEventListener('click', function() {
+					topBar.classList.toggle('collapsed');
+				});
 			}
 		});
 	</script>

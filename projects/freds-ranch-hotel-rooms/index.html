@@ -85,24 +85,106 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
 </style>
 
 <style>
-/* Top bar collapse functionality */
-.top-bar-close {
-    position: absolute !important;
-    bottom: -15px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    background: transparent !important;
-    border: none !important;
-    border-radius: 0 !important;
-    width: 30px !important;
-    height: 30px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    cursor: pointer !important;
-    transition: all 0.3s ease !important;
-    z-index: 10001 !important;
-}
+		/* Top bar collapse functionality */
+		.top-bar-close {
+			position: absolute !important;
+			bottom: -15px !important;
+			left: 50% !important;
+			transform: translateX(-50%) !important;
+			background: transparent !important;
+			border: none !important;
+			border-radius: 0 !important;
+			width: 30px !important;
+			height: 30px !important;
+			display: flex !important;
+			align-items: center !important;
+			justify-content: center !important;
+			cursor: pointer !important;
+			transition: all 0.3s ease !important;
+			z-index: 10001 !important;
+		}
+		
+		/* Mobile view - show both buttons and fix logo positioning */
+		@media (max-width: 991px) {
+			/* Logo positioning - ensure it stays in top left */
+			.site-logo {
+				position: absolute !important;
+				left: 15px !important;
+				top: 50% !important;
+				transform: translateY(-50%) !important;
+				z-index: 1002 !important;
+			}
+			
+			/* Ensure proper positioning of nav wrapper */
+			.nav-bar-wrapper {
+				position: relative !important;
+				display: flex !important;
+				align-items: center !important;
+				justify-content: space-between !important;
+				width: 100% !important;
+				height: 80px !important;
+			}
+			
+			/* Search button styling */
+			.search-toggle {
+				display: block !important;
+				background: #ffc329 !important;
+				border: 2px solid #ffc329 !important;
+				padding: 12px 15px !important;
+				border-radius: 6px !important;
+				cursor: pointer !important;
+				transition: all 0.3s ease !important;
+				position: absolute !important;
+				right: 80px !important;
+				top: 50% !important;
+				transform: translateY(-50%) !important;
+				z-index: 1001 !important;
+				box-shadow: 0 2px 4px rgba(255, 195, 41, 0.3) !important;
+			}
+			
+			.search-toggle:hover {
+				background: #e6b025 !important;
+				border-color: #e6b025 !important;
+				transform: translateY(-50%) scale(1.05) !important;
+				box-shadow: 0 4px 12px rgba(255, 195, 41, 0.4) !important;
+			}
+			
+			.search-toggle .fa-search {
+				color: #000000 !important;
+				font-size: 16px !important;
+				font-weight: bold !important;
+			}
+			
+			/* Hamburger menu button styling */
+			.navbar-toggle {
+				display: block !important;
+				background: #ffc329 !important;
+				border: 2px solid #ffc329 !important;
+				padding: 12px 15px !important;
+				border-radius: 6px !important;
+				cursor: pointer !important;
+				transition: all 0.3s ease !important;
+				position: absolute !important;
+				right: 15px !important;
+				top: 50% !important;
+				transform: translateY(-50%) !important;
+				z-index: 1001 !important;
+				box-shadow: 0 2px 4px rgba(255, 195, 41, 0.3) !important;
+			}
+			
+			.navbar-toggle:hover {
+				background: #e6b025 !important;
+				border-color: #e6b025 !important;
+				transform: translateY(-50%) scale(1.05) !important;
+				box-shadow: 0 4px 12px rgba(255, 195, 41, 0.4) !important;
+			}
+			
+			.navbar-toggle .fa-bars {
+				color: #000000 !important;
+				font-size: 16px !important;
+				font-weight: bold !important;
+			}
+		}
 
 .top-bar-close:hover {
     background: transparent !important;
