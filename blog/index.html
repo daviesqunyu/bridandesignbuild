@@ -520,6 +520,213 @@
 		.top-bar a:not(:hover) {
 			color: #ebebeb !important;
 		}
+		
+		/* Search icon styling - Desktop */
+		.search-toggle {
+			background: none !important;
+			border: none !important;
+			padding: 10px !important;
+			cursor: pointer !important;
+			transition: all 0.3s ease !important;
+			position: relative !important;
+			z-index: 1001 !important;
+			display: flex !important;
+			align-items: center !important;
+			justify-content: center !important;
+		}
+		
+		.search-toggle:hover {
+			transform: scale(1.1) !important;
+		}
+		
+		.search-toggle .fa-search {
+			color: #333 !important;
+			font-size: 18px !important;
+			transition: all 0.3s ease !important;
+		}
+		
+		.search-toggle:hover .fa-search {
+			color: #ffc329 !important;
+		}
+		
+		/* Desktop layout - ensure search icon is after navigation */
+		@media (min-width: 992px) {
+			.nav-bar {
+				display: flex !important;
+				align-items: center !important;
+				justify-content: space-between !important;
+			}
+			
+			.site-navigation {
+				display: flex !important;
+				align-items: center !important;
+				justify-content: flex-end !important;
+				flex: 1 !important;
+				margin-right: 20px !important;
+			}
+			
+			.search-toggle {
+				position: relative !important;
+				top: auto !important;
+				right: auto !important;
+				transform: none !important;
+				margin-left: 20px !important;
+				flex-shrink: 0 !important;
+			}
+		}
+		
+		/* Mobile navigation menu - Enhanced for all small screens */
+		@media (max-width: 991px) {
+			/* Hide desktop navigation */
+			.site-navigation {
+				display: none !important;
+			}
+			
+			/* Add hamburger menu button */
+			.nav-bar::after {
+				content: '\f0c9';
+				font-family: 'FontAwesome';
+				position: absolute;
+				top: 50%;
+				right: 15px;
+				transform: translateY(-50%);
+				font-size: 18px;
+				color: #333;
+				cursor: pointer;
+				z-index: 1001;
+				background: #ffc329;
+				border: none;
+				border-radius: 4px;
+				padding: 12px;
+				width: 44px;
+				height: 44px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			
+			/* Search icon positioning on mobile - left of hamburger */
+			.search-toggle {
+				display: flex !important;
+				position: absolute !important;
+				top: 50% !important;
+				right: 70px !important;
+				transform: translateY(-50%) !important;
+				z-index: 1001 !important;
+				background: #2c323c !important;
+				border: none !important;
+				border-radius: 4px !important;
+				padding: 12px !important;
+				width: 44px !important;
+				height: 44px !important;
+				align-items: center !important;
+				justify-content: center !important;
+			}
+			
+			.search-toggle .fa-search {
+				color: white !important;
+				font-size: 18px !important;
+			}
+		}
+		
+		/* Dropdown menu font styling - Montserrat */
+		.site-navigation .sub-menu { 
+			font-family: 'Montserrat', sans-serif !important; 
+		}
+		.site-navigation .sub-menu a { 
+			font-family: 'Montserrat', sans-serif !important; 
+			font-weight: 500 !important; 
+			text-transform: uppercase !important; 
+			letter-spacing: 0.5px !important; 
+		}
+		
+		/* Sticky header functionality - only when active */
+		.site-header-sticky-active {
+			position: fixed !important;
+			top: 0 !important;
+			left: 0 !important;
+			right: 0 !important;
+			z-index: 9999 !important;
+			transition: all 0.3s ease !important;
+			box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+		}
+		
+		/* Ensure top-bar is always visible */
+		.top-bar {
+			display: block !important;
+			visibility: visible !important;
+			opacity: 1 !important;
+			position: relative !important;
+			z-index: 10000 !important;
+			width: 100% !important;
+			height: auto !important;
+			min-height: 40px !important;
+			background-color: #f8f9fa !important;
+			border-bottom: 1px solid #e9ecef !important;
+		}
+		
+		/* Ensure main header is always visible */
+		.site-header {
+			display: block !important;
+			visibility: visible !important;
+			opacity: 1 !important;
+		}
+		
+		/* Add top padding to body when header is sticky */
+		body.sticky-header-active {
+			padding-top: 160px !important;
+		}
+		
+		/* Remove top margin from site-header to eliminate white space at top */
+		.site-header {
+			margin-top: 0 !important;
+		}
+		
+		/* Add spacing between header and main content */
+		.site-header + * {
+			margin-top: 20px !important;
+		}
+		
+		/* Ensure proper spacing in header sections */
+		.nav-wrap {
+			padding-top: 15px !important;
+			padding-bottom: 15px !important;
+		}
+		
+		/* Add spacing between top-bar and nav-wrap */
+		.top-bar + .site-header .nav-wrap {
+			margin-top: 10px !important;
+		}
+		
+		/* Sticky header functionality */
+		.site-header-sticky-active {
+			position: fixed !important;
+			top: 0 !important;
+			left: 0 !important;
+			right: 0 !important;
+			z-index: 9999 !important;
+			transition: all 0.3s ease !important;
+			box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+		}
+		
+		/* Ensure top-bar is always visible */
+		.top-bar {
+			display: block !important;
+			visibility: visible !important;
+			opacity: 1 !important;
+			position: relative !important;
+			z-index: 10000 !important;
+			width: 100% !important;
+			height: auto !important;
+			min-height: 40px !important;
+		}
+		
+		/* Ensure main header is always visible */
+		.site-header {
+			display: block !important;
+			visibility: visible !important;
+			opacity: 1 !important;
+		}
 	</style>
 
     <title>Construction & Design Blog - Bridan Design Build Kenya</title>
@@ -645,83 +852,50 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
                         <button class="site-search-close">&times;</button>
                     </div>
                 </div>
-                    <div class="transparent top-bar">
-                <div class="container">
-                    <!-- Left Side - Social Media Icons Only -->
+            <div class="top-bar" style="background-color: #f8f9fa; border-bottom: 1px solid #e9ecef;">
+                <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
                     <div class="top-bar-left">
-                        <div id="anpssocial-2" class="widget-container widget_anpssocial">
-                            <ul class="social">
-                                <li>
-                                    <a href="https://www.facebook.com/profile.php?id=100086679484882" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-3d">
-                                        <i class="fab fa-facebook-f" style="font-size: 20px;"></i>
-                                        <span class="sr-only">Facebook</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://x.com/bridanbuild" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="social-3d">
-                                        <i class="fab fa-twitter" style="font-size: 20px;"></i>
-                                        <span class="sr-only">Twitter</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/in/bridan-design-build-653b631a7/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-3d">
-                                        <i class="fab fa-linkedin-in" style="font-size: 20px;"></i>
-                                        <span class="sr-only">LinkedIn</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.tiktok.com/@bridandesignbuild" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="social-3d">
-                                        <i class="fab fa-tiktok" style="font-size: 20px;"></i>
-                                        <span class="sr-only">TikTok</span>
-                                    </a>
-                                </li>
-                            </ul>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/bridandesignbuild" target="_blank" rel="noopener noreferrer" style="color: #6c757d; margin-right: 20px;">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://x.com/bridanbuild" target="_blank" rel="noopener noreferrer" style="color: #6c757d; margin-right: 20px;">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/bridan-design-build" target="_blank" rel="noopener noreferrer" style="color: #6c757d; margin-right: 20px;">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bridandesignbuild" target="_blank" rel="noopener noreferrer" style="color: #6c757d; margin-right: 20px;">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <span style="color: #6c757d; margin: 0 15px; font-size: 16px;">|</span>
                         </div>
                     </div>
-                    
-                    <!-- Right Side - Working Hours, WhatsApp, Email -->
-                    <div class="top-bar-right">
-                        <!-- Working Hours -->
-                        <div id="anpstext-4" class="widget-container widget_anpstext">
-                            <div class="anpstext-wrap">
-                                <span class="fa fa-clock-o"></span>
-                                <div class="anpstext-desc" style="font-weight: bold">Mon - Sat: 7:00 - 17:00</div>
-                            </div>
-                        </div>
-                        
-                        <!-- WhatsApp -->
-                        <div id="anpstext-2" class="widget-container widget_anpstext">
-                            <div class="anpstext-wrap">
-                                <a href="https://wa.me/254741400368" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
-                                    <i class="fa fa-whatsapp" style="color: #25D366;"></i>
-                                    <div class="anpstext-desc" style="font-weight: bold">+254 741 400368</div>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <!-- Email -->
-                        <div id="anpstext-3" class="widget-container widget_anpstext">
-                            <div class="anpstext-wrap">
-                                <span class="fa fa-envelope-o"></span>
-                                <div class="anpstext-desc">
-                                    <a href="mailto:bridandesignbuild@gmail.com" style="color: inherit; text-decoration: none; font-weight: bold;">bridandesignbuild@gmail.com</a>
-                                </div>
-                            </div>
+                    <div class="top-bar-right" style="margin-left: auto;">
+                        <div class="contact-info" style="display: flex; align-items: center; gap: 10px;">
+                            <span class="contact-item">
+                                <i class="fa fa-clock-o" style="color: #6c757d; margin-right: 8px;"></i>
+                                <span style="color: #6c757d;">Mon - Sat: 7:00 - 17:00</span>
+                            </span>
+                            <span style="color: #6c757d; font-size: 16px;">|</span>
+                            <span class="contact-item">
+                                <i class="fa fa-phone" style="color: #6c757d; margin-right: 8px;"></i>
+                                <a href="https://wa.me/254741400368" style="color: #6c757d; text-decoration: none;">+254 741 400368</a>
+                            </span>
+                            <span style="color: #6c757d; font-size: 16px;">|</span>
+                            <span class="contact-item">
+                                <i class="fa fa-envelope" style="color: #6c757d; margin-right: 8px;"></i>
+                                <a href="mailto:bridandesignbuild@gmail.com" style="color: #6c757d; text-decoration: none;">bridandesignbuild@gmail.com</a>
+                            </span>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Top Bar Close Button -->
-                <button class="top-bar-close">
-                    <i class="fa fa-chevron-down"></i>
-                    <span class="sr-only">Close top bar</span>
-                </button>
             </div>
                         
 		
 		
-	<header class="site-header site-header-sticky site-header-layout-normal site-header-style-transparent site-header-dropdown-1" >
-            <div class="nav-wrap">
+	<header class="site-header site-header-sticky site-header-layout-normal site-header-style-normal site-header-dropdown-1" style="background-color: white;">
+            <div class="nav-wrap" style="background-color: white;">
                 <div class="container">
                     <!-- Logo -->
                     <div class="site-logo">
@@ -736,8 +910,8 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
                                             <div class="nav-bar-wrapper">
                             <div class="nav-bar">
 								<nav class="site-navigation">
-        <ul id="menu-main-menu" class=""><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-depth-0"><a href="/index.html">Home</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-depth-0"><a href="/projects/index.html">Projects</a>
+        <ul id="menu-main-menu" class=""><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-depth-0"><a href="/index.html" style="color: #333; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='#333'">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-depth-0"><a href="/projects/index.html" style="color: #333; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='#333'">Projects</a>
 <ul class="sub-menu">
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/lil-motors-isuzu-dealership/index.html">LIL MOTORS ISUZU</a></li>
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/de-vries-africa-office-fitout/index.html">DE VRIES AFRICA</a></li>
@@ -754,21 +928,26 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
 
 </ul>
 </li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-depth-0"><a href="/what-we-do/index.html">What we do</a>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-depth-0"><a href="/what-we-do/index.html" style="color: #333; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='#333'">What we do</a>
 <ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="what-we-do/index.html">CONSTRUCTION</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="what-we-do/index.html">RENOVATIONS</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="what-we-do/index.html">CONSULTING</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="what-we-do/index.html">BIG PROJECTS</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="what-we-do/index.html">ARCHITECTURE</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="what-we-do/index.html">CONCRETE TRANSPORT</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/what-we-do/architectural_services/index.html">ARCHITECTURE</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/what-we-do/interior_design_services/index.html">INTERIOR DESIGN</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/what-we-do/building_construction/index.html">BUILDING CONSTRUCTION</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/what-we-do/construction_managemet/index.html">CONSTRUCTION MANAGEMENT</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/what-we-do/skilled_labour-provision/index.html">SKILLED LABOUR PROVISION</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/what-we-do/renovations/index.html">RENOVATIONS </a></li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0"><a href="/about-us/index.html">About us</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0 current-menu-item"><a href="/blog/index.html">Blog</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0"><a href="/contact-us/index.html">Contact us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0"><a href="/about-us/index.html" style="color: #333; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='#333'">About us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0 current-menu-item"><a href="/blog/index.html" style="color: #ffc329; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='#ffc329'">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0"><a href="/contact-us/index.html" style="color: #333; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='#333'">Contact us</a></li>
 </ul>
                             </nav>
+                            
+                            <button class="search-toggle" type="button" onclick="toggleSearch()">
+                                <span class="sr-only">Search</span>
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
                             
                             <button class="navbar-toggle" type="button">
                                 <span class="sr-only">Toggle navigation</span>
@@ -1042,6 +1221,68 @@ var anps = {"search_placeholder":"Search...","home_url":"https:\/\/anpsthemes.co
             </div>
         </div>
     </footer>
+
+    <script>
+        // Search toggle function
+        function toggleSearch() {
+            const searchForm = document.querySelector('.site-search');
+            if (searchForm) {
+                searchForm.style.display = searchForm.style.display === 'block' ? 'none' : 'block';
+                if (searchForm.style.display === 'block') {
+                    const searchInput = searchForm.querySelector('.site-search-input');
+                    if (searchInput) {
+                        searchInput.focus();
+                    }
+                }
+            }
+        }
+
+        // Mobile navigation toggle
+        function toggleMobileNav() {
+            const nav = document.querySelector('.site-navigation');
+            if (nav) {
+                nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+            }
+        }
+
+        // Add click event listener for mobile nav toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const navBar = document.querySelector('.nav-bar');
+            if (navBar) {
+                navBar.addEventListener('click', function(e) {
+                    if (e.target.closest('.nav-bar::after') || e.target.closest('[data-toggle="mobile-nav"]')) {
+                        toggleMobileNav();
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>
+        // Sticky header functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.site-header-sticky');
+            const body = document.body;
+            
+            if (header) {
+                let lastScrollTop = 0;
+                
+                window.addEventListener('scroll', function() {
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    
+                    if (scrollTop > 100) {
+                        header.classList.add('site-header-sticky-active');
+                        body.classList.add('sticky-header-active');
+                    } else {
+                        header.classList.remove('site-header-sticky-active');
+                        body.classList.remove('sticky-header-active');
+                    }
+                    
+                    lastScrollTop = scrollTop;
+                });
+            }
+        });
+    </script>
 
 </body>
 </html>
