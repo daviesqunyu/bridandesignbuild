@@ -76,8 +76,8 @@
     <!-- Performance and SEO Optimizations -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://www.google-analytics.com">
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
     
     <!-- Advanced Performance & Compatibility CSS -->
     <link rel="stylesheet" href="/css/bridan-compatibility.css">
@@ -980,154 +980,6 @@
 			opacity: 1 !important;
 		}
 		
-		/* Navigation styling to match screenshot format */
-		.site-navigation a {
-			color: #333 !important;
-			font-weight: 500 !important;
-			text-transform: uppercase !important;
-			letter-spacing: 0.5px !important;
-			font-size: 13px !important;
-		}
-		
-		.site-navigation a:hover {
-			color: #ffc329 !important;
-		}
-		
-		.site-navigation .current-menu-item a {
-			color: #ffc329 !important;
-		}
-		
-		.search-toggle .fa-search {
-			color: #333 !important;
-			font-size: 16px !important;
-		}
-		
-		.navbar-toggle .fa-bars {
-			color: #333 !important;
-		}
-		
-		/* Mobile Toggle Buttons - Force Visibility */
-		@media (max-width: 991px) {
-			.navbar-toggle {
-				display: block !important;
-				background: #ffc329 !important;
-				border: none !important;
-				padding: 12px 15px !important;
-				border-radius: 6px !important;
-				cursor: pointer !important;
-				transition: all 0.3s ease !important;
-				position: relative !important;
-				z-index: 1001 !important;
-				margin-left: 10px !important;
-			}
-			
-			.navbar-toggle:hover {
-				background: #e6b025 !important;
-				transform: translateY(-2px) !important;
-				box-shadow: 0 4px 12px rgba(255, 195, 41, 0.4) !important;
-			}
-			
-			.navbar-toggle .fa-bars {
-				color: #333 !important;
-				font-size: 18px !important;
-				font-weight: bold !important;
-			}
-			
-			.search-toggle {
-				display: block !important;
-				background: #ffc329 !important;
-				border: 2px solid #ffc329 !important;
-				padding: 12px 15px !important;
-				border-radius: 6px !important;
-				cursor: pointer !important;
-				transition: all 0.3s ease !important;
-				position: relative !important;
-				z-index: 1001 !important;
-				margin-right: 10px !important;
-				box-shadow: 0 2px 4px rgba(255, 195, 41, 0.3) !important;
-			}
-			
-			.search-toggle:hover {
-				background: #e6b025 !important;
-				border-color: #e6b025 !important;
-				transform: translateY(-2px) !important;
-				box-shadow: 0 4px 12px rgba(255, 195, 41, 0.4) !important;
-			}
-			
-			.search-toggle .fa-search {
-				color: #000000 !important;
-				font-size: 16px !important;
-				font-weight: bold !important;
-			}
-			
-			/* Ensure nav bar wrapper shows both buttons */
-			.nav-bar-wrapper {
-				display: flex !important;
-				align-items: center !important;
-				justify-content: flex-end !important;
-				gap: 10px !important;
-			}
-			
-			/* Mobile navigation positioning */
-			.site-navigation {
-				display: none !important;
-				position: absolute !important;
-				top: 100% !important;
-				left: 0 !important;
-				right: 0 !important;
-				background: white !important;
-				box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
-				z-index: 1000 !important;
-				padding: 20px !important;
-			}
-			
-			.site-navigation.active {
-				display: block !important;
-			}
-			
-			.site-navigation ul {
-				flex-direction: column !important;
-				gap: 15px !important;
-			}
-			
-			.site-navigation li {
-				width: 100% !important;
-			}
-			
-			.site-navigation a {
-				display: block !important;
-				padding: 12px 15px !important;
-				color: #333 !important;
-				text-decoration: none !important;
-				border-radius: 6px !important;
-				transition: all 0.3s ease !important;
-				font-weight: 500 !important;
-			}
-			
-			.site-navigation a:hover {
-				background: #ffc329 !important;
-				color: #333 !important;
-				transform: translateX(5px) !important;
-			}
-		}
-		
-		/* Extra small mobile devices */
-		@media (max-width: 480px) {
-			.navbar-toggle,
-			.search-toggle {
-				padding: 10px 12px !important;
-			}
-			
-			.navbar-toggle .fa-bars,
-			.search-toggle .fa-search {
-				font-size: 16px !important;
-			}
-			
-			.nav-bar-wrapper {
-				gap: 8px !important;
-			}
-		}
-		
 		/* Add top padding to body when header is sticky */
 		body.sticky-header-active {
 			padding-top: 160px !important;
@@ -1294,60 +1146,7 @@ user-select: none; background-image: none; border: 0; color: #fff; cursor: point
 				}
 			//});
 		  };</script>
-<noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
-
-<!-- Header Background Color Override - Apply consistent styling across all pages -->
-<style type="text/css">
-    /* Header Background Color Override - Apply to ALL pages including home */
-    .top-bar {
-        background-color: #2c323c !important;
-        color: #ffffff !important;
-        position: sticky !important;
-        top: 0 !important;
-        z-index: 1001 !important;
-    }
-    
-    .nav-wrap {
-        background-color: #2c323c !important;
-        border-bottom: 2px solid #ffc329 !important;
-        position: sticky !important;
-        top: 0 !important;
-        z-index: 1000 !important;
-    }
-    
-    /* Fix white space in header */
-    .site-header {
-        background-color: #2c323c !important;
-    }
-    
-    .site-header-style-normal {
-        background-color: #2c323c !important;
-    }
-    
-    /* Ensure navigation text is visible on dark background */
-    .site-navigation a {
-        color: #ffffff !important;
-        font-weight: 600 !important;
-        text-shadow: none !important;
-    }
-    
-    .site-navigation a:hover {
-        color: #ffc329 !important;
-    }
-    
-    /* Top bar text styling for visibility */
-    .top-bar, .top-bar a {
-        color: #000000 !important;
-    }
-    
-    /* Remove background image from body to prevent conflicts */
-    body, html {
-        background-image: none !important;
-        background-color: #ffffff !important;
-    }
-</style>
-
-</head>
+<noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
 
 <body class="home page-template-default page page-id-5 wp-embed-responsive  header-spacing-off wpb-js-composer js-comp-ver-7.8 vc_responsive">
         <div class="site-wrap">
@@ -1437,8 +1236,8 @@ user-select: none; background-image: none; border: 0; color: #fff; cursor: point
                         
 		
 		
-	<header class="site-header site-header-sticky site-header-layout-normal site-header-style-normal site-header-dropdown-1">
-            <div class="nav-wrap" style="background-color: white; border-bottom: 1px solid #e9ecef;">
+	<header class="site-header site-header-sticky site-header-layout-normal site-header-style-normal site-header-dropdown-1" style="background-color: white;">
+            <div class="nav-wrap" style="background-color: white;">
                 <div class="container">
                     <!-- Logo -->
                     <div class="site-logo">
@@ -1456,17 +1255,17 @@ user-select: none; background-image: none; border: 0; color: #fff; cursor: point
         <ul id="menu-main-menu" class=""><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-depth-0"><a href="/index.html" style="color: #333; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='#333'">Home</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-depth-0"><a href="/projects/index.html" style="color: #333; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='#333'" onclick="if(window.innerWidth <= 991) { event.preventDefault(); toggleMobileSubmenu(this); }">Projects</a>
 <ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/lil-motors-isuzu-dealership/index.html">Lil Motors Isuzu </a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/freds-ranch-hotel-rooms/index.html">De Vries Africa</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/freds-ranch-hotel-rooms/index.html">Fred's Ranch Hotel</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/twiva-media-office-renovation/index.html">Twiva Media Office</a></li>
-    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/Kitale-Club-Main- Kitchen-Facility/index.html">Kitale Club</a></li>
-    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/res_home_ngong/index.html">Ngong Residential</a></li>
-    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/grand-westpeak-kilimani/index.html">Grand-Westpeak</a></li>
-    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/Residential House, Lukhhome, Trans Nzoia/index.html">Lukhhome House</a></li>
-    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/mukinduri-gazebo-bedroom-extension/index.html">Mukinduri Gazebo</a></li>
-    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/ngong-kitchen-design/index.html"> Kitchen Design</a></li>
-    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/milimani-kitale-residential/index.html">Milimani Residential</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/lil-motors-isuzu-dealership/index.html">LIL MOTORS ISUZU</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/de-vries-africa-office-fitout/index.html">DE VRIES AFRICA</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/freds-ranch-hotel-rooms/index.html">FRED'S RANCH HOTEL</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/twiva-media-office-renovation/index.html">TWIVA MEDIA OFFICE</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/Kitale-Club-Main- Kitchen-Facility/index.html">KITALE CLUB</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/res_home_ngong/index.html">NGONG RESIDENTIAL</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/grand-westpeak-kilimani/index.html">GRAND-WESTPEAK</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/Residential House, Lukhhome, Trans Nzoia/index.html">LUKHHOME HOUSE</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/mukinduri-gazebo-bedroom-extension/index.html">MUKINDURI GAZEBO</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/ngong-kitchen-design/index.html">KITCHEN DESIGN</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/milimani-kitale-residential/index.html">MILIMANI RESIDENTIAL</a></li>
 
 
 </ul>
