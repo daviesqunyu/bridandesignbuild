@@ -454,10 +454,157 @@
 			.top-bar-close i {
 				font-size: 10px !important;
 			}
+			
+			.site-navigation a {
+				padding: 10px 12px !important;
+				font-size: 13px !important;
+			}
+			
+			.site-logo img {
+				max-width: 50px !important;
+			}
 		}
 		
-		.top-bar a:not(:hover) {
-			color: #ebebeb !important;
+		/* Content responsive adjustments */
+		.row {
+			margin-left: -15px !important;
+			margin-right: -15px !important;
+		}
+		
+		.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
+		.col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+			padding-left: 15px !important;
+			padding-right: 15px !important;
+		}
+		
+		/* Responsive images */
+		img {
+			max-width: 100% !important;
+			height: auto !important;
+		}
+		
+		/* Responsive videos */
+		video {
+			max-width: 100% !important;
+			height: auto !important;
+		}
+		
+		/* Responsive tables */
+		table {
+			width: 100% !important;
+			overflow-x: auto !important;
+			display: block !important;
+			white-space: nowrap !important;
+		}
+		
+		/* Responsive forms */
+		input, textarea, select {
+			max-width: 100% !important;
+			box-sizing: border-box !important;
+		}
+		
+		/* Footer responsive adjustments */
+		.site-footer .row {
+			margin-left: -10px !important;
+			margin-right: -10px !important;
+		}
+		
+		.site-footer .col-md-3 {
+			margin-bottom: 30px !important;
+		}
+		
+		@media (max-width: 767px) {
+			.site-footer .col-md-3 {
+				margin-bottom: 20px !important;
+			}
+		}
+		
+		/* Sticky header functionality - only when active */
+		.site-header-sticky-active {
+			position: fixed !important;
+			top: 0 !important;
+			left: 0 !important;
+			right: 0 !important;
+			z-index: 9999 !important;
+			transition: all 0.3s ease !important;
+			box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+		}
+		
+		/* Ensure top-bar is always visible */
+		.top-bar {
+			display: block !important;
+			visibility: visible !important;
+			opacity: 1 !important;
+			position: relative !important;
+			z-index: 10000 !important;
+			width: 100% !important;
+			height: auto !important;
+			min-height: 40px !important;
+			background-color: #f8f9fa !important;
+			border-bottom: 1px solid #e9ecef !important;
+		}
+		
+		/* Ensure main header is always visible */
+		.site-header {
+			display: block !important;
+			visibility: visible !important;
+			opacity: 1 !important;
+		}
+		
+		/* Add top padding to body when header is sticky */
+		body.sticky-header-active {
+			padding-top: 160px !important;
+		}
+		
+		/* Remove top margin from site-header to eliminate white space at top */
+		.site-header {
+			margin-top: 0 !important;
+		}
+		
+		/* Add spacing between header and main content */
+		.site-header + * {
+			margin-top: 20px !important;
+		}
+		
+		/* Ensure proper spacing in header sections */
+		.nav-wrap {
+			padding-top: 15px !important;
+			padding-bottom: 15px !important;
+		}
+		
+		/* Add spacing between top-bar and nav-wrap */
+		.top-bar + .site-header .nav-wrap {
+			margin-top: 10px !important;
+		}
+		
+		/* Sticky header functionality */
+		.site-header-sticky-active {
+			position: fixed !important;
+			top: 0 !important;
+			left: 0 !important;
+			right: 0 !important;
+			z-index: 9999 !important;
+			transition: all 0.3s ease !important;
+			box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+		}
+		
+		/* Ensure top-bar is always visible */
+		.top-bar {
+			display: block !important;
+			visibility: visible !important;
+			opacity: 1 !important;
+			position: relative !important;
+			z-index: 10000 !important;
+			width: 100% !important;
+			height: auto !important;
+			min-height: 40px !important;
+		}
+		
+		/* Ensure main header is always visible */
+		.site-header {
+			display: block !important;
+			visibility: visible !important;
+			opacity: 1 !important;
 		}
 	</style>
 
@@ -563,60 +710,7 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
 				}
 			//});
 		  };</script>
-<style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1435847124413{margin-bottom: 60px !important;}.vc_custom_1418807519392{margin-top: 20px !important;}</style>
-
-<!-- Header Background Color Override - Apply consistent styling across all pages -->
-<style type="text/css">
-    /* Header Background Color Override - Apply to ALL pages including home */
-    .top-bar {
-        background-color: #2c323c !important;
-        color: #ffffff !important;
-        position: sticky !important;
-        top: 0 !important;
-        z-index: 1001 !important;
-    }
-    
-    .nav-wrap {
-        background-color: #2c323c !important;
-        border-bottom: 2px solid #ffc329 !important;
-        position: sticky !important;
-        top: 0 !important;
-        z-index: 1000 !important;
-    }
-    
-    /* Fix white space in header */
-    .site-header {
-        background-color: #2c323c !important;
-    }
-    
-    .site-header-style-normal {
-        background-color: #2c323c !important;
-    }
-    
-    /* Ensure navigation text is visible on dark background */
-    .site-navigation a {
-        color: #ffffff !important;
-        font-weight: 600 !important;
-        text-shadow: none !important;
-    }
-    
-    .site-navigation a:hover {
-        color: #ffc329 !important;
-    }
-    
-    /* Top bar text styling for visibility */
-    .top-bar, .top-bar a {
-        color: #000000 !important;
-    }
-    
-    /* Remove background image from body to prevent conflicts */
-    body, html {
-        background-image: none !important;
-        background-color: #ffffff !important;
-    }
-</style>
-
-<noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
+<style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1435847124413{margin-bottom: 60px !important;}.vc_custom_1418807519392{margin-top: 20px !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
 
 <body class="page-template-default page page-id-15 wp-embed-responsive wpb-js-composer js-comp-ver-7.8 vc_responsive">
         <div class="site-wrap">
@@ -683,27 +777,8 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
                                                                     </a>
                                                                 </div>
                     </div>
-                                                            
-                                                            <!-- Email -->
-                                                            <div id="anpstext-3" class="widget-container widget_anpstext">
-        <div class="anpstext-wrap">
-                                                <span class="fa fa-envelope-o"></span>
-                                                                    <div class="anpstext-desc">
-                                                                        <a href="mailto:bridandesignbuild@gmail.com" style="color: inherit; text-decoration: none;">bridandesignbuild@gmail.com</a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                    </div>
-                                                    
-                                                    <!-- Top Bar Close Button -->
-                                                    <button class="top-bar-close">
-                        <i class="fa fa-chevron-down"></i>
-                        <span class="sr-only">Close top bar</span>
-                    </button>
-        </div>
-                        <header class="site-header site-header-sticky site-header-style-normal site-header-layout-normal site-header-dropdown-1" >
-                                    <div class="nav-wrap">
+                        <header class="site-header site-header-sticky site-header-style-normal site-header-layout-normal site-header-dropdown-1" style="background-color: white;">
+                                    <div class="nav-wrap" style="background-color: white;">
                         <div class="container">
                         <div class="site-logo"><a href="/index.html">  
                              
@@ -721,62 +796,30 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-depth-0">
                                             <a href="/projects/index.html" style="color: seashell; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='seashell'" >Projects</a>
                                             <ul class="sub-menu">
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="/projects/lil-motors-isuzu-dealership/index.html">LIL MOTORS ISUZU</a>
-                                                </li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="/projects/de-vries-africa-office-fitout/index.html">DE VRIES AFRICA</a>
-                                                </li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="/projects/freds-ranch-hotel-rooms/index.html">FRED'S RANCH HOTEL</a>
-                                                </li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="/projects/twiva-media-office-renovation/index.html">TWIVA MEDIA OFFICE</a>
-                                                </li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="/projects/Kitale-Club-Main- Kitchen-Facility/index.html">KITALE CLUB</a>
-                                                </li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="/projects/res_home_ngong/index.html">NGONG RESIDENTIAL</a>
-                                                </li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="/projects/grand-westpeak-kilimani/index.html">GRAND-WESTPEAK</a>
-                                                </li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="/projects/Residential House, Lukhhome, Trans Nzoia/index.html">LUKHHOME HOUSE</a>
-                                                </li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="/projects/mukinduri-gazebo-bedroom-extension/index.html">MUKINDURI GAZEBO</a>
-                                                </li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="/projects/ngong-kitchen-design/index.html">KITCHEN DESIGN</a>
-                                                </li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="/projects/milimani-kitale-residential/index.html">MILIMANI RESIDENTIAL</a>
-                                                </li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/lil-motors-isuzu-dealership/index.html">LIL MOTORS ISUZU</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/freds-ranch-hotel-rooms/index.html">DE VRIES AFRICA</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/freds-ranch-hotel-rooms/index.html">FRED'S RANCH HOTEL</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/twiva-media-office-renovation/index.html">TWIVA MEDIA OFFICE</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/Kitale-Club-Main- Kitchen-Facility/index.html">KITALE CLUB</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/res_home_ngong/index.html">NGONG RESIDENTIAL</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/grand-westpeak-kilimani/index.html">GRAND-WESTPEAK</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/Residential House, Lukhhome, Trans Nzoia/index.html">LUKHHOME HOUSE</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/mukinduri-gazebo-bedroom-extension/index.html">MUKINDURI GAZEBO</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/ngong-kitchen-design/index.html">KITCHEN DESIGN</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/projects/milimani-kitale-residential/index.html">MILIMANI RESIDENTIAL</a></li>
+
+
                                             </ul>
                                         </li>
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-depth-0">
                                             <a href="/what-we-do/index.html" style="color: seashell; transition: color 0.3s ease;" onmouseover="this.style.color='#ffc329'" onmouseout="this.style.color='seashell'" >What we do</a>
                                             <ul class="sub-menu">
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="/what-we-do/index.html">CONSTRUCTION</a>
-                                                </li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="/what-we-do/index.html">RENOVATIONS</a>
-                                                </li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="/what-we-do/index.html">CONSULTING</a>
-                                                </li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="/what-we-do/index.html">BIG PROJECTS</a>
-                                                </li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="/what-we-do/index.html">ARCHITECTURE</a>
-                                                </li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                    <a href="/what-we-do/index.html">CONCRETE TRANSPORT</a>
-                                                </li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/what-we-do/architectural_services/index.html">CONSTRUCTION</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/what-we-do/interior_design_services/index.html">RENOVATIONS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/what-we-do/building_construction/index.html">BUILDING CONSTRUCTION</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/what-we-do/construction_managemet/index.html">CONSTRUCTION MANAGEMENT</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/what-we-do/skilled_labour-provision/index.html">SKILLED LABOUR PROVISION</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1"><a href="/what-we-do/renovations/index.html">RENOVATIONS</a></li>
                                             </ul>
                                         </li>
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0">
