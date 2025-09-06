@@ -1,165 +1,56 @@
-# Bridan Design Build - Robots.txt
-# Optimized for buildwithbridan.com
+# Bridan Design Build - robots.txt
 # Target: Kenya Construction Market
 
 User-agent: *
 Allow: /
 
-# ===========================================
-# SITEMAP LOCATION
-# ===========================================
+# Sitemap
 Sitemap: https://buildwithbridan.com/sitemap.xml
 
-# ===========================================
-# ALLOWED PATHS (Construction Industry Focus)
-# ===========================================
-Allow: /index.html
+# Main Allowed Paths
 Allow: /about-us/
 Allow: /projects/
 Allow: /what-we-do/
 Allow: /contact-us/
 Allow: /blog/
 Allow: /img/
-Allow: /favicon/
 Allow: /wp-content/uploads/
-Allow: /wp-content/themes/
-Allow: /wp-includes/
 
-# ===========================================
-# DISALLOWED PATHS (Security & Performance)
-# ===========================================
+# Important Assets (JS, CSS for SEO rendering)
+Allow: /wp-content/plugins/*.js
+Allow: /wp-content/plugins/*.css
+Allow: /wp-content/cache/*.js
+Allow: /wp-content/cache/*.css
+
+# Block Sensitive WP Paths
 Disallow: /wp-admin/
 Disallow: /wp-includes/
-Disallow: /wp-content/plugins/
 Disallow: /wp-content/cache/
 Disallow: /wp-content/upgrade/
-Disallow: /wp-content/backup*/
 Disallow: /wp-content/backups/
-Disallow: /wp-content/blogs.dir/
-Disallow: /wp-content/uploads/backup*/
 Disallow: /wp-content/uploads/backups/
-Disallow: /wp-content/uploads/upgrade/
-Disallow: /wp-content/uploads/wpforms/
 Disallow: /wp-json/
 Disallow: /xmlrpc.php
 Disallow: /readme.html
 Disallow: /license.txt
 Disallow: /wp-config.php
-Disallow: /wp-config-sample.php
-Disallow: /wp-settings.php
-Disallow: /wp-load.php
-Disallow: /wp-blog-header.php
-Disallow: /wp-activate.php
-Disallow: /wp-signup.php
-Disallow: /wp-register.php
 Disallow: /wp-login.php
-Disallow: /wp-cron.php
-Disallow: /wp-mail.php
-Disallow: /wp-trackback.php
-Disallow: /wp-comments-post.php
-Disallow: /wp-links-opml.php
-Disallow: /wp-locations.php
-Disallow: /wp-sitemap-posts-post-1.xml
-Disallow: /wp-sitemap-posts-page-1.xml
-Disallow: /wp-sitemap-taxonomies-category-1.xml
-Disallow: /wp-sitemap-taxonomies-post_tag-1.xml
-Disallow: /wp-sitemap-users-1.xml
-Disallow: /wp-sitemap-index.xml
-Disallow: /feed/
-Disallow: /comments/feed/
 Disallow: /trackback/
 Disallow: /search/
-Disallow: /author/
 Disallow: /tag/
 Disallow: /category/
+Disallow: /author/
 Disallow: /date/
-Disallow: /page/
-Disallow: /attachment/
-Disallow: /?s=
-Disallow: /?attachment_id=
-Disallow: /?p=
-Disallow: /?m=
-Disallow: /?w=
-Disallow: /?cat=
-Disallow: /?tag=
-Disallow: /?author=
-Disallow: /?year=
-Disallow: /?monthnum=
-Disallow: /?day=
-Disallow: /?hour=
-Disallow: /?minute=
-Disallow: /?second=
-Disallow: /?post_type=
-Disallow: /?name=
-Disallow: /?pagename=
-Disallow: /?preview=
-Disallow: /?preview_id=
-Disallow: /?preview_nonce=
-Disallow: /?preview=true
-Disallow: /?s=*
-Disallow: /?attachment_id=*
-Disallow: /?p=*
-Disallow: /?m=*
-Disallow: /?w=*
-Disallow: /?cat=*
-Disallow: /?tag=*
-Disallow: /?author=*
-Disallow: /?year=*
-Disallow: /?monthnum=*
-Disallow: /?day=*
-Disallow: /?hour=*
-Disallow: /?minute=*
-Disallow: /?second=*
-Disallow: /?post_type=*
-Disallow: /?name=*
-Disallow: /?pagename=*
-Disallow: /?preview=*
-Disallow: /?preview_id=*
-Disallow: /?preview_nonce=*
-Disallow: /?preview=true*
 
-# ===========================================
-# KENYA-SPECIFIC SEARCH ENGINES
-# ===========================================
-# Allow Kenya-specific search engines
-User-agent: Googlebot
-Allow: /
+# Query Parameters
+Disallow: /*?s=
+Disallow: /*?preview=
+Disallow: /*?attachment_id=
 
-User-agent: Bingbot
-Allow: /
-
-User-agent: YandexBot
-Allow: /
-
-# ===========================================
-# CONSTRUCTION INDUSTRY FOCUS
-# ===========================================
-# Prioritize construction-related content
-Allow: /projects/*.html
-Allow: /what-we-do/*.html
-Allow: /about-us/index.html
-Allow: /contact-us/index.html
-
-# ===========================================
-# CRAWL DELAY (Optimized for Kenya's infrastructure)
-# ===========================================
-# Slower crawl delay for better server performance
+# Crawl Delay
 Crawl-delay: 1
 
-# ===========================================
-# MOBILE OPTIMIZATION
-# ===========================================
-# Allow mobile search engines
-User-agent: Googlebot-Mobile
-Allow: /
-
-User-agent: Bingbot-Mobile
-Allow: /
-
-# ===========================================
-# SOCIAL MEDIA CRAWLERS
-# ===========================================
-# Allow social media crawlers for better sharing
+# Social Media Bots
 User-agent: facebookexternalhit
 Allow: /
 
@@ -172,29 +63,4 @@ Allow: /
 User-agent: WhatsApp
 Allow: /
 
-# ===========================================
-# ANALYTICS & TRACKING
-# ===========================================
-# Allow analytics crawlers
-User-agent: GoogleAnalytics
-Allow: /
-
-User-agent: Googlebot-Image
-Allow: /img/
-Allow: /wp-content/uploads/
-
-# ===========================================
-# BRIDAN DESIGN BUILD SPECIFIC
-# ===========================================
-# Optimize for buildwithbridan.com domain
-# Allow all main pages for better SEO
-Allow: /index.html
-Allow: /about-us/
-Allow: /projects/
-Allow: /what-we-do/
-Allow: /contact-us/
-Allow: /blog/
-
-# ===========================================
-# END OF ROBOTS.TXT
-# ===========================================
+# End of robots.txt
