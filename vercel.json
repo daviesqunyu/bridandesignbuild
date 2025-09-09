@@ -1,5 +1,13 @@
 {
+  "version": 2,
   "redirects": [
-    { "source": "/(.*)", "has": [{ "type": "host", "value": "www.buildwithbridan.com" }], "destination": "https://buildwithbridan.com/:1", "permanent": true }
+    {
+      "source": "/(.*)",
+      "has": [
+        { "type": "host", "value": "www.buildwithbridan.com" }
+      ],
+      "destination": "https://buildwithbridan.com/:1",
+      "permanent": true
+    }
   ]
 }
