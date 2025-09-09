@@ -356,15 +356,24 @@ jQuery.fn.isOnScreen = function() {
         });
 
         $('.top-bar-close').on('click', function() {
-            if( !$('.top-bar .container').attr('style') ) {
-                topBarSize();
-                $('.top-bar').addClass('top-bar-show').removeClass('top-bar-hide');
+            var $btn = $(this)
+            var $bar = $('.top-bar')
+            var $wrap = $('.top-bar .container')
+            // If no explicit height set, ensure it is calculated
+            if (!$bar.hasClass('collapsed')) {
+                // Collapse
+                $bar.addClass('collapsed').removeClass('top-bar-show').addClass('top-bar-hide')
+                $wrap.css('display', 'none')
+                $btn.find('i').removeClass('fa-chevron-down').addClass('fa-chevron-up')
             } else {
-                $('.top-bar .container').attr('style', '');
-                $('.top-bar').removeClass('top-bar-show').addClass('top-bar-hide');
+                // Expand
+                $bar.removeClass('collapsed').removeClass('top-bar-hide').addClass('top-bar-show')
+                $wrap.css('display', 'block')
+                topBarSize()
+                $btn.find('i').removeClass('fa-chevron-up').addClass('fa-chevron-down')
             }
-            $(this).trigger('blur');
-        });
+            $btn.trigger('blur')
+        })
 
         if (isMegamenu) megamenu()
 

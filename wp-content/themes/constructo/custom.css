@@ -1,2 +1,71 @@
 /*** Write your CSS structure here. ***/
 
+/* Global mobile refinements for consistent header/nav across pages */
+@media (max-width: 767px) {
+  /* Top bar spacing and readability */
+  .top-bar { padding: 8px 0; }
+  .top-bar .container { padding-left: 12px; padding-right: 12px; }
+  .top-bar, .top-bar a, .top-bar .anpstext-desc { font-weight: 700; color: #ebebeb; }
+  .top-bar i { color: #ebebeb; }
+
+  /* Logo sizing consistency */
+  .site-logo img { max-height: 70px; height: auto; width: auto; }
+
+  /* Mobile navigation drawer */
+  .site-navigation {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 82%;
+    max-width: 340px;
+    background: #2c323c;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: -2px 0 14px rgba(0,0,0,0.25);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 10000;
+  }
+  .site-navigation.mobile-active { transform: translateX(0); }
+  body.sticky-header-active .site-navigation.mobile-active { padding-top: 70px; }
+
+  /* Increase tap target spacing */
+  .site-navigation ul li a { padding: 14px 18px; display: block; }
+  .site-navigation .sub-menu a { padding-left: 28px; }
+
+  /* Avoid content hidden behind header */
+  .page-heading { margin-top: 12px; }
+  .vc_row.vc_row-fluid { padding-left: 12px; padding-right: 12px; }
+
+  /* Slideout menu toggle button visibility */
+  .navbar-toggle { position: relative; z-index: 11000; }
+
+  /* Top bar arrow visibility and spacing */
+  .top-bar-close { display: block; position: relative; z-index: 11000; margin: 0 auto; }
+  .top-bar .container { display: block; }
+
+  /* Hero buttons readability on mobile */
+  .rev-btn { color: #111 !important; background-color: #ffc329 !important; border-color: #ffc329 !important; }
+
+  /* Prevent overflow on testimonial cards & grids */
+  .testimonial-container { padding-left: 16px !important; padding-right: 16px !important; }
+  .content-card { margin-left: 0; margin-right: 0; }
+}
+
+/* Reduce layout shifts: ensure logo dimensions reserved */
+.site-logo img.logo-desktop { width: 80px; height: 70px; }
+.site-logo img.logo-mobile { width: 70px; height: 90px; }
+.site-logo img.logo-sticky { width: 70px; height: 70px; }
+
+/* Ensure off-canvas nav opens inside viewport on every page */
+@media (max-width: 991px) {
+  .site-navigation { left: -100% !important; right: auto !important; transform: none; }
+  .site-navigation.mobile-active { left: 0 !important; }
+  .site-navigation ul { display: flex; flex-direction: column; padding: 0 18px; }
+  .site-navigation li { width: 100%; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .site-navigation a { color: #fff; display: block; padding: 16px 14px; text-decoration: none; }
+  .site-navigation .sub-menu { display: none; position: static; background: rgba(255,255,255,.06); border-left: 3px solid #ffc329; }
+  .menu-item-has-children.active > .sub-menu { display: block; }
+}
+
