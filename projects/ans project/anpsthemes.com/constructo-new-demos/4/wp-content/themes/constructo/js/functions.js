@@ -936,3 +936,5 @@ async function initMap() {
         addMarkers(map, locations)
     })
 }
+
+
