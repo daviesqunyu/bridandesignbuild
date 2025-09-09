@@ -3,14 +3,6 @@
   "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
-  "builds": [
-    { "src": "index.html", "use": "@vercel/static" },
-    { "src": "404.html", "use": "@vercel/static" },
-    { "src": "robots.txt", "use": "@vercel/static" },
-    { "src": "sitemap.xml", "use": "@vercel/static" },
-    { "src": "favicon/**", "use": "@vercel/static" },
-    { "src": "**/*", "use": "@vercel/static" }
-  ],
   "redirects": [
     {
       "source": "/(.*)",
