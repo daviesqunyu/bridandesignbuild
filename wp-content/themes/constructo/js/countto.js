@@ -78,3 +78,4 @@
 		return value.toFixed(settings.decimals);
 	}
 }(jQuery));
+

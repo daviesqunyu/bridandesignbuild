@@ -518,3 +518,4 @@ https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt
   });
 
 }).call(this);
+

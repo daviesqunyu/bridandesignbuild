@@ -41,3 +41,4 @@ jQuery(function($) {
         $qty.trigger('change')
     })
 })
+
