@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -613,7 +613,8 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
 </ul>                                </nav>
                                                                    
                                                               
-                                                                <button class="navbar-toggle" type="button" onclick="toggleMobileMenu()" style="color: #ffc329;">
+                                                                
+								<button class="navbar-toggle" type="button" onclick="toggleMobileMenu()" style="color: #ffc329;">
                                     <span class="sr-only">Toggle navigation</span>
                                     <i class="fa fa-bars" aria-hidden="true" style="color: #ffc329;"></i>
                                 </button>
@@ -2070,6 +2071,7 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 
 		if (window.RS_MODULES.checkMinimal!==undefined) { window.RS_MODULES.checkMinimal();};
 	    </script>
+	
 
         <!-- /////////// -->
 
@@ -2219,35 +2221,43 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 
 		// Mobile menu toggle function
 		function toggleMobileMenu() {
-			console.log('toggleMobileMenu called');
-			const nav = document.querySelector('.site-navigation');
-			const searchForm = document.querySelector('.site-search');
-			
-			if (nav) {
-				nav.classList.toggle('mobile-active');
-				// Close search if open
-				if (searchForm) {
-					searchForm.classList.remove('mobile-active');
-				}
-				
-				// Prevent body scroll when menu is open
-				if (nav.classList.contains('mobile-active')) {
-					document.body.style.overflow = 'hidden';
-				} else {
-					document.body.style.overflow = '';
-				}
-			}
-		}
+    const nav = document.querySelector('.site-navigation');
+    const searchForm = document.querySelector('.site-search');
+    const body = document.body;
+    
+    if (nav) {
+        nav.classList.toggle('mobile-active');
+        
+        // Toggle body scroll
+        if (nav.classList.contains('mobile-active')) {
+            body.style.overflow = 'hidden';
+        } else {
+            body.style.overflow = '';
+        }
+        
+        // Close search if open
+        if (searchForm && searchForm.classList.contains('mobile-active')) {
+            searchForm.classList.remove('mobile-active');
+        }
+    }
+}
+
 		
 		// Mobile submenu toggle function
-		function toggleMobileSubmenu(element) {
-			const submenu = element.nextElementSibling;
-			if (submenu && submenu.classList.contains('sub-menu')) {
-				submenu.classList.toggle('mobile-submenu-active');
-				element.classList.toggle('mobile-submenu-open');
-			}
-		}
-		
+	function toggleMobileSubmenu(element) {
+    if (window.innerWidth <= 991) {
+        const parent = element.parentElement;
+        parent.classList.toggle('active');
+        
+        // Close other submenus
+        document.querySelectorAll('.menu-item-has-children').forEach(item => {
+            if (item !== parent) {
+                item.classList.remove('active');
+            }
+        });
+    }
+}
+
 
 		// Close mobile menu when clicking outside
 		document.addEventListener('click', function(event) {
