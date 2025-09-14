@@ -133,7 +133,6 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
                         <form role="search" method="get" class="site-search-form" action="">
                             <input name="s" type="text" class="site-search-input" placeholder="type and press &#8216;enter&#8217;">
                         </form>
-                        <button class="site-search-close">&times;</button>
                     </div>
                 </div>
                                                 <div class="top-bar" style="background-color: #2c323c;" ><div class="container"><div class="top-bar-left"><div id="anpssocial-2" class="widget-container widget_anpssocial" >  
@@ -424,43 +423,11 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
                                     <a href="/projects/index.html">Projects</a>
-                                    <!-- <ul class="sub-menu">
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="/projects/index.html">All Projects</a>
-                                        </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="projects/grand-westpeak-kilimani/index.html">Modern Building</a>
-                                        </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="projects/de-vries-africa-office-fitout/index.html">De Vries Africa</a>
-                                        </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="projects/lil-motors-isuzu-dealership/index.html">Lil Motors Isuzu</a>
-                                        </li>
-                                    </ul> -->
+                                   
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
                                     <a href="/what-we-do/index.html">What We Do</a>
-                                    <!-- <ul class="sub-menu">
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="what-we-do/index.html">CONSTRUCTION</a>
-                                        </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="what-we-do/index.html">RENOVATIONS</a>
-                                        </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="what-we-do/index.html">CONSULTING</a>
-                                        </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="what-we-do/index.html">BIG PROJECTS</a>
-                                        </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="what-we-do/index.html">ARCHITECTURE</a>
-                                        </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="what-we-do/index.html">CONCRETE TRANSPORT</a>
-                                        </li>
-                                    </ul> -->
+                                  
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
                                     <a href="/about-us/index.html">About Us</a>
@@ -567,6 +534,55 @@ var anps = {"search_placeholder":"Search...","home_url":"https:\/\/buildwithbrid
 /* ]]> */
 </script>
 <script type="text/javascript" src="https://buildwithbridan.com/wp-content/themes/constructo/js/functions.js?ver=4.3.2" id="functions-js"></script>
-<script></script>
+<script>
+
+
+    // Toggle mobile menu functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const siteNavigation = document.querySelector('.site-navigation');
+    
+    if (navbarToggle && siteNavigation) {
+        navbarToggle.addEventListener('click', function() {
+            // Toggle the active class on the navigation menu
+            siteNavigation.classList.toggle('active');
+            
+            // Change the icon from bars to times and back
+            const icon = this.querySelector('i');
+            if (siteNavigation.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Close menu when clicking on a menu item (for single page applications)
+        const menuItems = siteNavigation.querySelectorAll('a');
+        menuItems.forEach(item => {
+            item.addEventListener('click', function() {
+                siteNavigation.classList.remove('active');
+                const icon = navbarToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (siteNavigation.classList.contains('active') && 
+                !siteNavigation.contains(event.target) && 
+                !navbarToggle.contains(event.target)) {
+                siteNavigation.classList.remove('active');
+                const icon = navbarToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    }
+});
+
+</script>
 </body>
 </html>

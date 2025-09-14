@@ -479,7 +479,53 @@ var anps = {"search_placeholder":"Search...","home_url":"https:\/\/anpsthemes.co
 </script>
 <script type="text/javascript" src="https://buildwithbridan.com/wp-content/themes/constructo/js/functions.js?ver=4.3.2" id="functions-js"></script>
 <script type="text/javascript" src="https://buildwithbridan.com/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=7.8" id="wpb_composer_front_js-js"></script>
-<script></script>
+<!-- <script>
+    // Toggle mobile menu functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const siteNavigation = document.querySelector('.site-navigation');
+    
+    if (navbarToggle && siteNavigation) {
+        navbarToggle.addEventListener('click', function() {
+            // Toggle the active class on the navigation menu
+            siteNavigation.classList.toggle('active');
+            
+            // Change the icon from bars to times and back
+            const icon = this.querySelector('i');
+            if (siteNavigation.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Close menu when clicking on a menu item (for single page applications)
+        const menuItems = siteNavigation.querySelectorAll('a');
+        menuItems.forEach(item => {
+            item.addEventListener('click', function() {
+                siteNavigation.classList.remove('active');
+                const icon = navbarToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (siteNavigation.classList.contains('active') && 
+                !siteNavigation.contains(event.target) && 
+                !navbarToggle.contains(event.target)) {
+                siteNavigation.classList.remove('active');
+                const icon = navbarToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    }
+});
+</script> -->
 </body>
 </html>
 
