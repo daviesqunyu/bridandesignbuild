@@ -282,6 +282,8 @@ jQuery.fn.isOnScreen = function() {
 
 
     $(function () {
+        // Add namespaced class to scope our overrides safely
+        $('body').addClass('bdbl-mobile-nav')
         isJqueryReady = true
         $containerMasonry = $('.blog-masonry')
         topOffset = 0
@@ -311,14 +313,54 @@ jQuery.fn.isOnScreen = function() {
             }
         });
 
-        $('.navbar-toggle').on('click', function() {
-            $('.site-navigation').toggleClass('site-navigation-opened');
-            if ($('.site-navigation-opened').length) {
-                var offset = $('.nav-wrap').height();
-                if (window.innerWidth > 782) { offset += $('#wpadminbar').height(); }
-                $('.site-navigation-opened').css({ 'max-height': window.innerHeight - offset, });
+        // Unify mobile nav toggle across all pages
+        $('.navbar-toggle').on('click', function(e) {
+            e.preventDefault()
+            var $nav = $('.site-navigation')
+            // Toggle both legacy and new classes to cover inline page variations
+            $nav.toggleClass('site-navigation-opened')
+            $nav.toggleClass('mobile-active')
+
+            // Lock/unlock body scroll when menu is open
+            if ($nav.hasClass('mobile-active')) {
+                $('body').css('overflow', 'hidden')
+            } else {
+                $('body').css('overflow', '')
             }
-        });
+
+            // Ensure visible height fits viewport on open
+            if ($nav.hasClass('site-navigation-opened') || $nav.hasClass('mobile-active')) {
+                var offset = $('.nav-wrap').height()
+                if (window.innerWidth > 782) { offset += $('#wpadminbar').height() }
+                $nav.css({ 'max-height': window.innerHeight - offset })
+            }
+        })
+
+        // Mobile submenu toggle with navigation on second tap
+        $(document).on('click', '.menu-item-has-children > a', function(e) {
+            if (window.innerWidth <= 991) {
+                var $parent = $(this).parent()
+                // If not open yet, open submenu and prevent navigation
+                if (!$parent.hasClass('active')) {
+                    e.preventDefault()
+                    $parent.addClass('active')
+                    $parent.siblings('.menu-item-has-children.active').removeClass('active')
+                } else {
+                    // Already open: allow link to navigate (e.g., Projects -> projects/index.html)
+                }
+            }
+        })
+
+        // Close mobile menu when clicking outside of it
+        $(document).on('click', function(e) {
+            var $nav = $('.site-navigation')
+            var $toggle = $('.navbar-toggle')
+            if (!$nav.length) return
+            if ($nav.hasClass('mobile-active') && !$(e.target).closest('.site-navigation, .navbar-toggle').length) {
+                $nav.removeClass('mobile-active site-navigation-opened')
+                $('body').css('overflow', '')
+            }
+        })
 
         if (!$('.menu-item-depth-0').length) {
             $('.site-navigation > ul > li').addClass('menu-item-depth-0');
@@ -718,6 +760,38 @@ jQuery.fn.isOnScreen = function() {
         if (scrollTopEl) handleScrollTopLinkVisibility()
     }, 100), { passive: true })
 })(jQuery)
+
+// Backward-compatible globals used by some pages with inline onclick handlers
+window.toggleMobileMenu = function () {
+    try {
+        var toggle = document.querySelector('.navbar-toggle')
+        if (toggle) {
+            // Trigger the jQuery handler we bound above
+            toggle.dispatchEvent(new MouseEvent('click', { bubbles: true }))
+        }
+    } catch (e) {
+        // Fallback: directly toggle classes if dispatch fails
+        var nav = document.querySelector('.site-navigation')
+        if (!nav) return
+        nav.classList.toggle('site-navigation-opened')
+        nav.classList.toggle('mobile-active')
+        document.body.style.overflow = nav.classList.contains('mobile-active') ? 'hidden' : ''
+    }
+}
+
+window.toggleMobileSubmenu = function (el) {
+    if (window.innerWidth > 991 || !el) return
+    var parent = el.parentElement
+    if (!parent) return
+    if (!parent.classList.contains('active')) {
+        // Close siblings then open current
+        var siblings = parent.parentElement ? parent.parentElement.querySelectorAll('.menu-item-has-children.active') : []
+        siblings.forEach(function (sib) { if (sib !== parent) sib.classList.remove('active') })
+        parent.classList.add('active')
+    } else {
+        parent.classList.remove('active')
+    }
+}
 
 if (typeof window['vc_rowBehaviour'] !== 'function') {
     window.vc_rowBehaviour = function() {

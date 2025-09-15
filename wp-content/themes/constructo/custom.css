@@ -1,7 +1,11 @@
 /*** Write your CSS structure here. ***/
 
 /* Global mobile refinements for consistent header/nav across pages */
-@media (max-width: 767px) {
+/* Scoped mobile header refinements to avoid overriding page styles */
+body.bdbl-mobile-nav @media (max-width: 767px) {
+  /* Anchor placements to header container */
+  .nav-wrap, .site-header .container { position: relative !important; }
+  .nav-wrap { min-height: 56px; }
   /* Top bar spacing and readability */
   .top-bar { padding: 8px 0; }
   .top-bar .container { padding-left: 12px; padding-right: 12px; }
@@ -38,11 +42,23 @@
   .page-heading { margin-top: 12px; }
   .vc_row.vc_row-fluid { padding-left: 12px; padding-right: 12px; }
 
-  /* Slideout menu toggle button visibility */
-  .navbar-toggle { position: relative; z-index: 11000; }
+  /* Slideout menu toggle button visibility and centered placement */
+  .navbar-toggle {
+    position: absolute !important;
+    top: 12px !important;
+    right: 12px !important;
+    left: auto !important;
+    transform: none !important;
+    z-index: 11000 !important;
+    background: rgba(0,0,0,0.85) !important;
+    border-radius: 10px !important;
+    padding: 10px 12px !important;
+  }
 
   /* Top bar arrow visibility and spacing */
-  .top-bar-close { display: block; position: relative; z-index: 11000; margin: 0 auto; }
+  /* Place the top bar dropdown arrow button on the right inside the top bar */
+  .top-bar { position: relative; }
+  .top-bar-close { display: block; position: absolute; right: 12px; top: 8px; z-index: 11000; margin: 0; left: auto; transform: none; background: rgba(0,0,0,0.6); color: #fff; border-radius: 8px; padding: 6px 8px; }
   .top-bar .container { display: block; }
 
   /* Hero buttons readability on mobile */
@@ -53,6 +69,55 @@
   .content-card { margin-left: 0; margin-right: 0; }
 }
 
+/* Mobile nav dropdown state styles */
+}
+
+/* Scoped mobile nav dropdown state styles */
+body.bdbl-mobile-nav @media (max-width: 991px) {
+  /* Normalize slideout menu position across pages */
+  .site-navigation {
+    left: auto !important;
+    right: 0 !important;
+  }
+  .site-navigation ul { list-style: none; margin: 0; padding: 0; display: flex !important; flex-direction: column !important; align-items: stretch !important; width: 100% !important; }
+  .site-navigation ul, .site-navigation li { float: none !important; }
+  .site-navigation ul > li { display: block !important; text-align: center; width: 100% !important; }
+  .site-navigation ul:not(.sub-menu) > li > a,
+  .site-navigation .menu > li > a,
+  .site-navigation a { display: block !important; width: 100% !important; text-align: center !important; padding-left: 18px !important; padding-right: 18px !important; }
+  .site-navigation li.menu-item-has-children > a { position: relative; padding-right: 36px; }
+  .site-navigation li.menu-item-has-children > a:after {
+    content: "\f107"; /* FontAwesome down arrow */
+    font-family: "FontAwesome";
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.85;
+  }
+  .site-navigation li.menu-item-has-children.active > a:after { content: "\f106"; }
+  .site-navigation li .sub-menu { display: none; padding: 6px 0; }
+  .site-navigation li.active > .sub-menu { display: block; }
+  .site-navigation .sub-menu li a { padding: 12px 18px; display: block; }
+}
+
+/* Center the hamburger for tablets too */
+}
+
+/* Scoped tablet header refinements */
+body.bdbl-mobile-nav @media (min-width: 768px) and (max-width: 991px) {
+  .nav-wrap, .site-header .container { position: relative !important; }
+  .nav-wrap { min-height: 60px; }
+  .navbar-toggle {
+    position: absolute !important;
+    top: 14px !important;
+    right: 14px !important;
+    left: auto !important;
+    transform: none !important;
+    z-index: 11000 !important;
+  }
+}
+
 /* Reduce layout shifts: ensure logo dimensions reserved */
 .site-logo img.logo-desktop { width: 80px; height: 70px; }
 .site-logo img.logo-mobile { width: 70px; height: 90px; }
@@ -60,12 +125,12 @@
 
 /* Ensure off-canvas nav opens inside viewport on every page */
 @media (max-width: 991px) {
-  .site-navigation { left: -100% !important; right: auto !important; transform: none; }
-  .site-navigation.mobile-active { left: 0 !important; }
+  .site-navigation { left: auto !important; right: 0 !important; transform: none; width: 82%; max-width: 340px; }
+  .site-navigation.mobile-active { left: auto !important; right: 0 !important; }
   .site-navigation ul { display: flex; flex-direction: column; padding: 0 18px; }
   .site-navigation li { width: 100%; border-bottom: 1px solid rgba(255,255,255,.08); }
-  .site-navigation a { color: #fff; display: block; padding: 16px 14px; text-decoration: none; }
-  .site-navigation .sub-menu { display: none; position: static; background: rgba(255,255,255,.06); border-left: 3px solid #ffc329; }
+  .site-navigation a { color: #fff; display: block; padding: 16px 14px; text-decoration: none; text-align: center; }
+  .site-navigation .sub-menu { display: none; position: static; background: rgba(255,255,255,.06); border-left: 0; }
   .menu-item-has-children.active > .sub-menu { display: block; }
 }
 

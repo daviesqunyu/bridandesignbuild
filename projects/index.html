@@ -882,40 +882,7 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
     <script type="text/javascript" src="/wp-content/themes/constructo/js/jquery.isotope.min.js?ver=6.6.3" id="anps-isotope-js"></script>
     <script></script>
 
-    <!-- Enhanced Dropdown JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Mobile Dropdown Toggle Functionality
-            document.querySelectorAll('.menu-item-has-children > a').forEach(menuItem => {
-                menuItem.addEventListener('click', function(e) {
-                    if (window.innerWidth <= 991) {
-                        e.preventDefault();
-                        const parent = this.parentElement;
-                        const subMenu = parent.querySelector('.sub-menu');
-                        
-                        // Close other open dropdowns
-                        document.querySelectorAll('.menu-item-has-children.active').forEach(activeItem => {
-                            if (activeItem !== parent) {
-                                activeItem.classList.remove('active');
-                            }
-                        });
-                        
-                        // Toggle current dropdown
-                        parent.classList.toggle('active');
-                    }
-                });
-            });
-            
-            // Close dropdowns when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.site-navigation')) {
-                    document.querySelectorAll('.menu-item-has-children.active').forEach(item => {
-                        item.classList.remove('active');
-                    });
-                }
-            });
-        });
-    </script>
+    <!-- Removed inline nav handlers to prevent conflicts. Behavior handled in theme JS. -->
 
     <!-- Footer Section -->
     <footer class="site-footer style-1">
