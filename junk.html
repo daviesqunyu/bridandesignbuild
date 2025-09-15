@@ -58,3 +58,224 @@ widget-container widget_anpssocial
     </div>
   </div>
 </div>
+
+
+<!-- toggle menu  -->
+
+
+
+<button class="navbar-toggle" type="button" onclick="toggleMobileMenu()" style="color: #ffc329;">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <i class="fa fa-bars" aria-hidden="true" style="color: #ffc329;"></i>
+                                </button>
+
+
+
+
+    <script>
+      
+        // Add loading states to all buttons
+        document.querySelectorAll('a[href], button').forEach(element => {
+            element.addEventListener('click', function() {
+                if (this.href && !this.href.includes('#')) {
+                    this.classList.add('loading');
+                    setTimeout(() => {
+                        this.classList.remove('loading');
+                    }, 1000);
+                }
+            });
+        });
+
+        // Enhanced social media tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add hover effects to social media cards
+            document.querySelectorAll('.content-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+
+            // Add click tracking for analytics (placeholder)
+            document.querySelectorAll('.social-follow-btn, .social-message-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    console.log('Social media button clicked:', this.textContent);
+                    // Add your analytics tracking here
+                });
+            });
+        });
+	</script>
+
+	<!-- Enhanced Dropdown JavaScript -->
+	<script>
+		// Search toggle function
+		function toggleSearch() {
+			console.log('toggleSearch called');
+			const searchForm = document.querySelector('.site-search');
+			if (searchForm) {
+				// Toggle mobile search
+				if (window.innerWidth <= 991) {
+					searchForm.classList.toggle('mobile-active');
+					// Close mobile nav if open
+					const nav = document.querySelector('.site-navigation');
+					if (nav) {
+						nav.classList.remove('mobile-active');
+					}
+				} else {
+					// Desktop search functionality
+					searchForm.style.display = searchForm.style.display === 'block' ? 'none' : 'block';
+					if (searchForm.style.display === 'block') {
+						const searchInput = searchForm.querySelector('.site-search-input');
+						if (searchInput) {
+							searchInput.focus();
+						}
+					}
+				}
+			}
+		}
+
+		// Mobile menu toggle function
+		function toggleMobileMenu() {
+    const nav = document.querySelector('.site-navigation');
+    const searchForm = document.querySelector('.site-search');
+    const body = document.body;
+    
+    if (nav) {
+        nav.classList.toggle('mobile-active');
+        
+        // Toggle body scroll
+        if (nav.classList.contains('mobile-active')) {
+            body.style.overflow = 'hidden';
+        } else {
+            body.style.overflow = '';
+        }
+        
+        // Close search if open
+        if (searchForm && searchForm.classList.contains('mobile-active')) {
+            searchForm.classList.remove('mobile-active');
+        }
+    }
+}
+
+		
+		// Mobile submenu toggle function
+	function toggleMobileSubmenu(element) {
+    if (window.innerWidth <= 991) {
+        const parent = element.parentElement;
+        parent.classList.toggle('active');
+        
+        // Close other submenus
+        document.querySelectorAll('.menu-item-has-children').forEach(item => {
+            if (item !== parent) {
+                item.classList.remove('active');
+            }
+        });
+    }
+}
+
+
+		// Close mobile menu when clicking outside
+		document.addEventListener('click', function(event) {
+			const nav = document.querySelector('.site-navigation');
+			const navbarToggle = document.querySelector('.navbar-toggle');
+			const searchToggle = document.querySelector('.search-toggle');
+			
+			if (nav && nav.classList.contains('mobile-active')) {
+				if (!nav.contains(event.target) && !navbarToggle.contains(event.target) && !searchToggle.contains(event.target)) {
+					nav.classList.remove('mobile-active');
+				}
+			}
+		});
+
+		// Top bar collapse functionality
+		document.addEventListener('DOMContentLoaded', function() {
+			const topBar = document.querySelector('.top-bar');
+			const topBarClose = document.querySelector('.top-bar-close');
+			const topBarContent = document.querySelector('.top-bar .container');
+			
+			if (topBarClose && topBar) {
+				topBarClose.addEventListener('click', function() {
+					if (topBar.classList.contains('collapsed')) {
+						// Expand
+						topBar.classList.remove('collapsed');
+						topBarContent.style.display = 'block';
+						topBarClose.innerHTML = '<i class="fa fa-chevron-down"></i><span class="sr-only">Close top bar</span>';
+					} else {
+						// Collapse
+						topBar.classList.add('collapsed');
+						topBarContent.style.display = 'none';
+						topBarClose.innerHTML = '<i class="fa fa-chevron-up"></i><span class="sr-only">Open top bar</span>';
+					}
+				});
+			}
+		});
+
+		// Sticky header functionality
+		document.addEventListener('DOMContentLoaded', function() {
+			const header = document.querySelector('.site-header-sticky');
+			const body = document.body;
+			
+			if (header) {
+				let lastScrollTop = 0;
+				
+				window.addEventListener('scroll', function() {
+					const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+					
+					if (scrollTop > 100) {
+						header.classList.add('site-header-sticky-active');
+						body.classList.add('sticky-header-active');
+					} else {
+						header.classList.remove('site-header-sticky-active');
+						body.classList.remove('sticky-header-active');
+					}
+					
+					lastScrollTop = scrollTop;
+				});
+			}
+		});
+
+		document.addEventListener('DOMContentLoaded', function() {
+			// Mobile Dropdown Toggle Functionality
+			document.querySelectorAll('.menu-item-has-children > a').forEach(menuItem => {
+				menuItem.addEventListener('click', function(e) {
+					if (window.innerWidth <= 991) {
+						e.preventDefault();
+						const parent = this.parentElement;
+						const subMenu = parent.querySelector('.sub-menu');
+						
+						// Close other open dropdowns
+						document.querySelectorAll('.menu-item-has-children.active').forEach(activeItem => {
+							if (activeItem !== parent) {
+								activeItem.classList.remove('active');
+							}
+						});
+						
+						// Toggle current dropdown
+						parent.classList.toggle('active');
+					}
+				});
+			});
+			
+			// Close dropdowns when clicking outside
+			document.addEventListener('click', function(e) {
+				if (!e.target.closest('.site-navigation')) {
+					document.querySelectorAll('.menu-item-has-children.active').forEach(item => {
+						item.classList.remove('active');
+					});
+				}
+			});
+			
+			// Navbar Toggle Button Functionality
+			const navbarToggle = document.querySelector('.navbar-toggle');
+			const siteNavigation = document.querySelector('.site-navigation');
+			
+			if (navbarToggle && siteNavigation) {
+				navbarToggle.addEventListener('click', function() {
+					siteNavigation.classList.toggle('active');
+				});
+			}
+		});
+	</script>
