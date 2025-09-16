@@ -395,26 +395,58 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
     <div id="scrolltop" class="fixed scrollup"><a href="#" title="Scroll to top"><i class="fa fa-angle-up"></i></a></div>
     <input type="hidden" id="theme-path" value="/wp-content/themes/constructo" />
 
-    <script>
-
-// Mobile nav toggle replicated from Contact/Home
-        document.addEventListener('DOMContentLoaded', function () {
-            var toggle = document.querySelector('.navbar-toggle');
-            var nav = document.querySelector('.site-navigation');
-            if (!toggle || !nav) return;
-            toggle.addEventListener('click', function () {
-                nav.classList.toggle('mobile-active');
-                document.body.style.overflow = nav.classList.contains('mobile-active') ? 'hidden' : '';
-            });
-            // close drawer when clicking outside
-            document.addEventListener('click', function(e){
-                if (window.innerWidth <= 991 && nav.classList.contains('mobile-active') && !e.target.closest('.site-navigation') && !e.target.closest('.navbar-toggle')) {
-                    nav.classList.remove('mobile-active');
-                    document.body.style.overflow = '';
-                }
-            });
+<script>
+// Mobile Navigation Toggle - Fixed Version
+document.addEventListener('DOMContentLoaded', function() {
+    var toggle = document.querySelector('.navbar-toggle');
+    var nav = document.querySelector('.site-navigation');
+    var body = document.body;
+    
+    if (!toggle || !nav) return;
+    
+    // Toggle mobile menu
+    toggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        nav.classList.toggle('mobile-active');
+        body.style.overflow = nav.classList.contains('mobile-active') ? 'hidden' : '';
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 991 && 
+            nav.classList.contains('mobile-active') && 
+            !e.target.closest('.site-navigation') && 
+            !e.target.closest('.navbar-toggle')) {
+            nav.classList.remove('mobile-active');
+            body.style.overflow = '';
+        }
+    });
+    
+    // Close menu when clicking on a link
+    var navLinks = nav.querySelectorAll('a');
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 991) {
+                nav.classList.remove('mobile-active');
+                body.style.overflow = '';
+            }
         });
+    });
+    
+    // Handle submenu toggles on mobile
+    var parentItems = nav.querySelectorAll('.menu-item-has-children > a');
+    parentItems.forEach(function(item) {
+        item.addEventListener('click', function(e) {
+            if (window.innerWidth <= 991) {
+                e.preventDefault();
+                var parent = this.parentElement;
+                parent.classList.toggle('submenu-active');
+            }
+        });
+    });
+});
 </script>
+	
 <script>
         window.RS_MODULES = window.RS_MODULES || {};
         window.RS_MODULES.modules = window.RS_MODULES.modules || {};
