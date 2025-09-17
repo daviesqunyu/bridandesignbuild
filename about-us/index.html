@@ -354,17 +354,94 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
 		</div>
 	</div>
 </div></div></div></div>
-										<div>
-											<h5 class='heading-content  style-1' ><span>OUR TEAM</span></h5>
-										</div>
-										<div class="vc_row wpb_row vc_row-fluid vc_custom_1418301066256"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class='row'><div class='col-lg-3 col-sm-6'><div class='team team-hover'>
-											
-											<br>
-											<header><img loading="lazy" decoding="async" width="370" height="360" src="/img/brianpic.png" class="attachment-team-3 size-team-3 wp-post-image" alt="Brian Situma - Director / CEO" sizes="(max-width: 370px) 100vw, 370px" style="width:370px;height:360px;object-fit:cover;object-position:center;" />
-    <div class='hover'>Brian Situma is the Director and CEO of Bridan Design Build.</div></header><h2>Brian Situma</h2><em>Director / CEO</em></div></div><div class='col-lg-3 col-sm-6'><div class='team team-hover team-hover'><header><img loading="lazy" decoding="async" width="370" height="360" src="/img/dianapic.png" class="attachment-team-3 size-team-3 wp-post-image" alt="Diana Situma - Director / COO & Lead Designer" sizes="(max-width: 370px) 100vw, 370px" style="width:370px;height:360px;object-fit:cover;object-position:center;" /><div class='hover'>Diana Situma is the Director and COO of Bridan Design Build. She is also the Lead Designer.</div></header><h2>Diana Situma</h2><em>Director / COO & Lead Designer</em></div></div><div class='col-lg-3 col-sm-6'>
-        <div class='team team-hover team-hover team-hover'><header><img loading="lazy" decoding="async" width="370" height="360" src="/img/davidpic.png" class="attachment-team-3 size-team-3 wp-post-image" alt="David Situma - Director" sizes="(max-width: 370px) 100vw, 370px" style="width:370px;height:360px;object-fit:cover;object-position:center;" /><div class='hover'>David is a director at Bridan Design Build.</div></header><h2>David Situma </h2><em>Director</em></div></div><div class='col-lg-3 col-sm-6'><div class='team team-hover team-hover team-hover team-hover'><header>
-            <img loading="lazy" decoding="async" width="370" height="360" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='370' height='360' viewBox='0 0 370 360'><rect width='100%' height='100%' fill='%232c323c'/><circle cx='185' cy='110' r='55' fill='%23ffffff'/><path d='M125 210 L245 210 L285 300 L85 300 Z' fill='%23ffffff'/> </svg>" class="attachment-team-3 size-team-3 wp-post-image" alt="Director - female placeholder" style="width:370px;height:360px;object-fit:cover;object-position:center;" /><div class='hover'>Ann Situma is the Director of Bridan Design Build.</div></header><h2>Ann Situma</h2><em> Director</em></div></div></div></div></div></div></div>
-</div>                
+							<!-- Team section: heading centered above the grid -->
+<div class="team-section">
+  <div>
+    <h5 class="heading-content style-1"><span>OUR TEAM</span></h5>
+  </div>
+
+  <div class="vc_row wpb_row vc_row-fluid vc_custom_1418301066256">
+    <div class="wpb_column vc_column_container vc_col-sm-12">
+      <div class="vc_column-inner">
+        <div class="wpb_wrapper">
+          <div class="row">
+            <!-- keep your existing columns unchanged -->
+            <div class="col-lg-3 col-sm-6">
+              <div class="team team-hover">
+                <header>
+                  <img loading="lazy" decoding="async" width="370" height="360"
+                       src="/img/brianpic.png"
+                       class="attachment-team-3 size-team-3 wp-post-image"
+                       alt="Brian Situma - Director / CEO"
+                       style="width:370px;height:360px;object-fit:cover;object-position:center;" />
+                  <div class="hover">Brian Situma is the Director and CEO of Bridan Design Build.</div>
+                </header>
+                <h2>Brian Situma</h2>
+                <em>Director / CEO</em>
+              </div>
+            </div>
+
+            <!-- other team columns (leave as-is) -->
+            <!-- ... -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* scoped team heading and layout fixes */
+.team-section { width:100%; box-sizing:border-box; padding-top:8px; padding-bottom:12px; }
+
+/* center the H5 and make its width limited so it visually sits above the grid */
+.team-section .heading-content {
+  display:inline-block;
+  text-align:center;
+  width:100%;
+  max-width:720px;
+  margin:0 auto 18px;
+  padding:0;
+  line-height:1;
+}
+
+/* responsive heading size */
+.team-section .heading-content span {
+  display:block;
+  font-size: clamp(18px, 3.6vw, 28px);
+  font-weight:700;
+  letter-spacing:0.6px;
+}
+
+/* ensure team columns and images are centered */
+.team-section .row { justify-content:center; align-items:flex-start; display:flex; flex-wrap:wrap; gap:18px; }
+
+/* keep each bootstrap column behaving while centering inner content */
+.team-section .col-lg-3, .team-section .col-sm-6 {
+  display:flex;
+  justify-content:center;
+  box-sizing:border-box;
+}
+
+/* center the image inside each team card */
+.team-section .team header img {
+  display:block;
+  margin:0 auto;
+  max-width:100%;
+  height:auto;
+  object-fit:cover;
+}
+
+/* small screens: stack nicely and keep heading centered */
+@media (max-width:767px) {
+  .team-section .heading-content { margin-bottom:12px; }
+  .team-section .col-lg-3 { flex:0 0 48%; max-width:48%; }
+}
+@media (max-width:480px) {
+  .team-section .col-lg-3 { flex:0 0 100%; max-width:100%; }
+}
+</style>
+            
                     </div>
 </section>
 </div>
