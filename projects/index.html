@@ -1244,41 +1244,7 @@ var wpcf7 = {"api":{"root":"/wp-json\/","namespace":"contact-form-7\/v1"},"cache
 
 
 	</script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Mobile Dropdown Toggle Functionality
-        document.querySelectorAll('.menu-item-has-children > a').forEach(menuItem => {
-            menuItem.addEventListener('click', function(e) {
-                if (window.innerWidth <= 991) {
-                    e.preventDefault();
-                    const parent = this.parentElement;
-                    const subMenu = parent.querySelector('.sub-menu');
-                    
-                    // Close other open dropdowns
-                    document.querySelectorAll('.menu-item-has-children.active').forEach(activeItem => {
-                        if (activeItem !== parent) {
-                            activeItem.classList.remove('active');
-                        }
-                    });
-                    
-                    // Toggle current dropdown
-                    parent.classList.toggle('active');
-                }
-            });
-        });
-        
-        // Close dropdowns when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!e.target.closest('.site-navigation')) {
-                document.querySelectorAll('.menu-item-has-children.active').forEach(item => {
-                    item.classList.remove('active');
-                });
-            }
-        });
-        
-        // ... (WhatsApp form code follows)
-    });
-</script>
+
 	
 	<script>
 // Mobile nav toggle replicated from Contact/Home
