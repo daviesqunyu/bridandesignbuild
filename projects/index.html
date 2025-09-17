@@ -17,7 +17,12 @@
 
 	
     
- <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+   <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+   <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+   <link rel="manifest" href="/site.webmanifest" />
+   <meta name="theme-color" content="#FFC329" />
     <title>Projects - Bridan Design Build Limited - Kenya Construction Company</title>
 <meta name='robots' content='max-image-preview:large' />
 <link rel='dns-prefetch' href='//fonts.googleapis.com' />
@@ -151,9 +156,9 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
                 </a>
                             </li>
                                         <li>
-                                    <a href="https://www.linkedin.com/in/bridan-design-build-653b631a7/" target="_blank" aria-label="LinkedIn" class="social-3d">
-                                        <i class="fab fa-linkedin-in" style="font-size: 20px;"></i>
-                                        <span class="sr-only">LinkedIn</span>
+                                        <a href="https://www.instagram.com/bridandesignbuild/" target="_blank" aria-label="Instagram" class="social-3d">
+                                        <i class="fab fa-instagram" style="font-size: 20px;"></i>
+                                        <span class="sr-only">Instagram</span>
                 </a>
                             </li>
                                         <li>
@@ -287,7 +292,7 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
 </article>
 
 <a class='portfolio-title' href='/projects/lil-motors-isuzu-dealership/index.html'> 
-<h2 class='text-center'> Lil Motors Isuzu Dealership Shop, Nairobi</h2>
+<h2 class='text-center'>Lil Motors Isuzu Dealership</h2>
 </a>
 <div class='subtitle text-center'></div>
 
@@ -347,7 +352,7 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
                     <div class='item-img'>
                     <img loading="lazy" decoding="async" width="360" height="267" src="/wp-content/uploads/img/image34.jpg" class="attachment-post-thumb attachment-post-thumb size-post-thumb wp-post-image" alt="" srcset="/wp-content/uploads/img/image34.jpg 360w, /wp-content/uploads/img/image34.jpg 500w" sizes="(max-width: 360px) 100vw, 360px" /></div></article>
                     <a class='portfolio-title' href='/projects/Kitale-Club-Main- Kitchen-Facility/index.html'>
-                        <h2 class='text-center'>Kitale Club: Main Kitchen Facility</h2>
+                        <h2 class='text-center'>Kitale Club Main Kitchen Facility</h2>
                     </a><div class='subtitle text-center'></div>
                 </li>
                 
@@ -359,7 +364,7 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
         </a>
         <div class='item-img'><img loading="lazy" decoding="async" width="360" height="267" src="/wp-content/uploads/img/tzz.jpg" class="attachment-post-thumb attachment-post-thumb size-post-thumb wp-post-image" alt="" srcset="/wp-content/uploads/img/tzz.jpg 360w, /wp-content/uploads/img/tzz.jpg 500w" sizes="(max-width: 360px) 100vw, 360px" /></div></article>
              <a class='portfolio-title' href='/projects/Residential House, Lukhhome, Trans Nzoia/index.html'>
-                <h2 class='text-center'>Residential House, Lukhhome, Trans Nzoia  </h2>
+                <h2 class='text-center'>Residential House, Lukhhome</h2>
             </a><div class='subtitle text-center'></div>
 </li>
              
@@ -469,7 +474,7 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
                 <div class="row">
                     <div class="text-center">
                         <div id="text-5" class="widget-container widget_text">
-                            <div class="textwidget">Bridan Build Design | � 2025 BRIDAN, All rights reserved</div>
+                            <div class="textwidget">Bridan Build Design | © 2025 BRIDAN, All rights reserved</div>
                         </div>
                     </div>
                 </div>
@@ -998,6 +1003,66 @@ var wpcf7 = {"api":{"root":"/wp-json\/","namespace":"contact-form-7\/v1"},"cache
         // ... (WhatsApp form code follows)
     });
 </script>
+	<script>
+	// Simple portfolio filter without external libs
+	// Works on buttons inside `.filter` having `data-filter` attributes
+	// and items inside `.portfolio` having corresponding category classes
+	(function() {
+		var filterContainer = document.querySelector('.filter');
+		var portfolio = document.querySelector('.portfolio');
+		if (!filterContainer || !portfolio) return;
+
+		var buttons = filterContainer.querySelectorAll('[data-filter]');
+		var items = portfolio.querySelectorAll('.isotope-item');
+
+		function applyFilter(filter) {
+			items.forEach(function(item) {
+				var show = filter === '*' || item.classList.contains(filter);
+				item.style.display = show ? 'block' : 'none';
+			});
+		}
+
+		buttons.forEach(function(btn) {
+			btn.addEventListener('click', function(e) {
+				e.preventDefault();
+				var filter = btn.getAttribute('data-filter');
+				buttons.forEach(function(b){ b.classList.remove('selected'); b.setAttribute('aria-pressed','false'); });
+				btn.classList.add('selected');
+				btn.setAttribute('aria-pressed','true');
+				applyFilter(filter);
+			});
+		});
+
+		// Initialize with "All"
+		var initial = filterContainer.querySelector('[data-filter="*"]');
+		if (initial) { initial.click(); }
+	})();
+	</script>
+<style>
+.portfolio { display: flex; flex-wrap: wrap; }
+.portfolio.classic { list-style: none; padding: 0; margin: 0; }
+.portfolio.classic > li { box-sizing: border-box; display:block; }
+.portfolio.classic > li { flex: 0 0 25%; max-width:25%; }
+.portfolio.classic > li .item-img img { width:100%; height:220px; object-fit:cover; display:block; }
+.portfolio.classic > li .inner { display:flex; flex-direction:column; height:100%; position:relative; overflow:hidden; }
+.portfolio.classic > li .portfolio-title { margin-top:1px; }
+.portfolio .portfolio-title { display:block; text-decoration:none; }
+.portfolio .portfolio-title h2 { font-size:17px; line-height:1.28; font-weight:600; margin:2px 4px 4px; text-align:center; min-height:52px; overflow:hidden; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; }
+.portfolio .inner .item-hover { display:none !important; }
+.portfolio .subtitle { min-height: 0; }
+
+@media (max-width: 991px) {
+  .portfolio.classic > li { flex: 0 0 50%; max-width:50%; }
+  .portfolio.classic > li .item-img img { height:200px; }
+  .portfolio .portfolio-title h2 { font-size:16px; min-height:48px; -webkit-line-clamp:3; margin:2px 4px 4px; }
+}
+
+@media (max-width: 575px) {
+  .portfolio.classic > li { flex: 0 0 100%; max-width:100%; }
+  .portfolio.classic > li .item-img img { height:180px; }
+  .portfolio .portfolio-title h2 { font-size:15px; min-height:44px; -webkit-line-clamp:3; margin:2px 4px 4px; }
+}
+</style>
 	
 	<script>
 // Mobile nav toggle replicated from Contact/Home
