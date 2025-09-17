@@ -385,7 +385,68 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
                     </div>
 </section>
 </div>
+ </div>
 
+    <div id="scrolltop" class="fixed scrollup"><a href="#" title="Scroll to top"><i class="fa fa-angle-up"></i></a></div>
+    <input type="hidden" id="theme-path" value="/wp-content/themes/constructo" />
+
+
+	
+<script>
+        window.RS_MODULES = window.RS_MODULES || {};
+        window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+        window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+        window.RS_MODULES.defered = true;
+        window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+        window.RS_MODULES.type = 'compiled';
+    </script>
+
+    <script type="text/javascript">
+        window.RS_MODULES.modules['myModule'] = function() {
+            // Module definition goes here
+        };
+        window.RS_MODULES.waiting.push('myModule');
+        
+        if (window.RS_MODULES.defered) {
+            window.RS_MODULES.moduleWaiting['myModule'] = true;
+        }
+    </script>
+    <script type="text/javascript">
+        (function() {
+            function moduleLoader() {
+                if (window.RS_MODULES.modules['myModule']) {
+                    // Module is already defined
+                    return;
+                }
+                
+                // Define your module here
+                window.RS_MODULES.modules['myModule'] = function() {
+                    // Module implementation
+                };
+                
+                // Mark module as loaded
+                window.RS_MODULES.moduleWaiting['myModule'] = false;
+                
+                // If all modules are loaded, execute them
+                if (Object.values(window.RS_MODULES.moduleWaiting).every(status => !status)) {
+                    executeModules();
+                }
+            }
+            
+            function executeModules() {
+                for (const moduleName in window.RS_MODULES.modules) {
+                    if (window.RS_MODULES.modules.hasOwnProperty(moduleName)) {
+                        window.RS_MODULES.modules[moduleName]();
+                    }
+                }
+            }
+        })();
+    </script>
+
+    <link rel='stylesheet' id='vc_font_awesome_5_shims-css' href='/wp-content/plugins/js_composer/assets/lib/vendor/node_modules/@fortawesome/fontawesome-free/css/v4-shims.min.css?ver=7.8' type='text/css' media='all'
+    />
+    <link rel='stylesheet' id='vc_font_awesome_5-css' href='/wp-content/plugins/js_composer/assets/lib/vendor/node_modules/@fortawesome/fontawesome-free/css/all.min.css?ver=7.8' type='text/css' media='all' />
+    <link rel='stylesheet' id='rs-plugin-settings-css' href='/wp-content/plugins/revslider/sr6/assets/css/rs6.css' type='text/css' media='all' />
     <!-- Footer Section -->
     <footer class="site-footer style-1">
         <div class="container">
