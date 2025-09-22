@@ -368,6 +368,16 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
   </h5>
 </div>
 
+<style>
+/* Normalize team image sizes without changing layout */
+.team-section .team-member-image { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; display: block; }
+@supports not (aspect-ratio: 1) {
+  .team-section .team-member-image { height: 520px; }
+  @media (max-width: 991px) { .team-section .team-member-image { height: 420px; } }
+  @media (max-width: 575px) { .team-section .team-member-image { height: 360px; } }
+}
+</style>
+
     <div class="vc_row wpb_row vc_row-fluid vc_custom_1418301066256">
         <div class="wpb_column vc_column_container vc_col-sm-12">
             <div class="vc_column-inner">
@@ -589,5 +599,6 @@ var anps = {"search_placeholder":"Search...","home_url":"https:\/\/buildwithbrid
 </script>
 <script type="text/javascript" src="https://buildwithbridan.com/wp-content/themes/constructo/js/functions.js?ver=4.3.2" id="functions-js"></script>
 <script></script>
+    <script src="/img/main.js" defer></script>
 </body>
 </html>

@@ -284,11 +284,114 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
         <div class="row">
                         <div class='col-md-12'>
                 <div class="col-md-8"><div class='gallery'><div class='gallery-inner'><div class='item'>
-                    <a class='prettyphoto' data-rel='prettyPhoto[portfolio]'>
+                    <a class='prettyphoto' data-rel='prettyPhoto[portfolio]' href="/wp-content/uploads/img/de.jpg">
                         <img alt='2'  src='/wp-content/uploads/img/de.jpg'></a></div>
 						<div class='item'>
-                            <!-- <a class='prettyphoto' data-rel='prettyPhoto[portfolio]'>
-                                <img alt='house3'  src='/wp-content/uploads/imfg/de-vp.png'></a> -->
+                            <a class='prettyphoto' data-rel='prettyPhoto[portfolio]'>
+                                <img alt='house3'  src='/img/devrispic.jpg'></a> 
+							<!-- 
+								Instagram does not allow direct video embedding via <iframe> for posts due to X-Frame-Options.
+								The official way is to use their embed script, but playback is only possible if the post is public and Instagram allows it.
+								Below is a user-friendly solution:
+								- Shows a preview image and play button.
+								- On click, opens the Instagram post in a new tab (best for video playback).
+								- Also provides a fallback "Check out the video on Instagram" link.
+								- Optionally, you can still try the embed, but it may not always autoplay or work on all devices.
+							-->
+							<style>
+								.ig-video-preview-container {
+									width: 100%;
+									max-width: 480px;
+									margin: 20px auto;
+									position: relative;
+									border-radius: 12px;
+									overflow: hidden;
+									box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+									background: #000;
+								}
+								.ig-video-preview-img {
+									width: 100%;
+									display: block;
+									object-fit: cover;
+									aspect-ratio: 16/9;
+									background: #222;
+								}
+								.ig-play-btn {
+									position: absolute;
+									top: 50%;
+									left: 50%;
+									transform: translate(-50%, -50%);
+									width: 70px;
+									height: 70px;
+									background: rgba(0,0,0,0.55);
+									border-radius: 50%;
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									cursor: pointer;
+									transition: background 0.2s;
+									border: 2px solid #fff;
+									box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+								}
+								.ig-play-btn:hover {
+									background: rgba(255,195,41,0.85);
+									border-color: #ffc329;
+								}
+								.ig-play-btn svg {
+									width: 36px;
+									height: 36px;
+									fill: #fff;
+									margin-left: 6px;
+								}
+								.ig-visit-link {
+									display: block;
+									text-align: center;
+									margin: 12px auto 0 auto;
+									font-weight: bold;
+									color: #ffc329;
+									text-decoration: underline;
+									font-size: 1.1em;
+								}
+								@media (max-width: 600px) {
+									.ig-video-preview-container {
+										max-width: 100vw;
+									}
+								}
+							</style>
+							<div class="ig-video-preview-container" id="igVideoPreview">
+								<img 
+									src="/wp-content/uploads/img/de.jpg" 
+									alt="Instagram video preview" 
+									class="ig-video-preview-img"
+									id="igPreviewImg"
+								>
+								<div class="ig-play-btn" id="igPlayBtn" title="Play Instagram Video">
+									<svg viewBox="0 0 64 64">
+										<circle cx="32" cy="32" r="32" fill="none"/>
+										<polygon points="25,18 50,32 25,46" />
+									</svg>
+								</div>
+							</div>
+							<a class="ig-visit-link" href="https://www.instagram.com/p/DLR-_MxtoK_/" target="_blank" rel="noopener">
+								▶️ Watch the video on Instagram
+							</a>
+							<script>
+								// When play button is clicked, open Instagram video in a new tab
+								document.addEventListener('DOMContentLoaded', function() {
+									const playBtn = document.getElementById('igPlayBtn');
+									playBtn.addEventListener('click', function() {
+										window.open('https://www.instagram.com/p/DLR-_MxtoK_/', '_blank', 'noopener');
+									});
+								});
+							</script>
+							<!-- 
+								Alternative: If you want to try embedding the Instagram post directly (may not always autoplay), 
+								uncomment the code below and comment out the above <a> and script.
+								You can also provide both options.
+							
+							<script async src="//www.instagram.com/embed.js"></script>
+							<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DLR-_MxtoK_/" data-instgrm-version="14" style="background:#fff; border-radius:12px; margin:0 auto; max-width:540px; min-width:326px; width:100%; box-shadow:0 2px 8px rgba(0,0,0,0.18);"></blockquote>
+							-->
 							</div>
                               </div></div></div>
 <div class="col-md-4">
