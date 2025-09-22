@@ -1009,6 +1009,30 @@ var wpcf7 = {"api":{"root":"/wp-json\/","namespace":"contact-form-7\/v1"},"cache
         // ... (WhatsApp form code follows)
     });
 </script>
+<script>
+// Make portfolio images clickable using the same href as the project title
+document.addEventListener('DOMContentLoaded', function () {
+  var items = document.querySelectorAll('.portfolio .isotope-item');
+  if (!items.length) return;
+  items.forEach(function(item){
+    var titleLink = item.querySelector('a.portfolio-title');
+    var hoverLink = item.querySelector('a.item-hover');
+    var imgContainer = item.querySelector('.item-img');
+    var href = (titleLink && titleLink.getAttribute('href')) || (hoverLink && hoverLink.getAttribute('href'));
+    if (!imgContainer || !href) return;
+    // accessibility + UI cues
+    imgContainer.style.cursor = 'pointer';
+    imgContainer.setAttribute('role','link');
+    imgContainer.setAttribute('tabindex','0');
+    // navigate on click
+    imgContainer.addEventListener('click', function(){ window.location.href = href; });
+    // keyboard support
+    imgContainer.addEventListener('keypress', function(e){
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.location.href = href; }
+    });
+  });
+});
+</script>
 	<script>
 	// Simple portfolio filter without external libs
 	// Works on buttons inside `.filter` having `data-filter` attributes
