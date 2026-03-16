@@ -401,7 +401,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 <link rel='stylesheet' id='contact-form-7-css' href='/wp-content/plugins/contact-form-7/includes/css/styles.css' type='text/css' media='all' />
 <link rel='stylesheet' id='js_composer_front-css' href='/wp-content/plugins/js_composer/assets/css/js_composer.min.css' type='text/css' media='all' />
 <link rel='stylesheet' id='font-awesome-css' href='/wp-content/themes/constructo/css/font-awesome.min.css?ver=6.6.3' type='text/css' media='all' />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel='stylesheet' id='owl-css-css' href='/wp-content/themes/constructo/js/owl/assets/owl.carousel.css' type='text/css' media='all' />
 <link rel='stylesheet' id='theme_main_style-css' href='/wp-content/themes/constructo/style.css' type='text/css' media='all' />
 <link rel='stylesheet' id='swipebox-css' href='/wp-content/themes/constructo/css/swipebox.css' type='text/css' media='all' />
@@ -989,7 +989,7 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
   <div style="text-align:center;margin-bottom:24px;">
     <h2 style="color:#FFC329;font-size:26px;margin:0 0 8px;font-family:Montserrat,sans-serif;text-transform:uppercase;letter-spacing:.04em;">Follow Our Journey</h2>
     <p style="color:#666;font-size:14px;margin:0 auto;max-width:680px;font-family:PT Sans,sans-serif;line-height:1.6;">
-      Follow us on our socials to check out our journey, posts and see our latest projects and tips.
+      Follow us on our socials &mdash; click any thumbnail to preview the post right here on the page.
     </p>
   </div>
 
@@ -1019,7 +1019,7 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
           <a href="https://www.instagram.com/bridan_design_build/" target="_blank" rel="noopener noreferrer"
              style="color:#FFC329;text-decoration:none;">@bridan_design_build</a>
         </strong>
-        <span style="color:#888;font-size:12px;font-family:PT Sans,sans-serif;">Projects &amp; progress shots &mdash; tap any photo to open on Instagram.</span>
+        <span style="color:#888;font-size:12px;font-family:PT Sans,sans-serif;">Click any photo below to preview the post on this page.</span>
       </div>
       <a href="https://www.instagram.com/bridan_design_build/" target="_blank" rel="noopener noreferrer"
          style="background:#e1306c;color:#fff;padding:8px 16px;border-radius:6px;text-decoration:none;font-weight:700;font-size:13px;font-family:Montserrat,sans-serif;">
@@ -1029,18 +1029,18 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
 
     <!-- 3-column photo grid -->
     <div class="soc-grid">
-      <a href="https://www.instagram.com/p/DOqZGOyDbgi/" target="_blank" rel="noopener noreferrer" class="soc-card" style="background-image:url('/img/insta (3).jpg');">
+      <div class="soc-card" onclick="socOpen('ig','DOqZGOyDbgi')" style="background-image:url('/img/insta (3).jpg');" title="Click to preview post">
         <div class="soc-overlay"><span>Project Post</span></div>
-        <span class="soc-badge">IG</span>
-      </a>
-      <a href="https://www.instagram.com/p/DOfu3g-DdO3/?img_index=1" target="_blank" rel="noopener noreferrer" class="soc-card" style="background-image:url('/wp-content/uploads/img/isuzu.jpg');">
+        <span class="soc-badge"><i class="fa fa-eye"></i> Preview</span>
+      </div>
+      <div class="soc-card" onclick="socOpen('ig','DOfu3g-DdO3')" style="background-image:url('/wp-content/uploads/img/isuzu.jpg');" title="Click to preview post">
         <div class="soc-overlay"><span>Isuzu Site</span></div>
-        <span class="soc-badge">IG</span>
-      </a>
-      <a href="https://www.instagram.com/p/DOdhrymDZV3/?img_index=1" target="_blank" rel="noopener noreferrer" class="soc-card" style="background-image:url('/img/realandsavings.jpg');">
+        <span class="soc-badge"><i class="fa fa-eye"></i> Preview</span>
+      </div>
+      <div class="soc-card" onclick="socOpen('ig','DOdhrymDZV3')" style="background-image:url('/img/realandsavings.jpg');" title="Click to preview post">
         <div class="soc-overlay"><span>Real &amp; Savings</span></div>
-        <span class="soc-badge">IG</span>
-      </a>
+        <span class="soc-badge"><i class="fa fa-eye"></i> Preview</span>
+      </div>
     </div>
 
     <!-- Show more button -->
@@ -1054,15 +1054,15 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
     <!-- Extra posts (hidden) -->
     <div id="soc-ig-extra" style="display:none;margin-top:10px;">
       <div class="soc-grid">
-        <a href="https://www.instagram.com/p/DV75y4RjZCT/" target="_blank" rel="noopener noreferrer" class="soc-card soc-card-sm" style="background-image:url('/img/realandsavings.jpg');">
-          <div class="soc-overlay"><span>Video Post</span></div><span class="soc-badge">IG &#9654;</span>
-        </a>
-        <a href="https://www.instagram.com/p/DVGljVHDb4n/" target="_blank" rel="noopener noreferrer" class="soc-card soc-card-sm" style="background-image:url('/img/bgphotohome.jpg');">
-          <div class="soc-overlay"><span>Video Post</span></div><span class="soc-badge">IG &#9654;</span>
-        </a>
-        <a href="https://www.instagram.com/p/DUixaLqjQ2I/" target="_blank" rel="noopener noreferrer" class="soc-card soc-card-sm" style="background-image:url('/img/new1.jpg');">
-          <div class="soc-overlay"><span>Video Post</span></div><span class="soc-badge">IG &#9654;</span>
-        </a>
+        <div class="soc-card soc-card-sm" onclick="socOpen('ig','DV75y4RjZCT')" style="background-image:url('/img/realandsavings.jpg');" title="Click to preview post">
+          <div class="soc-overlay"><span>Video Post</span></div><span class="soc-badge"><i class="fa fa-eye"></i> Preview</span>
+        </div>
+        <div class="soc-card soc-card-sm" onclick="socOpen('ig','DVGljVHDb4n')" style="background-image:url('/img/bgphotohome.jpg');" title="Click to preview post">
+          <div class="soc-overlay"><span>Video Post</span></div><span class="soc-badge"><i class="fa fa-eye"></i> Preview</span>
+        </div>
+        <div class="soc-card soc-card-sm" onclick="socOpen('ig','DUixaLqjQ2I')" style="background-image:url('/img/new1.jpg');" title="Click to preview post">
+          <div class="soc-overlay"><span>Video Post</span></div><span class="soc-badge"><i class="fa fa-eye"></i> Preview</span>
+        </div>
       </div>
     </div>
 
@@ -1091,7 +1091,7 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
           <a href="https://www.tiktok.com/@bridandesignbuild" target="_blank" rel="noopener noreferrer"
              style="color:#FFC329;text-decoration:none;">@bridandesignbuild</a>
         </strong>
-        <span style="color:#888;font-size:12px;font-family:PT Sans,sans-serif;">Short clips &amp; site updates &mdash; tap any card to open and play on TikTok.</span>
+        <span style="color:#888;font-size:12px;font-family:PT Sans,sans-serif;">Click any video below to preview it right here on this page.</span>
       </div>
       <a href="https://www.tiktok.com/@bridandesignbuild" target="_blank" rel="noopener noreferrer"
          style="background:#111;color:#fff;padding:8px 16px;border-radius:6px;text-decoration:none;font-weight:700;font-size:13px;font-family:Montserrat,sans-serif;">
@@ -1101,18 +1101,18 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
 
     <!-- 3 TikTok cards -->
     <div class="soc-grid">
-      <a href="https://www.tiktok.com/@bridandesignbuild/photo/7548830748254489862" target="_blank" rel="noopener noreferrer" class="soc-tk-card">
-        <div class="soc-tk-thumb" style="background-image:url('/img/bgphotohome.jpg');"><span class="soc-badge"><i class="fab fa-tiktok"></i> &#9654;</span></div>
+      <div class="soc-tk-card" onclick="socOpen('tk','7548830748254489862')" title="Click to preview video">
+        <div class="soc-tk-thumb" style="background-image:url('/img/bgphotohome.jpg');"><span class="soc-badge"><i class="fab fa-tiktok"></i> &#9654; Preview</span></div>
         <div class="soc-tk-body"><span class="soc-tk-title">Quick Project Video</span><span class="soc-tk-sub">Snapshot from a recent site update.</span></div>
-      </a>
-      <a href="https://www.tiktok.com/@bridandesignbuild/video/7560642042649398539" target="_blank" rel="noopener noreferrer" class="soc-tk-card">
-        <div class="soc-tk-thumb" style="background-image:url('/img/new1.jpg');"><span class="soc-badge"><i class="fab fa-tiktok"></i> &#9654;</span></div>
+      </div>
+      <div class="soc-tk-card" onclick="socOpen('tk','7560642042649398539')" title="Click to preview video">
+        <div class="soc-tk-thumb" style="background-image:url('/img/new1.jpg');"><span class="soc-badge"><i class="fab fa-tiktok"></i> &#9654; Preview</span></div>
         <div class="soc-tk-body"><span class="soc-tk-title">Site Progress Clip</span><span class="soc-tk-sub">Short clip showing recent progress.</span></div>
-      </a>
-      <a href="https://www.tiktok.com/@bridandesignbuild/video/7559283727851949324" target="_blank" rel="noopener noreferrer" class="soc-tk-card">
-        <div class="soc-tk-thumb" style="background-image:url('/img/image.png');"><span class="soc-badge"><i class="fab fa-tiktok"></i> &#9654;</span></div>
+      </div>
+      <div class="soc-tk-card" onclick="socOpen('tk','7559283727851949324')" title="Click to preview video">
+        <div class="soc-tk-thumb" style="background-image:url('/img/image.png');"><span class="soc-badge"><i class="fab fa-tiktok"></i> &#9654; Preview</span></div>
         <div class="soc-tk-body"><span class="soc-tk-title">Our Design Tips Clip</span><span class="soc-tk-sub">Short design tip we shared.</span></div>
-      </a>
+      </div>
     </div>
 
     <!-- Show more -->
@@ -1126,18 +1126,18 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
     <!-- Extra TikToks (hidden) -->
     <div id="soc-tk-extra" style="display:none;margin-top:10px;">
       <div class="soc-grid">
-        <a href="https://www.tiktok.com/@bridandesignbuild/video/7616612722133716245" target="_blank" rel="noopener noreferrer" class="soc-tk-card soc-tk-sm">
-          <div class="soc-tk-thumb" style="background-image:url('/img/new2.jpg');"><span class="soc-badge"><i class="fab fa-tiktok"></i> &#9654;</span></div>
+        <div class="soc-tk-card soc-tk-sm" onclick="socOpen('tk','7616612722133716245')" title="Click to preview video">
+          <div class="soc-tk-thumb" style="background-image:url('/img/new2.jpg');"><span class="soc-badge"><i class="fab fa-tiktok"></i> &#9654; Preview</span></div>
           <div class="soc-tk-body"><span class="soc-tk-title">Project Highlight</span><span class="soc-tk-sub">Recent site video update.</span></div>
-        </a>
-        <a href="https://www.tiktok.com/@bridandesignbuild/video/7615166780239121684" target="_blank" rel="noopener noreferrer" class="soc-tk-card soc-tk-sm">
-          <div class="soc-tk-thumb" style="background-image:url('/img/new1.jpg');"><span class="soc-badge"><i class="fab fa-tiktok"></i> &#9654;</span></div>
+        </div>
+        <div class="soc-tk-card soc-tk-sm" onclick="socOpen('tk','7615166780239121684')" title="Click to preview video">
+          <div class="soc-tk-thumb" style="background-image:url('/img/new1.jpg');"><span class="soc-badge"><i class="fab fa-tiktok"></i> &#9654; Preview</span></div>
           <div class="soc-tk-body"><span class="soc-tk-title">Construction Tip</span><span class="soc-tk-sub">Short construction clip.</span></div>
-        </a>
-        <a href="https://www.tiktok.com/@bridandesignbuild/video/7601022146688732437" target="_blank" rel="noopener noreferrer" class="soc-tk-card soc-tk-sm">
-          <div class="soc-tk-thumb" style="background-image:url('/img/realandsavings.jpg');"><span class="soc-badge"><i class="fab fa-tiktok"></i> &#9654;</span></div>
+        </div>
+        <div class="soc-tk-card soc-tk-sm" onclick="socOpen('tk','7601022146688732437')" title="Click to preview video">
+          <div class="soc-tk-thumb" style="background-image:url('/img/realandsavings.jpg');"><span class="soc-badge"><i class="fab fa-tiktok"></i> &#9654; Preview</span></div>
           <div class="soc-tk-body"><span class="soc-tk-title">Before &amp; After</span><span class="soc-tk-sub">Transformation highlight.</span></div>
-        </a>
+        </div>
       </div>
     </div>
 
@@ -1156,40 +1156,75 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
 
 </div>
 
+<!-- ===== LIGHTBOX MODAL ===== -->
+<div id="soc-modal" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,0.88);align-items:center;justify-content:center;padding:16px;" onclick="socClose(event)">
+  <div id="soc-modal-box" style="position:relative;background:#1a1a1a;border-radius:16px;overflow:hidden;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,0.6);">
+    <!-- Modal header bar -->
+    <div id="soc-modal-header" style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#111;min-width:0;">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span id="soc-modal-icon" style="font-size:18px;color:#FFC329;"></span>
+        <span id="soc-modal-label" style="color:#fff;font-family:Montserrat,sans-serif;font-size:13px;font-weight:700;"></span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <a id="soc-modal-link" href="#" target="_blank" rel="noopener noreferrer"
+           style="background:#FFC329;color:#111;padding:6px 14px;border-radius:6px;text-decoration:none;font-weight:700;font-size:12px;font-family:Montserrat,sans-serif;white-space:nowrap;">
+          Open in App &#8599;
+        </a>
+        <button onclick="socClose()" title="Close"
+          style="background:rgba(255,255,255,0.12);border:none;color:#fff;width:32px;height:32px;border-radius:50%;font-size:18px;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center;">
+          &times;
+        </button>
+      </div>
+    </div>
+    <!-- Spinner shown while iframe loads -->
+    <div id="soc-modal-spinner" style="display:flex;align-items:center;justify-content:center;padding:40px;">
+      <div style="width:42px;height:42px;border-radius:50%;border:4px solid rgba(255,195,41,0.2);border-top-color:#FFC329;animation:soc-spin .8s linear infinite;"></div>
+    </div>
+    <!-- Iframe container -->
+    <div id="soc-modal-frame-wrap" style="display:none;overflow:auto;">
+      <iframe id="soc-modal-frame" src="" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"
+        style="display:block;border:none;" loading="lazy"></iframe>
+    </div>
+  </div>
+</div>
+
 <style>
+/* Grid */
 .soc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
 @media(max-width:680px){.soc-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:400px){.soc-grid{grid-template-columns:1fr;}}
 
+/* Instagram cards */
 .soc-card{
   display:block;height:170px;border-radius:10px;overflow:hidden;
   background-color:#bbb;background-size:cover;background-position:center;
-  position:relative;text-decoration:none;
+  position:relative;cursor:pointer;
   box-shadow:0 4px 14px rgba(0,0,0,0.13);
   transition:transform .2s,box-shadow .2s;
 }
-.soc-card:hover{transform:scale(1.03);box-shadow:0 8px 22px rgba(0,0,0,0.18);}
+.soc-card:hover{transform:scale(1.04);box-shadow:0 8px 24px rgba(0,0,0,0.22);}
 .soc-card-sm{height:130px;}
 
 .soc-overlay{
   position:absolute;bottom:0;left:0;right:0;
-  background:linear-gradient(to top,rgba(0,0,0,0.65),transparent);
+  background:linear-gradient(to top,rgba(0,0,0,0.68),transparent);
   padding:10px 10px 12px;
   display:flex;align-items:flex-end;min-height:60px;
 }
 .soc-overlay span{color:#fff;font-size:12px;font-weight:700;font-family:Montserrat,sans-serif;}
 .soc-badge{
   position:absolute;top:8px;right:8px;
-  background:rgba(0,0,0,0.6);color:#fff;font-size:11px;
-  padding:3px 8px;border-radius:20px;font-weight:700;font-family:Montserrat,sans-serif;
+  background:rgba(0,0,0,0.62);color:#fff;font-size:11px;
+  padding:3px 9px;border-radius:20px;font-weight:700;font-family:Montserrat,sans-serif;
 }
 
+/* TikTok cards */
 .soc-tk-card{
-  display:block;border-radius:10px;overflow:hidden;background:#fff;
-  box-shadow:0 4px 14px rgba(0,0,0,0.09);text-decoration:none;
+  border-radius:10px;overflow:hidden;background:#fff;
+  box-shadow:0 4px 14px rgba(0,0,0,0.09);cursor:pointer;
   transition:transform .2s,box-shadow .2s;
 }
-.soc-tk-card:hover{transform:scale(1.03);box-shadow:0 8px 22px rgba(0,0,0,0.15);}
+.soc-tk-card:hover{transform:scale(1.04);box-shadow:0 8px 24px rgba(0,0,0,0.16);}
 .soc-tk-thumb{
   height:140px;background-size:cover;background-position:center;
   background-color:#222;position:relative;
@@ -1198,9 +1233,15 @@ body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, 
 .soc-tk-body{padding:10px 12px;display:flex;flex-direction:column;gap:3px;}
 .soc-tk-title{color:#FFC329;font-size:13px;font-weight:700;font-family:Montserrat,sans-serif;}
 .soc-tk-sub{color:#888;font-size:11px;font-family:PT Sans,sans-serif;}
+
+/* Modal animation */
+@keyframes soc-spin{to{transform:rotate(360deg);}}
+@keyframes soc-fadein{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
+#soc-modal-box{animation:soc-fadein .22s ease;}
 </style>
 
 <script>
+// Tab switching
 function socTab(tab){
   var ig=document.getElementById('soc-ig'),tk=document.getElementById('soc-tk');
   var bIg=document.getElementById('soc-btn-ig'),bTk=document.getElementById('soc-btn-tk');
@@ -1212,6 +1253,8 @@ function socTab(tab){
   bTk.style.background=tab==='tk'?'#FFC329':'transparent';
   bTk.style.color=tab==='tk'?'#111':'#888';
 }
+
+// Show/hide extra posts
 function socMore(id,btnId,openTxt,closeTxt){
   var el=document.getElementById(id),btn=document.getElementById(btnId);
   if(!el||!btn)return;
@@ -1219,6 +1262,84 @@ function socMore(id,btnId,openTxt,closeTxt){
   el.style.display=open?'none':'block';
   btn.innerHTML=open?openTxt:closeTxt;
 }
+
+// Open lightbox modal
+function socOpen(type, id){
+  var modal=document.getElementById('soc-modal');
+  var frame=document.getElementById('soc-modal-frame');
+  var spinner=document.getElementById('soc-modal-spinner');
+  var frameWrap=document.getElementById('soc-modal-frame-wrap');
+  var icon=document.getElementById('soc-modal-icon');
+  var label=document.getElementById('soc-modal-label');
+  var link=document.getElementById('soc-modal-link');
+  var box=document.getElementById('soc-modal-box');
+  if(!modal||!frame) return;
+
+  var url, embedUrl, w, h;
+
+  if(type==='ig'){
+    url='https://www.instagram.com/p/'+id+'/';
+    embedUrl='https://www.instagram.com/p/'+id+'/embed/captioned/';
+    icon.innerHTML='<i class="fab fa-instagram"></i>';
+    label.textContent='Instagram Post Preview';
+    link.href=url;
+    link.textContent='Open on Instagram ↗';
+    w='480px'; h='580px';
+  } else {
+    url='https://www.tiktok.com/@bridandesignbuild/video/'+id;
+    embedUrl='https://www.tiktok.com/embed/v2/'+id+'?lang=en';
+    icon.innerHTML='<i class="fab fa-tiktok"></i>';
+    label.textContent='TikTok Video Preview';
+    link.href=url;
+    link.textContent='Open on TikTok ↗';
+    w='340px'; h='620px';
+  }
+
+  // Size the box
+  box.style.width=w;
+  box.style.maxWidth='calc(100vw - 32px)';
+
+  // Reset iframe, show spinner
+  frame.src='';
+  frameWrap.style.display='none';
+  spinner.style.display='flex';
+  frameWrap.style.height=h;
+  frame.style.width='100%';
+  frame.style.height=h;
+
+  // Show modal
+  modal.style.display='flex';
+  document.body.style.overflow='hidden';
+
+  // Load iframe after tiny delay (lets modal paint first)
+  setTimeout(function(){
+    frame.src=embedUrl;
+    frame.onload=function(){
+      spinner.style.display='none';
+      frameWrap.style.display='block';
+    };
+    // Fallback: hide spinner after 5s regardless
+    setTimeout(function(){
+      spinner.style.display='none';
+      frameWrap.style.display='block';
+    },5000);
+  },80);
+}
+
+// Close modal
+function socClose(e){
+  if(e && e.target!==document.getElementById('soc-modal')) return;
+  var modal=document.getElementById('soc-modal');
+  var frame=document.getElementById('soc-modal-frame');
+  if(modal){ modal.style.display='none'; }
+  if(frame){ frame.src=''; }
+  document.body.style.overflow='';
+}
+
+// ESC key closes modal
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape') socClose();
+});
 </script>
 </section>
 					<div class="vc_row-full-width vc_clearfix"></div><div class="vc_row wpb_row vc_row-fluid vc_custom_1418034361637"><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner">
