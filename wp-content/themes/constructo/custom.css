@@ -69,10 +69,8 @@
     transition: transform 0.3s ease;
     z-index: 10000;
   }
-  .site-navigation.mobile-active,
-  .site-navigation.site-navigation-opened { transform: translateX(0); }
-  body.sticky-header-active .site-navigation.mobile-active,
-  body.sticky-header-active .site-navigation.site-navigation-opened { padding-top: 70px; }
+  .site-navigation.mobile-active { transform: translateX(0); }
+  body.sticky-header-active .site-navigation.mobile-active { padding-top: 70px; }
 
   /* Bigger tap targets */
   .site-navigation ul li a { padding: 14px 18px; display: block; }
@@ -162,8 +160,7 @@
 
   /* Ensure off-canvas nav stays on-screen */
   .site-navigation { width: 82%; max-width: 340px; }
-  .site-navigation.mobile-active,
-  .site-navigation.site-navigation-opened { left: auto !important; right: 0 !important; transform: translateX(0); }
+  .site-navigation.mobile-active { left: auto !important; right: 0 !important; }
 
   /* Nav ul layout */
   .site-navigation ul { display: flex; flex-direction: column; padding: 0 18px; }
