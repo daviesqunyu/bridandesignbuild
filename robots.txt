@@ -1,3 +1,18 @@
 User-agent: *
 Allow: /
+
+# Block temporary/build files
+Disallow: /fix_pages.py
+Disallow: /junk.html
+Disallow: /replace_section.py
+
+# Allow all important content
+Allow: /projects/
+Allow: /what-we-do/
+Allow: /about-us/
+Allow: /contact-us/
+Allow: /blog/
+Allow: /img/
+Allow: /wp-content/
+
 Sitemap: https://buildwithbridan.com/sitemap.xml
