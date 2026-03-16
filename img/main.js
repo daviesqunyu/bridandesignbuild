@@ -4,6 +4,19 @@
     var d = document;
     var head = d.head || d.getElementsByTagName('head')[0];
 
+    function ensureStyle(href, id) {
+      if (!href) return;
+      if (id && d.getElementById(id)) return;
+      var existing = Array.prototype.slice.call(d.querySelectorAll('link[rel="stylesheet"]'))
+        .some(function(l){ return l.href && l.href.indexOf(href) !== -1; });
+      if (existing) return;
+      var link = d.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = href;
+      if (id) link.id = id;
+      head.appendChild(link);
+    }
+
     function ensureMeta(attrName, attrValue, content) {
       var selector = 'meta[' + attrName + '="' + attrValue + '"]';
       var el = d.querySelector(selector);
@@ -22,6 +35,10 @@
       if (!url) return '';
       try { return new URL(url, location.origin).href; } catch(e) { return url; }
     }
+
+    // Ensure icon fonts (Font Awesome) are available quickly for social/header icons
+    ensureStyle('/wp-content/themes/constructo/css/font-awesome.min.css', 'bdbl-fa4');
+    ensureStyle('/wp-content/plugins/js_composer/assets/lib/vendor/node_modules/@fortawesome/fontawesome-free/css/all.min.css', 'bdbl-fa5');
 
     // Canonical
     (function ensureCanonical(){
@@ -127,6 +144,12 @@
         a.setAttribute('rel', rel);
         var btn = d.createElement('button');
         btn.className = 'btn btn-lg style-5';
+        // Add explicit prev/next classes for styling
+        if (rel === 'prev') {
+          btn.className += ' folio-prev-btn';
+        } else if (rel === 'next') {
+          btn.className += ' folio-next-btn';
+        }
         btn.innerHTML = iconLeft ? '<i class="fa fa-angle-left"></i> &nbsp; ' + text : text + ' &nbsp; <i class="fa fa-angle-right"></i>';
         a.appendChild(btn);
         return a;
