@@ -2,169 +2,177 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found – Bridan Design Build</title>
-    <meta name="description" content="The page you are looking for could not be found. Return to Bridan Design Build homepage.">
-    <meta name="robots" content="noindex, follow">
-    <link rel="canonical" href="https://buildwithbridan.com/">
-    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Not Found - Bridan Design Build</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="wp-content/uploads/img/bridanlogo.PNG" />
+    <link rel="icon" type="image/png" sizes="32x32" href="wp-content/uploads/img/bridanlogo.PNG" />
+    <link rel="icon" type="image/png" sizes="16x16" href="wp-content/uploads/img/bridanlogo.PNG" />
+    
     <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: 'PT Sans', sans-serif;
-            background: #111;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             color: #fff;
             min-height: 100vh;
             display: flex;
-            flex-direction: column;
-        }
-        .hero {
-            flex: 1;
-            display: flex;
             align-items: center;
             justify-content: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #111 0%, #1a1a1a 50%, #222 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(circle at 20% 80%, rgba(255,195,41,0.08) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255,195,41,0.05) 0%, transparent 50%);
-        }
-        .content {
-            position: relative;
             text-align: center;
-            max-width: 620px;
         }
-        .logo-wrap {
-            margin-bottom: 32px;
+        
+        .container {
+            max-width: 600px;
+            padding: 40px 20px;
         }
-        .logo-wrap img {
-            height: 60px;
-            filter: brightness(1.1);
+        
+        .logo {
+            margin-bottom: 30px;
         }
-        .big-num {
-            font-family: 'Montserrat', sans-serif;
-            font-size: clamp(80px, 20vw, 160px);
-            font-weight: 900;
-            line-height: 1;
+        
+        .logo img {
+            width: 120px;
+            height: auto;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+        }
+        
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
             color: #FFC329;
-            letter-spacing: -4px;
-            text-shadow: 0 0 60px rgba(255,195,41,0.3);
-            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
-        .headline {
-            font-family: 'Montserrat', sans-serif;
-            font-size: clamp(18px, 4vw, 28px);
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 12px;
-            letter-spacing: 0.02em;
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #ecf0f1;
         }
-        .subline {
-            font-size: 15px;
-            color: #aaa;
-            margin-bottom: 36px;
+        
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #bdc3c7;
             line-height: 1.6;
         }
-        .btn-group {
+        
+        .buttons {
             display: flex;
-            gap: 12px;
+            gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
-            margin-bottom: 48px;
+            margin-bottom: 40px;
         }
+        
         .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 24px;
-            border-radius: 6px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 14px;
-            text-decoration: none;
-            transition: all .2s;
-            cursor: pointer;
-            border: none;
-        }
-        .btn-primary {
+            display: inline-block;
+            padding: 15px 30px;
             background: #FFC329;
-            color: #111;
-        }
-        .btn-primary:hover { background: #e0a800; color: #111; transform: translateY(-1px); }
-        .btn-outline {
-            background: transparent;
-            border: 2px solid rgba(255,255,255,0.25);
-            color: #fff;
-        }
-        .btn-outline:hover { border-color: #FFC329; color: #FFC329; transform: translateY(-1px); }
-        .quick-links {
-            border-top: 1px solid rgba(255,255,255,0.08);
-            padding-top: 28px;
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .quick-links a {
-            color: #888;
+            color: #2c3e50;
             text-decoration: none;
-            font-size: 13px;
-            font-family: 'Montserrat', sans-serif;
-            padding: 6px 14px;
-            border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: all .2s;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid #FFC329;
         }
-        .quick-links a:hover { color: #FFC329; border-color: rgba(255,195,41,0.4); }
-        footer.bar {
-            background: #0a0a0a;
-            text-align: center;
-            padding: 16px 20px;
-            color: #555;
-            font-size: 12px;
-            font-family: 'PT Sans', sans-serif;
+        
+        .btn:hover {
+            background: transparent;
+            color: #FFC329;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(255, 195, 41, 0.3);
         }
-        footer.bar a { color: #FFC329; text-decoration: none; }
+        
+        .btn.secondary {
+            background: transparent;
+            color: #FFC329;
+            border-color: #FFC329;
+        }
+        
+        .btn.secondary:hover {
+            background: #FFC329;
+            color: #2c3e50;
+        }
+        
+        .contact-info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .contact-info h3 {
+            color: #FFC329;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info p {
+            margin-bottom: 10px;
+            color: #ecf0f1;
+        }
+        
+        .contact-info a {
+            color: #FFC329;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
     </style>
+<link rel="canonical" href="https://buildwithbridan.com/404.html/" />
 </head>
 <body>
-    <div class="hero">
-        <div class="content">
-            <div class="logo-wrap">
-                <a href="/">
-                    <img src="/wp-content/uploads/img/bridanlogo-removebg-preview.png" alt="Bridan Design Build" onerror="this.style.display='none'">
-                </a>
-            </div>
-            <div class="big-num">404</div>
-            <h1 class="headline">Page Not Found</h1>
-            <p class="subline">The page you're looking for doesn't exist or has been moved.<br>Let us help you find what you need.</p>
-            <div class="btn-group">
-                <a href="/" class="btn btn-primary"><i class="fa fa-home"></i> Go to Homepage</a>
-                <a href="/projects/" class="btn btn-outline"><i class="fa fa-briefcase"></i> View Projects</a>
-                <a href="/contact-us/" class="btn btn-outline"><i class="fa fa-envelope"></i> Contact Us</a>
-            </div>
-            <div class="quick-links">
-                <a href="/about-us/">About Us</a>
-                <a href="/what-we-do/">What We Do</a>
-                <a href="/blog/">Blog</a>
-                <a href="https://wa.me/254741400368" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-            </div>
+    <div class="container">
+        <div class="logo">
+            <img src="wp-content/uploads/img/bridanlogo.PNG" alt="Bridan Design Build Logo">
+        </div>
+        
+        <h1>404</h1>
+        <h2>Page Not Found</h2>
+        <p>Oops! The page you're looking for seems to have gone missing. Don't worry, we're here to help you get back on track.</p>
+        
+        <div class="buttons">
+            <a href="index.html" class="btn">Go Home</a>
+            <a href="what-we-do/index.html" class="btn secondary">Our Services</a>
+        </div>
+        
+        <div class="contact-info">
+            <h3>Need Help?</h3>
+            <p>Contact us directly:</p>
+            <p>📞 <a href="tel:+254741400368">+254 741 400368</a></p>
+            <p>📧 <a href="mailto:bridandesignbuild@gmail.com">bridandesignbuild@gmail.com</a></p>
+            <p>🕒 Mon - Sat: 7:00 - 17:00</p>
         </div>
     </div>
-    <footer class="bar">
-        &copy; 2026 <a href="/">BRIDAN DESIGN BUILD LIMITED</a> &mdash; All rights reserved.
-    </footer>
 </body>
 </html>
+
+

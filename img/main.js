@@ -36,9 +36,7 @@
       try { return new URL(url, location.origin).href; } catch(e) { return url; }
     }
 
-    // Ensure Font Awesome icons load reliably on every page.
-    // Primary: CDN (always reachable). Fallbacks: local copies.
-    ensureStyle('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css', 'bdbl-fa6-cdn');
+    // Ensure icon fonts (Font Awesome) are available quickly for social/header icons
     ensureStyle('/wp-content/themes/constructo/css/font-awesome.min.css', 'bdbl-fa4');
     ensureStyle('/wp-content/plugins/js_composer/assets/lib/vendor/node_modules/@fortawesome/fontawesome-free/css/all.min.css', 'bdbl-fa5');
 
@@ -97,38 +95,33 @@
     // Project prev/next navigation on single project pages
     (function ensureProjectPrevNext(){
       var path = location.pathname;
-      // Skip the projects listing page
-      if (path === '/projects/' || path === '/projects/index.html') return;
-      if (!/^\/projects\//.test(path)) return;
+      if (!/^\/projects\//.test(path) || /\/projects\/index\.html$/.test(path)) return;
 
-      // Clean paths work with both /index.html and trailing-slash formats (Vercel cleanUrls)
       var projectsOrder = [
-        '/projects/lil-motors-isuzu-dealership/',
-        '/projects/de-vries-africa-office-fitout/',
-        '/projects/freds-ranch-hotel-rooms/',
-        '/projects/twiva-media-office-renovation/',
-        '/projects/res_home_ngong/',
-        '/projects/Kitale-Club-Main- Kitchen-Facility/',
-        '/projects/Residential House, Lukhhome, Trans Nzoia/',
-        '/projects/grand-westpeak-kilimani/',
-        '/projects/milimani-kitale-residential/',
-        '/projects/mukinduri-gazebo-bedroom-extension/',
-        '/projects/ngong-kitchen-design/'
-      ];
+        '/projects/lil-motors-isuzu-dealership/index.html',
+        '/projects/de-vries-africa-office-fitout/index.html',
+        '/projects/freds-ranch-hotel-rooms/index.html',
+        '/projects/twiva-media-office-renovation/index.html',
+        '/projects/res_home_ngong/index.html',
+        '/projects/Kitale-Club-Main- Kitchen-Facility/index.html',
+        '/projects/Residential House, Lukhhome, Trans Nzoia/index.html',
+        '/projects/grand-westpeak-kilimani/index.html',
+        '/projects/milimani-kitale-residential/index.html',
+        '/projects/mukinduri-gazebo-bedroom-extension/index.html',
+        '/projects/ngong-kitchen-design/index.html'
+      ].map(function(u){ return u; });
 
       function normalize(p){
-        try {
-          // Decode URI, unify slashes, strip trailing index.html, ensure trailing slash
-          var s = decodeURI(p).replace(/\\/g,'/').replace(/\/index\.html$/, '/');
-          if (s.slice(-1) !== '/') s += '/';
-          return s;
-        } catch(e) { return p; }
+        try { return decodeURI(p).replace(/\\+/g,' ').replace(/\\/g,'/'); } catch(e) { return p; }
       }
       var current = normalize(path);
-      var idx = -1;
-      for (var i = 0; i < projectsOrder.length; i++) {
-        if (normalize(projectsOrder[i]) === current) { idx = i; break; }
+      var idx = projectsOrder.findIndex(function(u){ return normalize(u) === current; });
+      if (idx === -1) {
+        // try matching by directory
+        var dir = current.replace(/\/index\.html$/, '');
+        idx = projectsOrder.findIndex(function(u){ return normalize(u).replace(/\/index\.html$/, '') === dir; });
       }
+      if (idx === -1) return;
       var prevUrl = idx > 0 ? projectsOrder[idx-1] : null;
       var nextUrl = idx < projectsOrder.length-1 ? projectsOrder[idx+1] : null;
 

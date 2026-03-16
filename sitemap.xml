@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-
-    <!-- Home Page -->
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+        
+    <!-- =========================================== -->
+    <!-- BRIDAN DESIGN BUILD - MAIN PAGES -->
+    <!-- =========================================== -->
+    
+    <!-- Home Page - Highest Priority -->
     <url>
         <loc>https://buildwithbridan.com/</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <image:image>
             <image:loc>https://buildwithbridan.com/wp-content/uploads/img/bridanlogo-removebg-preview.png</image:loc>
             <image:title>Bridan Design Build Logo</image:title>
-            <image:caption>BRIDAN DESIGN BUILD LIMITED - Premium Construction &amp; Design in Kenya</image:caption>
+<image:caption>BRIDAN DESIGN BUILD LIMITED - Premium Construction &amp; Design in Kenya</image:caption>
         </image:image>
         <image:image>
             <image:loc>https://buildwithbridan.com/img/bridan1.webp</image:loc>
@@ -19,11 +24,11 @@
             <image:caption>Professional construction services in Kenya</image:caption>
         </image:image>
     </url>
-
-    <!-- About Us -->
+    
+    <!-- About Us Page -->
     <url>
         <loc>https://buildwithbridan.com/about-us/</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <image:image>
@@ -32,11 +37,11 @@
             <image:caption>Learn about our construction company in Kenya</image:caption>
         </image:image>
     </url>
-
+    
     <!-- Projects Portfolio -->
     <url>
         <loc>https://buildwithbridan.com/projects/</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
         <image:image>
@@ -45,200 +50,242 @@
             <image:caption>View our completed construction projects in Kenya</image:caption>
         </image:image>
     </url>
-
-    <!-- What We Do -->
+    
+    <!-- What We Do - Services -->
     <url>
         <loc>https://buildwithbridan.com/what-we-do/</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
+    
     <!-- Contact Us -->
     <url>
         <loc>https://buildwithbridan.com/contact-us/</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
+    
     <!-- Blog -->
     <url>
         <loc>https://buildwithbridan.com/blog/</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
-
-    <!-- Services: Architectural Services -->
+    
+    <!-- =========================================== -->
+    <!-- CONSTRUCTION SERVICES PAGES -->
+    <!-- =========================================== -->
+    
+    <!-- Architectural Services -->
     <url>
         <loc>https://buildwithbridan.com/what-we-do/architectural_services/</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <image:image>
             <image:loc>https://buildwithbridan.com/img/modernjpg.jpg</image:loc>
-            <image:title>Architectural Design Services Kenya</image:title>
+            <image:title>Architectural Design Services</image:title>
             <image:caption>Professional architectural design services in Kenya</image:caption>
         </image:image>
     </url>
-
-    <!-- Services: Building Construction -->
+    
+    <!-- Building Construction -->
     <url>
         <loc>https://buildwithbridan.com/what-we-do/building_construction/</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <image:image>
             <image:loc>https://buildwithbridan.com/img/build.png</image:loc>
-            <image:title>Building Construction Services Kenya</image:title>
+            <image:title>Building Construction Services</image:title>
             <image:caption>Complete building construction services in Kenya</image:caption>
         </image:image>
     </url>
-
-    <!-- Services: Construction Management -->
+    
+    <!-- Construction Management -->
     <url>
         <loc>https://buildwithbridan.com/what-we-do/construction_managemet/</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
-    <!-- Services: Interior Design -->
+    
+    <!-- Interior Design Services -->
     <url>
         <loc>https://buildwithbridan.com/what-we-do/interior_design_services/</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <image:image>
             <image:loc>https://buildwithbridan.com/img/lr.jpg</image:loc>
-            <image:title>Interior Design Services Kenya</image:title>
+            <image:title>Interior Design Services</image:title>
             <image:caption>Professional interior design services in Kenya</image:caption>
         </image:image>
     </url>
-
-    <!-- Services: Renovations -->
+    
+    <!-- Renovations -->
     <url>
         <loc>https://buildwithbridan.com/what-we-do/renovations/</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <image:image>
             <image:loc>https://buildwithbridan.com/img/bathroom.jpg</image:loc>
-            <image:title>Renovation Services Kenya</image:title>
+            <image:title>Renovation Services</image:title>
             <image:caption>Professional renovation services in Kenya</image:caption>
         </image:image>
     </url>
-
-    <!-- Services: Skilled Labour -->
+    
+    <!-- Skilled Labour Provision -->
     <url>
         <loc>https://buildwithbridan.com/what-we-do/skilled_labour-provision/</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
-    <!-- Project: Lil Motors Isuzu Dealership -->
+    
+    <!-- =========================================== -->
+    <!-- CONSTRUCTION PROJECTS PORTFOLIO -->
+    <!-- =========================================== -->
+    
+    <!-- Lil Motors Isuzu Dealership -->
     <url>
         <loc>https://buildwithbridan.com/projects/lil-motors-isuzu-dealership/</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
         <image:image>
-            <image:loc>https://buildwithbridan.com/wp-content/uploads/img/isuzu.jpg</image:loc>
-            <image:title>Lil Motors Isuzu Dealership - Mlolongo Kenya</image:title>
-            <image:caption>Complete dealership construction project in Mlolongo, Kenya</image:caption>
+            <image:loc>https://buildwithbridan.com/img/isuz1 (1).jpg</image:loc>
+            <image:title>Lil Motors Isuzu Dealership Project</image:title>
+            <image:caption>Complete dealership construction in Mlolongo, Kenya</image:caption>
         </image:image>
     </url>
-
-    <!-- Project: De Vries Africa Office Fitout -->
+    
+    <!-- De Vries Africa Office Fitout -->
     <url>
         <loc>https://buildwithbridan.com/projects/de-vries-africa-office-fitout/</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
-
-    <!-- Project: Fred's Ranch Hotel Rooms -->
+    
+    <!-- Fred's Ranch Hotel Rooms -->
     <url>
         <loc>https://buildwithbridan.com/projects/freds-ranch-hotel-rooms/</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
-
-    <!-- Project: Grand Westpeak Kilimani -->
+    
+    <!-- Grand Westpeak Kilimani -->
     <url>
         <loc>https://buildwithbridan.com/projects/grand-westpeak-kilimani/</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
-
-    <!-- Project: Kitale Club Main Kitchen Facility -->
+    
+    <!-- Kitale Club Main Kitchen Facility -->
     <url>
-        <loc>https://buildwithbridan.com/projects/Kitale-Club-Main-%20Kitchen-Facility/</loc>
-        <lastmod>2026-03-16</lastmod>
+        <loc>https://buildwithbridan.com/projects/Kitale-Club-Main- Kitchen-Facility/</loc>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
         <image:image>
-            <image:loc>https://buildwithbridan.com/img/Kitaleclubnewimage1.jpg</image:loc>
-            <image:title>Kitale Club Kitchen Facility - Kenya</image:title>
+            <image:loc>https://buildwithbridan.com/img/kitchen.jpg</image:loc>
+            <image:title>Kitale Club Kitchen Facility</image:title>
             <image:caption>Professional kitchen design and construction in Kitale, Kenya</image:caption>
         </image:image>
     </url>
-
-    <!-- Project: Milimani Kitale Residential -->
+    
+    <!-- Milimani Kitale Residential -->
     <url>
         <loc>https://buildwithbridan.com/projects/milimani-kitale-residential/</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
         <image:image>
-            <image:loc>https://buildwithbridan.com/img/milimanires1.jpg</image:loc>
-            <image:title>Milimani Kitale Residential House</image:title>
+            <image:loc>https://buildwithbridan.com/img/home.jpg</image:loc>
+            <image:title>Milimani Kitale Residential Project</image:title>
             <image:caption>Residential construction project in Kitale, Kenya</image:caption>
         </image:image>
     </url>
-
-    <!-- Project: Mukinduri Gazebo Bedroom Extension -->
+    
+    <!-- Mukinduri Gazebo Bedroom Extension -->
     <url>
         <loc>https://buildwithbridan.com/projects/mukinduri-gazebo-bedroom-extension/</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
-
-    <!-- Project: Ngong Kitchen Design -->
+    
+    <!-- Ngong Kitchen Design -->
     <url>
         <loc>https://buildwithbridan.com/projects/ngong-kitchen-design/</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
-
-    <!-- Project: Residential House Ngong -->
+    
+    <!-- Residential House Ngong -->
     <url>
         <loc>https://buildwithbridan.com/projects/res_home_ngong/</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
-
-    <!-- Project: Residential House Lukhhome Trans Nzoia (URL-encoded) -->
+    
+    <!-- Residential House Lukhhome Trans Nzoia -->
     <url>
-        <loc>https://buildwithbridan.com/projects/Residential%20House%2C%20Lukhhome%2C%20Trans%20Nzoia/</loc>
-        <lastmod>2026-03-16</lastmod>
+        <loc>https://buildwithbridan.com/projects/Residential House, Lukhhome, Trans Nzoia/</loc>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
-
-    <!-- Project: Twiva Media Office Renovation -->
+    
+    <!-- Twiva Media Office Renovation -->
     <url>
         <loc>https://buildwithbridan.com/projects/twiva-media-office-renovation/</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
-
+    
+    <!-- =========================================== -->
+    <!-- KENYA CONSTRUCTION MARKET FOCUS -->
+    <!-- =========================================== -->
+    
+    <!-- Additional construction industry pages -->
+    <url>
+        <loc>https://buildwithbridan.com/construction-kenya/</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://buildwithbridan.com/building-contractors-nairobi/</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://buildwithbridan.com/architectural-design-kenya/</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- =========================================== -->
+    <!-- END OF SITEMAP -->
+    <!-- =========================================== -->
+    
 </urlset>
+
+
+
+
