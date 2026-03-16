@@ -36,8 +36,9 @@
       try { return new URL(url, location.origin).href; } catch(e) { return url; }
     }
 
-    // Ensure FA4 local file is available (FA5/6 CDN is loaded directly in each page's HTML)
+    // Ensure icon fonts (Font Awesome) are available quickly for social/header icons
     ensureStyle('/wp-content/themes/constructo/css/font-awesome.min.css', 'bdbl-fa4');
+    ensureStyle('/wp-content/plugins/js_composer/assets/lib/vendor/node_modules/@fortawesome/fontawesome-free/css/all.min.css', 'bdbl-fa5');
 
     // Canonical
     (function ensureCanonical(){
