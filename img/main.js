@@ -1,7 +1,7 @@
     // Project prev/next navigation on single project pages
     (function ensureProjectPrevNext(){
       var path = location.pathname;
-      if (!/^\/projects\//.test(path) || /\/projects\/index\.html$/.test(path)) return;
+      if (!/^\/projects\//.test(path) || \/\/projects\/index\.html$/.test(path)) return;
 
       var projectsOrder = [
         '/projects/lil-motors-isuzu-dealership/index.html',
@@ -41,3 +41,33 @@
         container.appendChild(inner);
         // append near the end of project content
         var hook = d.querySelector('.portfolio-single') || d.body;
+      }
+
+    })();
+
+// Ensure the Grand Daddy project appears in every Projects dropdown at runtime
+(function addGrandDaddyToDropdowns(){
+  try {
+    var linkHref = '/projects/grand-daddy-restaurant-bungoma/index.html';
+    var linkText = 'Grand Daddy Restaurant';
+    // find all Projects menu anchors
+    var anchors = document.querySelectorAll('.site-navigation a[href="/projects/index.html"]');
+    anchors.forEach(function(a){
+      var parentLi = a.closest('li');
+      if (!parentLi) return;
+      var submenu = parentLi.querySelector('.sub-menu');
+      if (!submenu) return;
+      // If the link already exists, skip
+      if (submenu.querySelector('a[href="'+linkHref+'"]')) return;
+      var li = document.createElement('li');
+      li.className = 'menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1';
+      var child = document.createElement('a');
+      child.setAttribute('href', linkHref);
+      child.textContent = linkText;
+      li.appendChild(child);
+      submenu.appendChild(li);
+    });
+  } catch(e){
+    console.error('Failed to add Grand Daddy link to dropdowns', e);
+  }
+})();
